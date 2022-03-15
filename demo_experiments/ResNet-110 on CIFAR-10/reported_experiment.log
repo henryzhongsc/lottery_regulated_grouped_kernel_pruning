@@ -1,0 +1,1023 @@
+2021-09-28 14:34:53,504 | INFO : Experiment resnet110_fix_abs starts at 2021-09-28T14:34:53.500470.
+2021-09-28 14:34:53,504 | INFO : Parsed setting file from /content/drive/MyDrive/lottery_grouped_kernel_pruning/settings/main_assign_exp.json...
+2021-09-28 14:34:53,504 | INFO : ==> Preparing dataset: cifar10
+2021-09-28 14:34:55,810 | INFO : ==> Building baseline model: /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110
+2021-09-28 14:35:00,726 | INFO : ==> Starting task: finetune for 300 epochs (iterative_flag: False; multi_prune_flag: False)
+2021-09-28 14:35:03,079 | INFO : Model /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110 has a baseline of 94.26.
+2021-09-28 14:36:54,582 | INFO : Layer 2-0-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 33, 'K-PCA': 3});	Sequence: {'Spectral': 30, 'K-PCA': 2});
+2021-09-28 14:38:24,891 | INFO : Layer 2-0-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 25, 'Modified DBSCAN': 9, 'Spectral': 2});	Sequence: {'K-PCA': 6, 'Modified DBSCAN': 1, 'Spectral': 1});
+2021-09-28 14:39:58,386 | INFO : Layer 2-1-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 25, 'Spectral': 10, 'Modified DBSCAN': 1});	Sequence: {'K-PCA': 7, 'Spectral': 2});
+2021-09-28 14:41:33,088 | INFO : Layer 2-1-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 28, 'Spectral': 8});	Sequence: {'Spectral': 6, 'K-PCA': 26});
+2021-09-28 14:43:02,602 | INFO : Layer 2-2-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 36});	Sequence: {'Spectral': 35});
+2021-09-28 14:44:35,695 | INFO : Layer 2-2-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 23, 'Modified DBSCAN': 13});	Sequence: {'K-PCA': 10, 'Modified DBSCAN': 4});
+2021-09-28 14:46:04,207 | INFO : Layer 2-3-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 36});	Sequence: {'Spectral': 35});
+2021-09-28 14:47:37,141 | INFO : Layer 2-3-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 23, 'Modified DBSCAN': 13});	Sequence: {'Spectral': 8, 'Modified DBSCAN': 8});
+2021-09-28 14:49:08,738 | INFO : Layer 2-4-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 17});	Sequence: {'Spectral': 9, 'K-PCA': 7});
+2021-09-28 14:50:41,783 | INFO : Layer 2-4-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 30, 'Spectral': 3, 'K-PCA': 3});	Sequence: {'Spectral': 1, 'Modified DBSCAN': 16});
+2021-09-28 14:52:11,718 | INFO : Layer 2-5-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 19, 'K-PCA': 16, 'Spectral': 1});	Sequence: {'Modified DBSCAN': 7, 'K-PCA': 7});
+2021-09-28 14:53:41,029 | INFO : Layer 2-5-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 16, 'Spectral': 14, 'Modified DBSCAN': 6});	Sequence: {'K-PCA': 4, 'Modified DBSCAN': 2, 'Spectral': 8});
+2021-09-28 14:55:11,198 | INFO : Layer 2-6-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Spectral': 14, 'Modified DBSCAN': 2});	Sequence: {'Spectral': 3, 'K-PCA': 5});
+2021-09-28 14:56:47,184 | INFO : Layer 2-6-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 33, 'Modified DBSCAN': 2, 'K-PCA': 1});	Sequence: {'Spectral': 22});
+2021-09-28 14:58:18,262 | INFO : Layer 2-7-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 20, 'K-PCA': 16});	Sequence: {'Spectral': 13, 'K-PCA': 10});
+2021-09-28 14:59:48,331 | INFO : Layer 2-7-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 27, 'Spectral': 7, 'Modified DBSCAN': 2});	Sequence: {'K-PCA': 10, 'Spectral': 1});
+2021-09-28 15:01:20,723 | INFO : Layer 2-8-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 28, 'K-PCA': 7, 'Modified DBSCAN': 1});	Sequence: {'Spectral': 10, 'K-PCA': 1});
+2021-09-28 15:02:54,076 | INFO : Layer 2-8-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 24, 'Modified DBSCAN': 12});	Sequence: {'K-PCA': 8, 'Modified DBSCAN': 3});
+2021-09-28 15:04:26,471 | INFO : Layer 2-9-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 24, 'Spectral': 9, 'Modified DBSCAN': 3});	Sequence: {'K-PCA': 10, 'Modified DBSCAN': 1, 'Spectral': 1});
+2021-09-28 15:05:58,513 | INFO : Layer 2-9-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 24, 'K-PCA': 6, 'Spectral': 6});	Sequence: {'Modified DBSCAN': 8, 'Spectral': 2, 'K-PCA': 2});
+2021-09-28 15:07:29,998 | INFO : Layer 2-10-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 35, 'Modified DBSCAN': 1});	Sequence: {'K-PCA': 34});
+2021-09-28 15:09:00,622 | INFO : Layer 2-10-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 16, 'K-PCA': 12, 'Modified DBSCAN': 8});	Sequence: {'K-PCA': 4, 'Modified DBSCAN': 1, 'Spectral': 6});
+2021-09-28 15:10:29,674 | INFO : Layer 2-11-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Modified DBSCAN': 12, 'Spectral': 4});	Sequence: {'Modified DBSCAN': 2, 'K-PCA': 12});
+2021-09-28 15:11:51,276 | INFO : Layer 2-11-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 25, 'Modified DBSCAN': 6, 'Spectral': 5});	Sequence: {'Spectral': 1, 'K-PCA': 11});
+2021-09-28 15:13:16,773 | INFO : Layer 2-12-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Modified DBSCAN': 16});	Sequence: {'Modified DBSCAN': 5, 'K-PCA': 11});
+2021-09-28 15:14:46,716 | INFO : Layer 2-12-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 15, 'Modified DBSCAN': 13, 'Spectral': 8});	Sequence: {'K-PCA': 9, 'Modified DBSCAN': 5, 'Spectral': 3});
+2021-09-28 15:16:45,322 | INFO : Layer 2-13-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 26, 'Modified DBSCAN': 10});	Sequence: {'Modified DBSCAN': 3, 'Spectral': 13});
+2021-09-28 15:18:13,720 | INFO : Layer 2-13-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 18, 'K-PCA': 11, 'Spectral': 7});	Sequence: {'Spectral': 3, 'Modified DBSCAN': 5, 'K-PCA': 4});
+2021-09-28 15:19:58,259 | INFO : Layer 2-14-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 18, 'K-PCA': 10, 'Spectral': 8});	Sequence: {'Spectral': 3, 'Modified DBSCAN': 4, 'K-PCA': 3});
+2021-09-28 15:21:30,756 | INFO : Layer 2-14-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 23, 'Spectral': 9, 'Modified DBSCAN': 4});	Sequence: {'Spectral': 2, 'Modified DBSCAN': 1, 'K-PCA': 16});
+2021-09-28 15:23:02,149 | INFO : Layer 2-15-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 27, 'Modified DBSCAN': 5, 'Spectral': 4});	Sequence: {'Modified DBSCAN': 1, 'K-PCA': 19, 'Spectral': 2});
+2021-09-28 15:24:32,648 | INFO : Layer 2-15-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'Modified DBSCAN': 18, 'K-PCA': 18});	Sequence: {'Modified DBSCAN': 7, 'K-PCA': 11});
+2021-09-28 15:25:54,294 | INFO : Layer 2-16-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 22, 'K-PCA': 11, 'Spectral': 3});	Sequence: {'Modified DBSCAN': 19, 'K-PCA': 7});
+2021-09-28 15:27:24,793 | INFO : Layer 2-16-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 11, 'Modified DBSCAN': 6});	Sequence: {'Modified DBSCAN': 2, 'Spectral': 9, 'K-PCA': 4});
+2021-09-28 15:28:57,753 | INFO : Layer 2-17-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 16, 'Spectral': 11, 'Modified DBSCAN': 9});	Sequence: {'Spectral': 4, 'Modified DBSCAN': 4, 'K-PCA': 4});
+2021-09-28 15:30:29,875 | INFO : Layer 2-17-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 27, 'Spectral': 7, 'Modified DBSCAN': 2});	Sequence: {'K-PCA': 15, 'Spectral': 5});
+2021-09-28 15:32:40,203 | INFO : Layer 3-0-0; Shape (32, 16, 3, 3) -> (32, 144); Method: Spectral; Occurrence: ({'Spectral': 15, 'Modified DBSCAN': 15, 'K-PCA': 6});	Sequence: {'K-PCA': 2, 'Spectral': 6, 'Modified DBSCAN': 4});
+2021-09-28 15:35:42,985 | INFO : Layer 3-0-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 20, 'K-PCA': 10, 'Modified DBSCAN': 6});	Sequence: {'Spectral': 8, 'Modified DBSCAN': 2, 'K-PCA': 3});
+2021-09-28 15:38:39,524 | INFO : Layer 3-1-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 33, 'Spectral': 3});	Sequence: {'K-PCA': 24, 'Spectral': 1});
+2021-09-28 15:40:54,040 | INFO : Layer 3-1-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 16, 'K-PCA': 13, 'Modified DBSCAN': 7});	Sequence: {'Modified DBSCAN': 4, 'Spectral': 3, 'K-PCA': 5});
+2021-09-28 15:43:33,390 | INFO : Layer 3-2-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 25, 'Spectral': 9, 'Modified DBSCAN': 2});	Sequence: {'Spectral': 6, 'K-PCA': 6});
+2021-09-28 15:45:50,049 | INFO : Layer 3-2-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 26, 'K-PCA': 8, 'Modified DBSCAN': 2});	Sequence: {'K-PCA': 1, 'Spectral': 13, 'Modified DBSCAN': 1});
+2021-09-28 15:48:44,933 | INFO : Layer 3-3-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 29, 'Modified DBSCAN': 6, 'K-PCA': 1});	Sequence: {'Spectral': 11, 'Modified DBSCAN': 1});
+2021-09-28 15:50:59,819 | INFO : Layer 3-3-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 28, 'K-PCA': 7, 'Modified DBSCAN': 1});	Sequence: {'K-PCA': 2, 'Spectral': 13});
+2021-09-28 15:53:10,411 | INFO : Layer 3-4-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 26, 'Modified DBSCAN': 8, 'K-PCA': 2});	Sequence: {'Modified DBSCAN': 6, 'Spectral': 20, 'K-PCA': 1});
+2021-09-28 15:55:26,086 | INFO : Layer 3-4-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 28, 'Spectral': 8});	Sequence: {'K-PCA': 11, 'Spectral': 2});
+2021-09-28 15:57:39,661 | INFO : Layer 3-5-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 32, 'K-PCA': 2, 'Modified DBSCAN': 2});	Sequence: {'Spectral': 20, 'K-PCA': 1, 'Modified DBSCAN': 1});
+2021-09-28 16:00:19,815 | INFO : Layer 3-5-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 16, 'Spectral': 12, 'Modified DBSCAN': 8});	Sequence: {'Spectral': 2, 'K-PCA': 4, 'Modified DBSCAN': 2});
+2021-09-28 16:04:25,369 | INFO : Layer 3-6-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 22, 'Spectral': 14});	Sequence: {'Modified DBSCAN': 10, 'Spectral': 6});
+2021-09-28 16:06:39,283 | INFO : Layer 3-6-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Spectral': 12, 'Modified DBSCAN': 4});	Sequence: {'Spectral': 2, 'K-PCA': 4, 'Modified DBSCAN': 1});
+2021-09-28 16:09:33,921 | INFO : Layer 3-7-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 28, 'K-PCA': 7, 'Spectral': 1});	Sequence: {'Modified DBSCAN': 7, 'K-PCA': 1});
+2021-09-28 16:12:10,221 | INFO : Layer 3-7-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 18, 'K-PCA': 16, 'Modified DBSCAN': 2});	Sequence: {'Modified DBSCAN': 1, 'K-PCA': 5, 'Spectral': 7});
+2021-09-28 16:14:25,695 | INFO : Layer 3-8-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 29, 'Modified DBSCAN': 4, 'Spectral': 3});	Sequence: {'K-PCA': 8, 'Modified DBSCAN': 1, 'Spectral': 1});
+2021-09-28 16:16:59,567 | INFO : Layer 3-8-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 9, 'Modified DBSCAN': 8});	Sequence: {'Modified DBSCAN': 2, 'Spectral': 12, 'K-PCA': 3});
+2021-09-28 16:19:14,787 | INFO : Layer 3-9-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 21, 'Spectral': 12, 'K-PCA': 3});	Sequence: {'Modified DBSCAN': 9, 'Spectral': 4});
+2021-09-28 16:21:25,938 | INFO : Layer 3-9-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 17, 'Modified DBSCAN': 15, 'Spectral': 4});	Sequence: {'Modified DBSCAN': 7, 'Spectral': 1, 'K-PCA': 8});
+2021-09-28 16:24:04,561 | INFO : Layer 3-10-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 22, 'Modified DBSCAN': 10, 'Spectral': 4});	Sequence: {'Modified DBSCAN': 4, 'Spectral': 1, 'K-PCA': 9});
+2021-09-28 16:26:45,901 | INFO : Layer 3-10-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 15, 'Spectral': 13, 'Modified DBSCAN': 8});	Sequence: {'K-PCA': 4, 'Spectral': 5, 'Modified DBSCAN': 5});
+2021-09-28 16:28:58,560 | INFO : Layer 3-11-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 22, 'Spectral': 13, 'Modified DBSCAN': 1});	Sequence: {'K-PCA': 10, 'Spectral': 6});
+2021-09-28 16:31:32,339 | INFO : Layer 3-11-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 24, 'Spectral': 7, 'Modified DBSCAN': 5});	Sequence: {'K-PCA': 15, 'Modified DBSCAN': 2, 'Spectral': 5});
+2021-09-28 16:34:51,423 | INFO : Layer 3-12-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 17, 'K-PCA': 16, 'Spectral': 3});	Sequence: {'Modified DBSCAN': 5, 'Spectral': 1, 'K-PCA': 4});
+2021-09-28 16:37:26,245 | INFO : Layer 3-12-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 14, 'Modified DBSCAN': 3});	Sequence: {'Spectral': 5, 'K-PCA': 2, 'Modified DBSCAN': 1});
+2021-09-28 16:40:06,066 | INFO : Layer 3-13-0; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 24, 'Spectral': 7, 'K-PCA': 5});	Sequence: {'Modified DBSCAN': 13, 'Spectral': 5, 'K-PCA': 1});
+2021-09-28 16:42:22,827 | INFO : Layer 3-13-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 13, 'Modified DBSCAN': 12, 'K-PCA': 11});	Sequence: {'Modified DBSCAN': 3, 'K-PCA': 1, 'Spectral': 2});
+2021-09-28 16:44:33,163 | INFO : Layer 3-14-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Modified DBSCAN': 10, 'Spectral': 6});	Sequence: {'K-PCA': 6, 'Modified DBSCAN': 5, 'Spectral': 4});
+2021-09-28 16:46:49,978 | INFO : Layer 3-14-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 22, 'Modified DBSCAN': 12, 'K-PCA': 2});	Sequence: {'Spectral': 14, 'Modified DBSCAN': 7, 'K-PCA': 1});
+2021-09-28 16:49:04,015 | INFO : Layer 3-15-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 21, 'Spectral': 8, 'Modified DBSCAN': 7});	Sequence: {'K-PCA': 10, 'Modified DBSCAN': 1, 'Spectral': 2});
+2021-09-28 16:51:15,475 | INFO : Layer 3-15-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 20, 'Spectral': 10, 'Modified DBSCAN': 6});	Sequence: {'K-PCA': 8, 'Spectral': 4, 'Modified DBSCAN': 2});
+2021-09-28 16:53:33,250 | INFO : Layer 3-16-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 35, 'Spectral': 1});	Sequence: {'K-PCA': 33});
+2021-09-28 16:56:10,496 | INFO : Layer 3-16-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 25, 'Spectral': 6, 'K-PCA': 5});	Sequence: {'Spectral': 1, 'Modified DBSCAN': 10, 'K-PCA': 1});
+2021-09-28 16:59:01,656 | INFO : Layer 3-17-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 26, 'Spectral': 10});	Sequence: {'K-PCA': 10, 'Spectral': 1});
+2021-09-28 17:02:26,753 | INFO : Layer 3-17-2; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'K-PCA': 22, 'Spectral': 14});	Sequence: {'Spectral': 3, 'K-PCA': 19});
+2021-09-28 17:06:46,880 | INFO : Layer 4-0-0; Shape (64, 32, 3, 3) -> (64, 288); Method: Spectral; Occurrence: ({'Spectral': 18, 'K-PCA': 17, 'Modified DBSCAN': 1});	Sequence: {'K-PCA': 4, 'Spectral': 8});
+2021-09-28 17:11:46,023 | INFO : Layer 4-0-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 26, 'Modified DBSCAN': 8, 'Spectral': 2});	Sequence: {'K-PCA': 19, 'Modified DBSCAN': 3});
+2021-09-28 17:15:59,358 | INFO : Layer 4-1-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 18, 'Spectral': 15, 'Modified DBSCAN': 3});	Sequence: {'Spectral': 4, 'K-PCA': 11, 'Modified DBSCAN': 1});
+2021-09-28 17:21:26,047 | INFO : Layer 4-1-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 32, 'Modified DBSCAN': 4});	Sequence: {'Modified DBSCAN': 1, 'K-PCA': 29});
+2021-09-28 17:25:43,709 | INFO : Layer 4-2-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 30, 'Spectral': 3, 'Modified DBSCAN': 3});	Sequence: {'Spectral': 2, 'K-PCA': 20});
+2021-09-28 17:30:00,196 | INFO : Layer 4-2-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 22, 'Modified DBSCAN': 14});	Sequence: {'Modified DBSCAN': 13, 'K-PCA': 21});
+2021-09-28 17:35:10,270 | INFO : Layer 4-3-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 22, 'K-PCA': 9, 'Modified DBSCAN': 5});	Sequence: {'Modified DBSCAN': 1, 'K-PCA': 2, 'Spectral': 9});
+2021-09-28 17:42:29,453 | INFO : Layer 4-3-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 28, 'Modified DBSCAN': 6, 'Spectral': 2});	Sequence: {'K-PCA': 15, 'Modified DBSCAN': 3});
+2021-09-28 17:46:49,997 | INFO : Layer 4-4-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 28, 'K-PCA': 8});	Sequence: {'Spectral': 8, 'K-PCA': 3});
+2021-09-28 17:51:11,029 | INFO : Layer 4-4-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 31, 'Spectral': 3, 'Modified DBSCAN': 2});	Sequence: {'K-PCA': 17, 'Spectral': 2});
+2021-09-28 17:55:26,723 | INFO : Layer 4-5-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 26, 'Spectral': 6, 'K-PCA': 4});	Sequence: {'Modified DBSCAN': 16, 'Spectral': 2, 'K-PCA': 3});
+2021-09-28 17:59:36,823 | INFO : Layer 4-5-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 20, 'K-PCA': 16});	Sequence: {'Spectral': 15, 'K-PCA': 5});
+2021-09-28 18:04:47,569 | INFO : Layer 4-6-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 22, 'Modified DBSCAN': 11, 'Spectral': 3});	Sequence: {'Modified DBSCAN': 2, 'Spectral': 1, 'K-PCA': 5});
+2021-09-28 18:09:17,804 | INFO : Layer 4-6-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 25, 'K-PCA': 7, 'Spectral': 4});	Sequence: {'Modified DBSCAN': 12, 'Spectral': 1, 'K-PCA': 3});
+2021-09-28 18:13:31,974 | INFO : Layer 4-7-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 21, 'K-PCA': 8, 'Spectral': 7});	Sequence: {'Modified DBSCAN': 6, 'Spectral': 1, 'K-PCA': 4});
+2021-09-28 18:17:46,808 | INFO : Layer 4-7-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 28, 'Spectral': 8});	Sequence: {'K-PCA': 8, 'Spectral': 2});
+2021-09-28 18:22:56,188 | INFO : Layer 4-8-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 34, 'Spectral': 2});	Sequence: {'Modified DBSCAN': 30, 'Spectral': 1});
+2021-09-28 18:27:15,527 | INFO : Layer 4-8-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 18, 'Modified DBSCAN': 13, 'K-PCA': 5});	Sequence: {'Spectral': 6, 'Modified DBSCAN': 5, 'K-PCA': 1});
+2021-09-28 18:32:27,475 | INFO : Layer 4-9-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 28, 'Modified DBSCAN': 8});	Sequence: {'K-PCA': 26, 'Modified DBSCAN': 5});
+2021-09-28 18:36:41,183 | INFO : Layer 4-9-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 19, 'Spectral': 13, 'K-PCA': 4});	Sequence: {'Modified DBSCAN': 4, 'K-PCA': 2, 'Spectral': 7});
+2021-09-28 18:41:01,347 | INFO : Layer 4-10-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 23, 'Modified DBSCAN': 12, 'Spectral': 1});	Sequence: {'K-PCA': 9, 'Modified DBSCAN': 4});
+2021-09-28 18:46:31,107 | INFO : Layer 4-10-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 27, 'Modified DBSCAN': 6, 'Spectral': 3});	Sequence: {'K-PCA': 18, 'Modified DBSCAN': 3, 'Spectral': 1});
+2021-09-28 18:51:39,242 | INFO : Layer 4-11-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 19, 'Modified DBSCAN': 17});	Sequence: {'Modified DBSCAN': 4, 'K-PCA': 8});
+2021-09-28 18:56:01,947 | INFO : Layer 4-11-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 16, 'Modified DBSCAN': 13, 'K-PCA': 7});	Sequence: {'Modified DBSCAN': 7, 'K-PCA': 2, 'Spectral': 6});
+2021-09-28 19:00:28,446 | INFO : Layer 4-12-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 9, 'Modified DBSCAN': 8});	Sequence: {'Modified DBSCAN': 2, 'Spectral': 7, 'K-PCA': 2});
+2021-09-28 19:06:36,303 | INFO : Layer 4-12-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 19, 'Modified DBSCAN': 14, 'K-PCA': 3});	Sequence: {'Modified DBSCAN': 3, 'Spectral': 7, 'K-PCA': 1});
+2021-09-28 19:11:55,164 | INFO : Layer 4-13-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 33, 'Spectral': 3});	Sequence: {'K-PCA': 14});
+2021-09-28 19:17:02,789 | INFO : Layer 4-13-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 16, 'K-PCA': 12, 'Spectral': 8});	Sequence: {'Spectral': 7, 'Modified DBSCAN': 6, 'K-PCA': 5});
+2021-09-28 19:21:17,861 | INFO : Layer 4-14-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 33, 'Spectral': 3});	Sequence: {'K-PCA': 17});
+2021-09-28 19:25:42,143 | INFO : Layer 4-14-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 26, 'K-PCA': 10});	Sequence: {'Spectral': 17, 'K-PCA': 3});
+2021-09-28 19:34:07,250 | INFO : Layer 4-15-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 19, 'Spectral': 17});	Sequence: {'Spectral': 7, 'Modified DBSCAN': 7});
+2021-09-28 19:38:30,719 | INFO : Layer 4-15-2; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 15, 'Spectral': 13, 'Modified DBSCAN': 8});	Sequence: {'K-PCA': 8, 'Spectral': 11, 'Modified DBSCAN': 4});
+2021-09-28 19:50:05,839 | INFO : Layer 4-16-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Modified DBSCAN; Occurrence: ({'Modified DBSCAN': 28, 'K-PCA': 5, 'Spectral': 3});	Sequence: {'Modified DBSCAN': 9, 'Spectral': 1, 'K-PCA': 1});
+2021-09-28 19:54:21,069 | INFO : Layer 4-16-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 23, 'K-PCA': 11, 'Modified DBSCAN': 2});	Sequence: {'Spectral': 11, 'K-PCA': 10});
+2021-09-28 20:02:44,965 | INFO : Layer 4-17-0; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 27, 'Modified DBSCAN': 9});	Sequence: {'Modified DBSCAN': 7, 'Spectral': 18});
+2021-09-28 20:07:08,655 | INFO : Layer 4-17-2; Shape (64, 64, 3, 3) -> (64, 576); Method: Spectral; Occurrence: ({'Spectral': 36});	Sequence: {'Spectral': 35});
+2021-09-28 20:07:12,841 | INFO : Model /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110 (type: <class 'group_cifar.GroupResNet'>) pruned and grouped (pruned baseline: 17.32); now to finetune with 300 epochs.
+
+2021-09-28 20:07:16,253 | INFO : Model /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110 has a baseline of 17.32.
+2021-09-28 20:08:32,358 | INFO : Epoch #0 (stage: None)
+2021-09-28 20:08:32,358 | INFO : 	 train_acc: 82.398; train_loss: 0.148; test_loss: 52.404; lr: [0.01]
+2021-09-28 20:08:32,359 | INFO : 	 test_acc: 82.39 (best: 82.39 from #0)
+2021-09-28 20:09:48,540 | INFO : Epoch #1 (stage: None)
+2021-09-28 20:09:48,540 | INFO : 	 train_acc: 87.824; train_loss: 1.234; test_loss: 51.517; lr: [0.01]
+2021-09-28 20:09:48,540 | INFO : 	 test_acc: 83.96 (best: 83.96 from #1)
+2021-09-28 20:11:04,151 | INFO : Epoch #2 (stage: None)
+2021-09-28 20:11:04,152 | INFO : 	 train_acc: 89.486; train_loss: 0.371; test_loss: 43.700; lr: [0.01]
+2021-09-28 20:11:04,152 | INFO : 	 test_acc: 86.06 (best: 86.06 from #2)
+2021-09-28 20:12:19,076 | INFO : Epoch #3 (stage: None)
+2021-09-28 20:12:19,077 | INFO : 	 train_acc: 90.26; train_loss: 0.180; test_loss: 43.398; lr: [0.01]
+2021-09-28 20:12:19,077 | INFO : 	 test_acc: 85.84 (best: 86.06 from #2)
+2021-09-28 20:13:33,831 | INFO : Epoch #4 (stage: None)
+2021-09-28 20:13:33,832 | INFO : 	 train_acc: 90.996; train_loss: 0.543; test_loss: 46.181; lr: [0.01]
+2021-09-28 20:13:33,832 | INFO : 	 test_acc: 85.71 (best: 86.06 from #2)
+2021-09-28 20:14:48,996 | INFO : Epoch #5 (stage: None)
+2021-09-28 20:14:48,996 | INFO : 	 train_acc: 91.7; train_loss: 1.191; test_loss: 37.515; lr: [0.01]
+2021-09-28 20:14:48,996 | INFO : 	 test_acc: 88.01 (best: 88.01 from #5)
+2021-09-28 20:16:04,264 | INFO : Epoch #6 (stage: None)
+2021-09-28 20:16:04,265 | INFO : 	 train_acc: 91.898; train_loss: 0.611; test_loss: 45.997; lr: [0.01]
+2021-09-28 20:16:04,265 | INFO : 	 test_acc: 85.48 (best: 88.01 from #5)
+2021-09-28 20:17:20,426 | INFO : Epoch #7 (stage: None)
+2021-09-28 20:17:20,426 | INFO : 	 train_acc: 92.176; train_loss: 0.252; test_loss: 35.191; lr: [0.01]
+2021-09-28 20:17:20,426 | INFO : 	 test_acc: 88.48 (best: 88.48 from #7)
+2021-09-28 20:18:36,935 | INFO : Epoch #8 (stage: None)
+2021-09-28 20:18:36,936 | INFO : 	 train_acc: 92.584; train_loss: 0.250; test_loss: 40.969; lr: [0.01]
+2021-09-28 20:18:36,936 | INFO : 	 test_acc: 87.54 (best: 88.48 from #7)
+2021-09-28 20:19:53,153 | INFO : Epoch #9 (stage: None)
+2021-09-28 20:19:53,153 | INFO : 	 train_acc: 93.048; train_loss: 0.208; test_loss: 39.408; lr: [0.01]
+2021-09-28 20:19:53,154 | INFO : 	 test_acc: 88.36 (best: 88.48 from #7)
+2021-09-28 20:21:08,427 | INFO : Epoch #10 (stage: None)
+2021-09-28 20:21:08,428 | INFO : 	 train_acc: 93.114; train_loss: 0.255; test_loss: 41.093; lr: [0.01]
+2021-09-28 20:21:08,428 | INFO : 	 test_acc: 87.12 (best: 88.48 from #7)
+2021-09-28 20:22:23,615 | INFO : Epoch #11 (stage: None)
+2021-09-28 20:22:23,616 | INFO : 	 train_acc: 93.178; train_loss: 0.551; test_loss: 33.798; lr: [0.01]
+2021-09-28 20:22:23,616 | INFO : 	 test_acc: 89.21 (best: 89.21 from #11)
+2021-09-28 20:23:38,923 | INFO : Epoch #12 (stage: None)
+2021-09-28 20:23:38,924 | INFO : 	 train_acc: 93.384; train_loss: 0.090; test_loss: 36.462; lr: [0.01]
+2021-09-28 20:23:38,924 | INFO : 	 test_acc: 88.61 (best: 89.21 from #11)
+2021-09-28 20:24:53,734 | INFO : Epoch #13 (stage: None)
+2021-09-28 20:24:53,735 | INFO : 	 train_acc: 93.64; train_loss: 0.238; test_loss: 35.744; lr: [0.01]
+2021-09-28 20:24:53,735 | INFO : 	 test_acc: 89.07 (best: 89.21 from #11)
+2021-09-28 20:26:08,948 | INFO : Epoch #14 (stage: None)
+2021-09-28 20:26:08,949 | INFO : 	 train_acc: 93.68; train_loss: 0.514; test_loss: 53.567; lr: [0.01]
+2021-09-28 20:26:08,949 | INFO : 	 test_acc: 84.29 (best: 89.21 from #11)
+2021-09-28 20:27:25,209 | INFO : Epoch #15 (stage: None)
+2021-09-28 20:27:25,210 | INFO : 	 train_acc: 93.652; train_loss: 0.041; test_loss: 34.276; lr: [0.01]
+2021-09-28 20:27:25,210 | INFO : 	 test_acc: 89.6 (best: 89.6 from #15)
+2021-09-28 20:28:41,710 | INFO : Epoch #16 (stage: None)
+2021-09-28 20:28:41,710 | INFO : 	 train_acc: 93.892; train_loss: 0.240; test_loss: 40.379; lr: [0.01]
+2021-09-28 20:28:41,711 | INFO : 	 test_acc: 87.69 (best: 89.6 from #15)
+2021-09-28 20:29:58,010 | INFO : Epoch #17 (stage: None)
+2021-09-28 20:29:58,010 | INFO : 	 train_acc: 93.932; train_loss: 0.104; test_loss: 34.603; lr: [0.01]
+2021-09-28 20:29:58,011 | INFO : 	 test_acc: 89.48 (best: 89.6 from #15)
+2021-09-28 20:31:12,971 | INFO : Epoch #18 (stage: None)
+2021-09-28 20:31:12,972 | INFO : 	 train_acc: 93.908; train_loss: 0.181; test_loss: 45.250; lr: [0.01]
+2021-09-28 20:31:12,972 | INFO : 	 test_acc: 87.35 (best: 89.6 from #15)
+2021-09-28 20:32:27,873 | INFO : Epoch #19 (stage: None)
+2021-09-28 20:32:27,873 | INFO : 	 train_acc: 93.972; train_loss: 0.179; test_loss: 38.048; lr: [0.01]
+2021-09-28 20:32:27,874 | INFO : 	 test_acc: 88.51 (best: 89.6 from #15)
+2021-09-28 20:33:42,783 | INFO : Epoch #20 (stage: None)
+2021-09-28 20:33:42,784 | INFO : 	 train_acc: 94.084; train_loss: 0.864; test_loss: 52.735; lr: [0.01]
+2021-09-28 20:33:42,784 | INFO : 	 test_acc: 85.38 (best: 89.6 from #15)
+2021-09-28 20:34:57,865 | INFO : Epoch #21 (stage: None)
+2021-09-28 20:34:57,866 | INFO : 	 train_acc: 94.152; train_loss: 0.294; test_loss: 35.077; lr: [0.01]
+2021-09-28 20:34:57,866 | INFO : 	 test_acc: 89.53 (best: 89.6 from #15)
+2021-09-28 20:36:13,304 | INFO : Epoch #22 (stage: None)
+2021-09-28 20:36:13,305 | INFO : 	 train_acc: 94.278; train_loss: 0.593; test_loss: 38.974; lr: [0.01]
+2021-09-28 20:36:13,305 | INFO : 	 test_acc: 88.47 (best: 89.6 from #15)
+2021-09-28 20:37:29,476 | INFO : Epoch #23 (stage: None)
+2021-09-28 20:37:29,477 | INFO : 	 train_acc: 94.268; train_loss: 0.041; test_loss: 36.356; lr: [0.01]
+2021-09-28 20:37:29,477 | INFO : 	 test_acc: 88.94 (best: 89.6 from #15)
+2021-09-28 20:38:45,744 | INFO : Epoch #24 (stage: None)
+2021-09-28 20:38:45,745 | INFO : 	 train_acc: 94.406; train_loss: 0.118; test_loss: 34.359; lr: [0.01]
+2021-09-28 20:38:45,745 | INFO : 	 test_acc: 89.46 (best: 89.6 from #15)
+2021-09-28 20:40:02,017 | INFO : Epoch #25 (stage: None)
+2021-09-28 20:40:02,018 | INFO : 	 train_acc: 94.464; train_loss: 0.182; test_loss: 36.357; lr: [0.01]
+2021-09-28 20:40:02,018 | INFO : 	 test_acc: 89.53 (best: 89.6 from #15)
+2021-09-28 20:41:18,237 | INFO : Epoch #26 (stage: None)
+2021-09-28 20:41:18,238 | INFO : 	 train_acc: 94.472; train_loss: 0.088; test_loss: 39.624; lr: [0.01]
+2021-09-28 20:41:18,238 | INFO : 	 test_acc: 88.77 (best: 89.6 from #15)
+2021-09-28 20:42:34,617 | INFO : Epoch #27 (stage: None)
+2021-09-28 20:42:34,618 | INFO : 	 train_acc: 94.586; train_loss: 0.043; test_loss: 37.396; lr: [0.01]
+2021-09-28 20:42:34,618 | INFO : 	 test_acc: 89.16 (best: 89.6 from #15)
+2021-09-28 20:43:50,942 | INFO : Epoch #28 (stage: None)
+2021-09-28 20:43:50,942 | INFO : 	 train_acc: 94.51; train_loss: 0.262; test_loss: 40.868; lr: [0.01]
+2021-09-28 20:43:50,942 | INFO : 	 test_acc: 87.56 (best: 89.6 from #15)
+2021-09-28 20:45:06,205 | INFO : Epoch #29 (stage: None)
+2021-09-28 20:45:06,206 | INFO : 	 train_acc: 94.504; train_loss: 0.134; test_loss: 34.210; lr: [0.01]
+2021-09-28 20:45:06,206 | INFO : 	 test_acc: 89.5 (best: 89.6 from #15)
+2021-09-28 20:46:21,960 | INFO : Epoch #30 (stage: None)
+2021-09-28 20:46:21,961 | INFO : 	 train_acc: 94.608; train_loss: 0.104; test_loss: 35.553; lr: [0.01]
+2021-09-28 20:46:21,961 | INFO : 	 test_acc: 88.9 (best: 89.6 from #15)
+2021-09-28 20:47:38,449 | INFO : Epoch #31 (stage: None)
+2021-09-28 20:47:38,449 | INFO : 	 train_acc: 94.71; train_loss: 0.140; test_loss: 32.144; lr: [0.01]
+2021-09-28 20:47:38,450 | INFO : 	 test_acc: 89.98 (best: 89.98 from #31)
+2021-09-28 20:48:54,852 | INFO : Epoch #32 (stage: None)
+2021-09-28 20:48:54,853 | INFO : 	 train_acc: 94.966; train_loss: 0.099; test_loss: 37.177; lr: [0.01]
+2021-09-28 20:48:54,853 | INFO : 	 test_acc: 88.87 (best: 89.98 from #31)
+2021-09-28 20:50:11,454 | INFO : Epoch #33 (stage: None)
+2021-09-28 20:50:11,455 | INFO : 	 train_acc: 94.64; train_loss: 0.316; test_loss: 36.510; lr: [0.01]
+2021-09-28 20:50:11,455 | INFO : 	 test_acc: 88.79 (best: 89.98 from #31)
+2021-09-28 20:51:27,611 | INFO : Epoch #34 (stage: None)
+2021-09-28 20:51:27,612 | INFO : 	 train_acc: 94.612; train_loss: 0.048; test_loss: 33.303; lr: [0.01]
+2021-09-28 20:51:27,612 | INFO : 	 test_acc: 89.97 (best: 89.98 from #31)
+2021-09-28 20:52:43,950 | INFO : Epoch #35 (stage: None)
+2021-09-28 20:52:43,951 | INFO : 	 train_acc: 94.914; train_loss: 0.181; test_loss: 39.396; lr: [0.01]
+2021-09-28 20:52:43,951 | INFO : 	 test_acc: 88.74 (best: 89.98 from #31)
+2021-09-28 20:54:00,439 | INFO : Epoch #36 (stage: None)
+2021-09-28 20:54:00,440 | INFO : 	 train_acc: 94.684; train_loss: 0.132; test_loss: 37.706; lr: [0.01]
+2021-09-28 20:54:00,440 | INFO : 	 test_acc: 88.96 (best: 89.98 from #31)
+2021-09-28 20:55:15,712 | INFO : Epoch #37 (stage: None)
+2021-09-28 20:55:15,713 | INFO : 	 train_acc: 94.728; train_loss: 0.044; test_loss: 33.014; lr: [0.01]
+2021-09-28 20:55:15,713 | INFO : 	 test_acc: 89.9 (best: 89.98 from #31)
+2021-09-28 20:56:32,201 | INFO : Epoch #38 (stage: None)
+2021-09-28 20:56:32,202 | INFO : 	 train_acc: 94.812; train_loss: 0.090; test_loss: 38.767; lr: [0.01]
+2021-09-28 20:56:32,202 | INFO : 	 test_acc: 88.59 (best: 89.98 from #31)
+2021-09-28 20:57:48,783 | INFO : Epoch #39 (stage: None)
+2021-09-28 20:57:48,783 | INFO : 	 train_acc: 94.78; train_loss: 0.207; test_loss: 35.558; lr: [0.01]
+2021-09-28 20:57:48,784 | INFO : 	 test_acc: 89.61 (best: 89.98 from #31)
+2021-09-28 20:59:05,174 | INFO : Epoch #40 (stage: None)
+2021-09-28 20:59:05,174 | INFO : 	 train_acc: 94.888; train_loss: 0.772; test_loss: 32.969; lr: [0.01]
+2021-09-28 20:59:05,175 | INFO : 	 test_acc: 90.05 (best: 90.05 from #40)
+2021-09-28 21:00:21,519 | INFO : Epoch #41 (stage: None)
+2021-09-28 21:00:21,520 | INFO : 	 train_acc: 94.868; train_loss: 0.216; test_loss: 37.139; lr: [0.01]
+2021-09-28 21:00:21,520 | INFO : 	 test_acc: 89.14 (best: 90.05 from #40)
+2021-09-28 21:01:36,390 | INFO : Epoch #42 (stage: None)
+2021-09-28 21:01:36,391 | INFO : 	 train_acc: 94.748; train_loss: 0.088; test_loss: 37.442; lr: [0.01]
+2021-09-28 21:01:36,391 | INFO : 	 test_acc: 88.81 (best: 90.05 from #40)
+2021-09-28 21:02:51,484 | INFO : Epoch #43 (stage: None)
+2021-09-28 21:02:51,485 | INFO : 	 train_acc: 94.96; train_loss: 0.148; test_loss: 42.803; lr: [0.01]
+2021-09-28 21:02:51,485 | INFO : 	 test_acc: 87.87 (best: 90.05 from #40)
+2021-09-28 21:04:06,684 | INFO : Epoch #44 (stage: None)
+2021-09-28 21:04:06,684 | INFO : 	 train_acc: 94.806; train_loss: 0.041; test_loss: 31.574; lr: [0.01]
+2021-09-28 21:04:06,684 | INFO : 	 test_acc: 90.37 (best: 90.37 from #44)
+2021-09-28 21:05:22,953 | INFO : Epoch #45 (stage: None)
+2021-09-28 21:05:22,954 | INFO : 	 train_acc: 94.906; train_loss: 0.400; test_loss: 49.938; lr: [0.01]
+2021-09-28 21:05:22,954 | INFO : 	 test_acc: 85.7 (best: 90.37 from #44)
+2021-09-28 21:06:39,508 | INFO : Epoch #46 (stage: None)
+2021-09-28 21:06:39,509 | INFO : 	 train_acc: 94.886; train_loss: 0.048; test_loss: 35.395; lr: [0.01]
+2021-09-28 21:06:39,509 | INFO : 	 test_acc: 89.26 (best: 90.37 from #44)
+2021-09-28 21:07:56,589 | INFO : Epoch #47 (stage: None)
+2021-09-28 21:07:56,590 | INFO : 	 train_acc: 95.072; train_loss: 0.191; test_loss: 32.688; lr: [0.01]
+2021-09-28 21:07:56,590 | INFO : 	 test_acc: 89.84 (best: 90.37 from #44)
+2021-09-28 21:09:12,989 | INFO : Epoch #48 (stage: None)
+2021-09-28 21:09:12,990 | INFO : 	 train_acc: 95.044; train_loss: 0.446; test_loss: 38.332; lr: [0.01]
+2021-09-28 21:09:12,990 | INFO : 	 test_acc: 88.51 (best: 90.37 from #44)
+2021-09-28 21:10:29,170 | INFO : Epoch #49 (stage: None)
+2021-09-28 21:10:29,170 | INFO : 	 train_acc: 94.726; train_loss: 0.050; test_loss: 29.922; lr: [0.01]
+2021-09-28 21:10:29,171 | INFO : 	 test_acc: 90.81 (best: 90.81 from #49)
+2021-09-28 21:11:45,750 | INFO : Epoch #50 (stage: None)
+2021-09-28 21:11:45,751 | INFO : 	 train_acc: 95.012; train_loss: 0.781; test_loss: 35.667; lr: [0.01]
+2021-09-28 21:11:45,751 | INFO : 	 test_acc: 89.71 (best: 90.81 from #49)
+2021-09-28 21:13:02,243 | INFO : Epoch #51 (stage: None)
+2021-09-28 21:13:02,244 | INFO : 	 train_acc: 94.818; train_loss: 0.335; test_loss: 33.694; lr: [0.01]
+2021-09-28 21:13:02,244 | INFO : 	 test_acc: 89.83 (best: 90.81 from #49)
+2021-09-28 21:14:17,819 | INFO : Epoch #52 (stage: None)
+2021-09-28 21:14:17,820 | INFO : 	 train_acc: 94.942; train_loss: 0.160; test_loss: 34.543; lr: [0.01]
+2021-09-28 21:14:17,820 | INFO : 	 test_acc: 89.75 (best: 90.81 from #49)
+2021-09-28 21:15:33,787 | INFO : Epoch #53 (stage: None)
+2021-09-28 21:15:33,788 | INFO : 	 train_acc: 95.072; train_loss: 0.015; test_loss: 43.301; lr: [0.01]
+2021-09-28 21:15:33,788 | INFO : 	 test_acc: 87.31 (best: 90.81 from #49)
+2021-09-28 21:16:50,705 | INFO : Epoch #54 (stage: None)
+2021-09-28 21:16:50,705 | INFO : 	 train_acc: 95.056; train_loss: 0.081; test_loss: 37.108; lr: [0.01]
+2021-09-28 21:16:50,705 | INFO : 	 test_acc: 89.12 (best: 90.81 from #49)
+2021-09-28 21:18:07,734 | INFO : Epoch #55 (stage: None)
+2021-09-28 21:18:07,734 | INFO : 	 train_acc: 94.988; train_loss: 0.032; test_loss: 35.645; lr: [0.01]
+2021-09-28 21:18:07,735 | INFO : 	 test_acc: 89.59 (best: 90.81 from #49)
+2021-09-28 21:19:24,799 | INFO : Epoch #56 (stage: None)
+2021-09-28 21:19:24,799 | INFO : 	 train_acc: 95.056; train_loss: 0.050; test_loss: 37.298; lr: [0.01]
+2021-09-28 21:19:24,799 | INFO : 	 test_acc: 89.22 (best: 90.81 from #49)
+2021-09-28 21:20:41,450 | INFO : Epoch #57 (stage: None)
+2021-09-28 21:20:41,451 | INFO : 	 train_acc: 95.246; train_loss: 0.162; test_loss: 30.817; lr: [0.01]
+2021-09-28 21:20:41,451 | INFO : 	 test_acc: 90.5 (best: 90.81 from #49)
+2021-09-28 21:21:57,417 | INFO : Epoch #58 (stage: None)
+2021-09-28 21:21:57,418 | INFO : 	 train_acc: 95.17; train_loss: 0.037; test_loss: 33.527; lr: [0.01]
+2021-09-28 21:21:57,418 | INFO : 	 test_acc: 89.94 (best: 90.81 from #49)
+2021-09-28 21:23:13,173 | INFO : Epoch #59 (stage: None)
+2021-09-28 21:23:13,173 | INFO : 	 train_acc: 95.106; train_loss: 0.100; test_loss: 37.629; lr: [0.01]
+2021-09-28 21:23:13,174 | INFO : 	 test_acc: 88.74 (best: 90.81 from #49)
+2021-09-28 21:24:28,989 | INFO : Epoch #60 (stage: None)
+2021-09-28 21:24:28,990 | INFO : 	 train_acc: 95.04; train_loss: 0.223; test_loss: 31.750; lr: [0.01]
+2021-09-28 21:24:28,990 | INFO : 	 test_acc: 90.32 (best: 90.81 from #49)
+2021-09-28 21:25:44,896 | INFO : Epoch #61 (stage: None)
+2021-09-28 21:25:44,896 | INFO : 	 train_acc: 95.214; train_loss: 0.119; test_loss: 31.836; lr: [0.01]
+2021-09-28 21:25:44,897 | INFO : 	 test_acc: 90.39 (best: 90.81 from #49)
+2021-09-28 21:27:01,639 | INFO : Epoch #62 (stage: None)
+2021-09-28 21:27:01,639 | INFO : 	 train_acc: 95.03; train_loss: 0.037; test_loss: 38.981; lr: [0.01]
+2021-09-28 21:27:01,640 | INFO : 	 test_acc: 88.57 (best: 90.81 from #49)
+2021-09-28 21:28:18,372 | INFO : Epoch #63 (stage: None)
+2021-09-28 21:28:18,373 | INFO : 	 train_acc: 95.234; train_loss: 0.112; test_loss: 33.199; lr: [0.01]
+2021-09-28 21:28:18,373 | INFO : 	 test_acc: 90.24 (best: 90.81 from #49)
+2021-09-28 21:29:34,717 | INFO : Epoch #64 (stage: None)
+2021-09-28 21:29:34,717 | INFO : 	 train_acc: 95.134; train_loss: 0.297; test_loss: 36.048; lr: [0.01]
+2021-09-28 21:29:34,717 | INFO : 	 test_acc: 89.38 (best: 90.81 from #49)
+2021-09-28 21:30:50,539 | INFO : Epoch #65 (stage: None)
+2021-09-28 21:30:50,540 | INFO : 	 train_acc: 95.052; train_loss: 0.053; test_loss: 35.088; lr: [0.01]
+2021-09-28 21:30:50,540 | INFO : 	 test_acc: 89.49 (best: 90.81 from #49)
+2021-09-28 21:32:06,121 | INFO : Epoch #66 (stage: None)
+2021-09-28 21:32:06,122 | INFO : 	 train_acc: 95.22; train_loss: 0.507; test_loss: 37.872; lr: [0.01]
+2021-09-28 21:32:06,122 | INFO : 	 test_acc: 88.9 (best: 90.81 from #49)
+2021-09-28 21:33:22,035 | INFO : Epoch #67 (stage: None)
+2021-09-28 21:33:22,036 | INFO : 	 train_acc: 95.066; train_loss: 0.130; test_loss: 52.039; lr: [0.01]
+2021-09-28 21:33:22,036 | INFO : 	 test_acc: 86.1 (best: 90.81 from #49)
+2021-09-28 21:34:37,854 | INFO : Epoch #68 (stage: None)
+2021-09-28 21:34:37,855 | INFO : 	 train_acc: 95.124; train_loss: 0.107; test_loss: 30.342; lr: [0.01]
+2021-09-28 21:34:37,855 | INFO : 	 test_acc: 90.75 (best: 90.81 from #49)
+2021-09-28 21:35:54,581 | INFO : Epoch #69 (stage: None)
+2021-09-28 21:35:54,582 | INFO : 	 train_acc: 95.364; train_loss: 0.035; test_loss: 37.527; lr: [0.01]
+2021-09-28 21:35:54,582 | INFO : 	 test_acc: 88.64 (best: 90.81 from #49)
+2021-09-28 21:37:11,111 | INFO : Epoch #70 (stage: None)
+2021-09-28 21:37:11,111 | INFO : 	 train_acc: 95.206; train_loss: 0.048; test_loss: 33.880; lr: [0.01]
+2021-09-28 21:37:11,111 | INFO : 	 test_acc: 90.25 (best: 90.81 from #49)
+2021-09-28 21:38:27,662 | INFO : Epoch #71 (stage: None)
+2021-09-28 21:38:27,663 | INFO : 	 train_acc: 95.474; train_loss: 0.095; test_loss: 37.525; lr: [0.01]
+2021-09-28 21:38:27,663 | INFO : 	 test_acc: 89.52 (best: 90.81 from #49)
+2021-09-28 21:39:44,163 | INFO : Epoch #72 (stage: None)
+2021-09-28 21:39:44,164 | INFO : 	 train_acc: 95.024; train_loss: 0.455; test_loss: 34.899; lr: [0.01]
+2021-09-28 21:39:44,164 | INFO : 	 test_acc: 89.6 (best: 90.81 from #49)
+2021-09-28 21:41:00,493 | INFO : Epoch #73 (stage: None)
+2021-09-28 21:41:00,493 | INFO : 	 train_acc: 95.288; train_loss: 0.116; test_loss: 32.525; lr: [0.01]
+2021-09-28 21:41:00,494 | INFO : 	 test_acc: 89.8 (best: 90.81 from #49)
+2021-09-28 21:42:16,817 | INFO : Epoch #74 (stage: None)
+2021-09-28 21:42:16,817 | INFO : 	 train_acc: 95.292; train_loss: 0.653; test_loss: 37.419; lr: [0.01]
+2021-09-28 21:42:16,817 | INFO : 	 test_acc: 89.16 (best: 90.81 from #49)
+2021-09-28 21:43:32,525 | INFO : Epoch #75 (stage: None)
+2021-09-28 21:43:32,526 | INFO : 	 train_acc: 95.154; train_loss: 0.108; test_loss: 32.961; lr: [0.01]
+2021-09-28 21:43:32,526 | INFO : 	 test_acc: 90.22 (best: 90.81 from #49)
+2021-09-28 21:44:47,535 | INFO : Epoch #76 (stage: None)
+2021-09-28 21:44:47,536 | INFO : 	 train_acc: 95.224; train_loss: 0.142; test_loss: 29.964; lr: [0.01]
+2021-09-28 21:44:47,536 | INFO : 	 test_acc: 90.81 (best: 90.81 from #76)
+2021-09-28 21:46:03,214 | INFO : Epoch #77 (stage: None)
+2021-09-28 21:46:03,215 | INFO : 	 train_acc: 95.352; train_loss: 0.868; test_loss: 43.544; lr: [0.01]
+2021-09-28 21:46:03,215 | INFO : 	 test_acc: 87.67 (best: 90.81 from #76)
+2021-09-28 21:47:19,539 | INFO : Epoch #78 (stage: None)
+2021-09-28 21:47:19,539 | INFO : 	 train_acc: 95.096; train_loss: 0.240; test_loss: 36.776; lr: [0.01]
+2021-09-28 21:47:19,540 | INFO : 	 test_acc: 88.7 (best: 90.81 from #76)
+2021-09-28 21:48:35,812 | INFO : Epoch #79 (stage: None)
+2021-09-28 21:48:35,812 | INFO : 	 train_acc: 95.184; train_loss: 0.192; test_loss: 35.428; lr: [0.01]
+2021-09-28 21:48:35,812 | INFO : 	 test_acc: 89.39 (best: 90.81 from #76)
+2021-09-28 21:49:52,853 | INFO : Epoch #80 (stage: None)
+2021-09-28 21:49:52,854 | INFO : 	 train_acc: 95.206; train_loss: 0.387; test_loss: 32.650; lr: [0.01]
+2021-09-28 21:49:52,854 | INFO : 	 test_acc: 90.25 (best: 90.81 from #76)
+2021-09-28 21:51:08,083 | INFO : Epoch #81 (stage: None)
+2021-09-28 21:51:08,083 | INFO : 	 train_acc: 95.158; train_loss: 0.198; test_loss: 34.922; lr: [0.01]
+2021-09-28 21:51:08,083 | INFO : 	 test_acc: 89.4 (best: 90.81 from #76)
+2021-09-28 21:52:23,124 | INFO : Epoch #82 (stage: None)
+2021-09-28 21:52:23,125 | INFO : 	 train_acc: 95.328; train_loss: 0.035; test_loss: 33.429; lr: [0.01]
+2021-09-28 21:52:23,125 | INFO : 	 test_acc: 90.06 (best: 90.81 from #76)
+2021-09-28 21:53:38,082 | INFO : Epoch #83 (stage: None)
+2021-09-28 21:53:38,082 | INFO : 	 train_acc: 95.338; train_loss: 0.060; test_loss: 48.330; lr: [0.01]
+2021-09-28 21:53:38,082 | INFO : 	 test_acc: 86.36 (best: 90.81 from #76)
+2021-09-28 21:54:52,959 | INFO : Epoch #84 (stage: None)
+2021-09-28 21:54:52,959 | INFO : 	 train_acc: 95.182; train_loss: 0.311; test_loss: 36.595; lr: [0.01]
+2021-09-28 21:54:52,960 | INFO : 	 test_acc: 89.22 (best: 90.81 from #76)
+2021-09-28 21:56:08,535 | INFO : Epoch #85 (stage: None)
+2021-09-28 21:56:08,536 | INFO : 	 train_acc: 95.308; train_loss: 0.088; test_loss: 35.822; lr: [0.01]
+2021-09-28 21:56:08,536 | INFO : 	 test_acc: 89.47 (best: 90.81 from #76)
+2021-09-28 21:57:24,680 | INFO : Epoch #86 (stage: None)
+2021-09-28 21:57:24,680 | INFO : 	 train_acc: 95.446; train_loss: 0.088; test_loss: 32.672; lr: [0.01]
+2021-09-28 21:57:24,681 | INFO : 	 test_acc: 90.3 (best: 90.81 from #76)
+2021-09-28 21:58:41,155 | INFO : Epoch #87 (stage: None)
+2021-09-28 21:58:41,156 | INFO : 	 train_acc: 95.41; train_loss: 0.035; test_loss: 38.586; lr: [0.01]
+2021-09-28 21:58:41,156 | INFO : 	 test_acc: 88.72 (best: 90.81 from #76)
+2021-09-28 21:59:57,482 | INFO : Epoch #88 (stage: None)
+2021-09-28 21:59:57,483 | INFO : 	 train_acc: 95.434; train_loss: 0.842; test_loss: 31.299; lr: [0.01]
+2021-09-28 21:59:57,483 | INFO : 	 test_acc: 90.49 (best: 90.81 from #76)
+2021-09-28 22:01:13,657 | INFO : Epoch #89 (stage: None)
+2021-09-28 22:01:13,658 | INFO : 	 train_acc: 95.308; train_loss: 0.251; test_loss: 32.232; lr: [0.01]
+2021-09-28 22:01:13,658 | INFO : 	 test_acc: 90.23 (best: 90.81 from #76)
+2021-09-28 22:02:29,560 | INFO : Epoch #90 (stage: None)
+2021-09-28 22:02:29,560 | INFO : 	 train_acc: 95.422; train_loss: 0.045; test_loss: 38.440; lr: [0.01]
+2021-09-28 22:02:29,561 | INFO : 	 test_acc: 89.04 (best: 90.81 from #76)
+2021-09-28 22:03:46,158 | INFO : Epoch #91 (stage: None)
+2021-09-28 22:03:46,158 | INFO : 	 train_acc: 95.336; train_loss: 0.466; test_loss: 34.770; lr: [0.01]
+2021-09-28 22:03:46,159 | INFO : 	 test_acc: 89.4 (best: 90.81 from #76)
+2021-09-28 22:05:02,852 | INFO : Epoch #92 (stage: None)
+2021-09-28 22:05:02,853 | INFO : 	 train_acc: 95.154; train_loss: 0.446; test_loss: 34.998; lr: [0.01]
+2021-09-28 22:05:02,853 | INFO : 	 test_acc: 89.51 (best: 90.81 from #76)
+2021-09-28 22:06:18,668 | INFO : Epoch #93 (stage: None)
+2021-09-28 22:06:18,669 | INFO : 	 train_acc: 95.448; train_loss: 0.156; test_loss: 36.859; lr: [0.01]
+2021-09-28 22:06:18,669 | INFO : 	 test_acc: 89.53 (best: 90.81 from #76)
+2021-09-28 22:07:34,862 | INFO : Epoch #94 (stage: None)
+2021-09-28 22:07:34,862 | INFO : 	 train_acc: 95.332; train_loss: 0.387; test_loss: 32.225; lr: [0.01]
+2021-09-28 22:07:34,862 | INFO : 	 test_acc: 90.42 (best: 90.81 from #76)
+2021-09-28 22:08:51,068 | INFO : Epoch #95 (stage: None)
+2021-09-28 22:08:51,068 | INFO : 	 train_acc: 95.54; train_loss: 0.641; test_loss: 30.924; lr: [0.01]
+2021-09-28 22:08:51,069 | INFO : 	 test_acc: 90.64 (best: 90.81 from #76)
+2021-09-28 22:10:07,416 | INFO : Epoch #96 (stage: None)
+2021-09-28 22:10:07,417 | INFO : 	 train_acc: 95.25; train_loss: 0.391; test_loss: 36.698; lr: [0.01]
+2021-09-28 22:10:07,417 | INFO : 	 test_acc: 89.13 (best: 90.81 from #76)
+2021-09-28 22:11:22,675 | INFO : Epoch #97 (stage: None)
+2021-09-28 22:11:22,675 | INFO : 	 train_acc: 95.214; train_loss: 0.118; test_loss: 38.328; lr: [0.01]
+2021-09-28 22:11:22,676 | INFO : 	 test_acc: 88.3 (best: 90.81 from #76)
+2021-09-28 22:12:37,761 | INFO : Epoch #98 (stage: None)
+2021-09-28 22:12:37,761 | INFO : 	 train_acc: 95.406; train_loss: 0.136; test_loss: 36.630; lr: [0.01]
+2021-09-28 22:12:37,761 | INFO : 	 test_acc: 89.09 (best: 90.81 from #76)
+2021-09-28 22:13:52,715 | INFO : Epoch #99 (stage: None)
+2021-09-28 22:13:52,715 | INFO : 	 train_acc: 95.45; train_loss: 0.436; test_loss: 31.693; lr: [0.01]
+2021-09-28 22:13:52,715 | INFO : 	 test_acc: 90.68 (best: 90.81 from #76)
+2021-09-28 22:15:07,786 | INFO : Epoch #100 (stage: None)
+2021-09-28 22:15:07,787 | INFO : 	 train_acc: 98.02; train_loss: 0.131; test_loss: 22.111; lr: [0.001]
+2021-09-28 22:15:07,787 | INFO : 	 test_acc: 93.44 (best: 93.44 from #100)
+2021-09-28 22:16:23,635 | INFO : Epoch #101 (stage: None)
+2021-09-28 22:16:23,635 | INFO : 	 train_acc: 98.892; train_loss: 0.064; test_loss: 21.500; lr: [0.001]
+2021-09-28 22:16:23,635 | INFO : 	 test_acc: 93.59 (best: 93.59 from #101)
+2021-09-28 22:17:40,208 | INFO : Epoch #102 (stage: None)
+2021-09-28 22:17:40,209 | INFO : 	 train_acc: 99.104; train_loss: 0.057; test_loss: 21.536; lr: [0.001]
+2021-09-28 22:17:40,209 | INFO : 	 test_acc: 93.94 (best: 93.94 from #102)
+2021-09-28 22:18:56,684 | INFO : Epoch #103 (stage: None)
+2021-09-28 22:18:56,685 | INFO : 	 train_acc: 99.236; train_loss: 0.015; test_loss: 21.836; lr: [0.001]
+2021-09-28 22:18:56,685 | INFO : 	 test_acc: 93.95 (best: 93.95 from #103)
+2021-09-28 22:20:13,244 | INFO : Epoch #104 (stage: None)
+2021-09-28 22:20:13,245 | INFO : 	 train_acc: 99.38; train_loss: 0.210; test_loss: 21.689; lr: [0.001]
+2021-09-28 22:20:13,245 | INFO : 	 test_acc: 94.15 (best: 94.15 from #104)
+2021-09-28 22:21:28,248 | INFO : Epoch #105 (stage: None)
+2021-09-28 22:21:28,248 | INFO : 	 train_acc: 99.444; train_loss: 0.055; test_loss: 21.518; lr: [0.001]
+2021-09-28 22:21:28,248 | INFO : 	 test_acc: 94.21 (best: 94.21 from #105)
+2021-09-28 22:22:43,110 | INFO : Epoch #106 (stage: None)
+2021-09-28 22:22:43,111 | INFO : 	 train_acc: 99.498; train_loss: 0.076; test_loss: 22.120; lr: [0.001]
+2021-09-28 22:22:43,111 | INFO : 	 test_acc: 94.08 (best: 94.21 from #105)
+2021-09-28 22:23:58,061 | INFO : Epoch #107 (stage: None)
+2021-09-28 22:23:58,062 | INFO : 	 train_acc: 99.492; train_loss: 0.004; test_loss: 22.527; lr: [0.001]
+2021-09-28 22:23:58,062 | INFO : 	 test_acc: 93.89 (best: 94.21 from #105)
+2021-09-28 22:25:13,082 | INFO : Epoch #108 (stage: None)
+2021-09-28 22:25:13,082 | INFO : 	 train_acc: 99.58; train_loss: 0.029; test_loss: 22.866; lr: [0.001]
+2021-09-28 22:25:13,083 | INFO : 	 test_acc: 94.07 (best: 94.21 from #105)
+2021-09-28 22:26:28,998 | INFO : Epoch #109 (stage: None)
+2021-09-28 22:26:28,999 | INFO : 	 train_acc: 99.624; train_loss: 0.013; test_loss: 22.810; lr: [0.001]
+2021-09-28 22:26:28,999 | INFO : 	 test_acc: 94.08 (best: 94.21 from #105)
+2021-09-28 22:27:45,538 | INFO : Epoch #110 (stage: None)
+2021-09-28 22:27:45,538 | INFO : 	 train_acc: 99.628; train_loss: 0.007; test_loss: 23.038; lr: [0.001]
+2021-09-28 22:27:45,538 | INFO : 	 test_acc: 94.16 (best: 94.21 from #105)
+2021-09-28 22:29:01,978 | INFO : Epoch #111 (stage: None)
+2021-09-28 22:29:01,978 | INFO : 	 train_acc: 99.728; train_loss: 0.122; test_loss: 22.995; lr: [0.001]
+2021-09-28 22:29:01,979 | INFO : 	 test_acc: 94.12 (best: 94.21 from #105)
+2021-09-28 22:30:18,604 | INFO : Epoch #112 (stage: None)
+2021-09-28 22:30:18,605 | INFO : 	 train_acc: 99.672; train_loss: 0.012; test_loss: 23.099; lr: [0.001]
+2021-09-28 22:30:18,605 | INFO : 	 test_acc: 94.13 (best: 94.21 from #105)
+2021-09-28 22:31:34,029 | INFO : Epoch #113 (stage: None)
+2021-09-28 22:31:34,030 | INFO : 	 train_acc: 99.71; train_loss: 0.001; test_loss: 23.463; lr: [0.001]
+2021-09-28 22:31:34,030 | INFO : 	 test_acc: 94.08 (best: 94.21 from #105)
+2021-09-28 22:32:49,282 | INFO : Epoch #114 (stage: None)
+2021-09-28 22:32:49,282 | INFO : 	 train_acc: 99.704; train_loss: 0.003; test_loss: 23.387; lr: [0.001]
+2021-09-28 22:32:49,283 | INFO : 	 test_acc: 94.19 (best: 94.21 from #105)
+2021-09-28 22:34:04,509 | INFO : Epoch #115 (stage: None)
+2021-09-28 22:34:04,510 | INFO : 	 train_acc: 99.716; train_loss: 0.001; test_loss: 23.766; lr: [0.001]
+2021-09-28 22:34:04,510 | INFO : 	 test_acc: 94.17 (best: 94.21 from #105)
+2021-09-28 22:35:19,469 | INFO : Epoch #116 (stage: None)
+2021-09-28 22:35:19,469 | INFO : 	 train_acc: 99.722; train_loss: 0.071; test_loss: 23.842; lr: [0.001]
+2021-09-28 22:35:19,469 | INFO : 	 test_acc: 94.14 (best: 94.21 from #105)
+2021-09-28 22:36:35,594 | INFO : Epoch #117 (stage: None)
+2021-09-28 22:36:35,594 | INFO : 	 train_acc: 99.728; train_loss: 0.018; test_loss: 24.094; lr: [0.001]
+2021-09-28 22:36:35,595 | INFO : 	 test_acc: 94.1 (best: 94.21 from #105)
+2021-09-28 22:37:52,132 | INFO : Epoch #118 (stage: None)
+2021-09-28 22:37:52,132 | INFO : 	 train_acc: 99.768; train_loss: 0.009; test_loss: 23.484; lr: [0.001]
+2021-09-28 22:37:52,133 | INFO : 	 test_acc: 94.25 (best: 94.25 from #118)
+2021-09-28 22:39:08,506 | INFO : Epoch #119 (stage: None)
+2021-09-28 22:39:08,507 | INFO : 	 train_acc: 99.792; train_loss: 0.011; test_loss: 23.761; lr: [0.001]
+2021-09-28 22:39:08,507 | INFO : 	 test_acc: 94.32 (best: 94.32 from #119)
+2021-09-28 22:40:24,887 | INFO : Epoch #120 (stage: None)
+2021-09-28 22:40:24,888 | INFO : 	 train_acc: 99.816; train_loss: 0.006; test_loss: 23.865; lr: [0.001]
+2021-09-28 22:40:24,888 | INFO : 	 test_acc: 94.22 (best: 94.32 from #119)
+2021-09-28 22:41:39,974 | INFO : Epoch #121 (stage: None)
+2021-09-28 22:41:39,975 | INFO : 	 train_acc: 99.798; train_loss: 0.003; test_loss: 24.254; lr: [0.001]
+2021-09-28 22:41:39,975 | INFO : 	 test_acc: 94.26 (best: 94.32 from #119)
+2021-09-28 22:42:54,963 | INFO : Epoch #122 (stage: None)
+2021-09-28 22:42:54,963 | INFO : 	 train_acc: 99.828; train_loss: 0.004; test_loss: 24.272; lr: [0.001]
+2021-09-28 22:42:54,963 | INFO : 	 test_acc: 94.22 (best: 94.32 from #119)
+2021-09-28 22:44:09,761 | INFO : Epoch #123 (stage: None)
+2021-09-28 22:44:09,762 | INFO : 	 train_acc: 99.828; train_loss: 0.008; test_loss: 24.337; lr: [0.001]
+2021-09-28 22:44:09,762 | INFO : 	 test_acc: 94.31 (best: 94.32 from #119)
+2021-09-28 22:45:24,681 | INFO : Epoch #124 (stage: None)
+2021-09-28 22:45:24,682 | INFO : 	 train_acc: 99.878; train_loss: 0.001; test_loss: 24.433; lr: [0.001]
+2021-09-28 22:45:24,682 | INFO : 	 test_acc: 94.32 (best: 94.32 from #124)
+2021-09-28 22:46:40,508 | INFO : Epoch #125 (stage: None)
+2021-09-28 22:46:40,509 | INFO : 	 train_acc: 99.858; train_loss: 0.001; test_loss: 24.715; lr: [0.001]
+2021-09-28 22:46:40,509 | INFO : 	 test_acc: 94.32 (best: 94.32 from #125)
+2021-09-28 22:47:56,886 | INFO : Epoch #126 (stage: None)
+2021-09-28 22:47:56,886 | INFO : 	 train_acc: 99.848; train_loss: 0.003; test_loss: 24.844; lr: [0.001]
+2021-09-28 22:47:56,887 | INFO : 	 test_acc: 94.22 (best: 94.32 from #125)
+2021-09-28 22:49:13,325 | INFO : Epoch #127 (stage: None)
+2021-09-28 22:49:13,326 | INFO : 	 train_acc: 99.884; train_loss: 0.001; test_loss: 25.095; lr: [0.001]
+2021-09-28 22:49:13,326 | INFO : 	 test_acc: 94.32 (best: 94.32 from #127)
+2021-09-28 22:50:30,484 | INFO : Epoch #128 (stage: None)
+2021-09-28 22:50:30,485 | INFO : 	 train_acc: 99.834; train_loss: 0.002; test_loss: 25.378; lr: [0.001]
+2021-09-28 22:50:30,485 | INFO : 	 test_acc: 94.22 (best: 94.32 from #127)
+2021-09-28 22:51:45,514 | INFO : Epoch #129 (stage: None)
+2021-09-28 22:51:45,515 | INFO : 	 train_acc: 99.878; train_loss: 0.003; test_loss: 25.444; lr: [0.001]
+2021-09-28 22:51:45,515 | INFO : 	 test_acc: 94.3 (best: 94.32 from #127)
+2021-09-28 22:53:00,462 | INFO : Epoch #130 (stage: None)
+2021-09-28 22:53:00,462 | INFO : 	 train_acc: 99.83; train_loss: 0.010; test_loss: 24.783; lr: [0.001]
+2021-09-28 22:53:00,462 | INFO : 	 test_acc: 94.49 (best: 94.49 from #130)
+2021-09-28 22:54:15,579 | INFO : Epoch #131 (stage: None)
+2021-09-28 22:54:15,580 | INFO : 	 train_acc: 99.844; train_loss: 0.041; test_loss: 24.766; lr: [0.001]
+2021-09-28 22:54:15,580 | INFO : 	 test_acc: 94.28 (best: 94.49 from #130)
+2021-09-28 22:55:30,396 | INFO : Epoch #132 (stage: None)
+2021-09-28 22:55:30,396 | INFO : 	 train_acc: 99.84; train_loss: 0.001; test_loss: 24.759; lr: [0.001]
+2021-09-28 22:55:30,397 | INFO : 	 test_acc: 94.36 (best: 94.49 from #130)
+2021-09-28 22:56:46,240 | INFO : Epoch #133 (stage: None)
+2021-09-28 22:56:46,240 | INFO : 	 train_acc: 99.876; train_loss: 0.009; test_loss: 25.056; lr: [0.001]
+2021-09-28 22:56:46,241 | INFO : 	 test_acc: 94.46 (best: 94.49 from #130)
+2021-09-28 22:58:02,878 | INFO : Epoch #134 (stage: None)
+2021-09-28 22:58:02,879 | INFO : 	 train_acc: 99.868; train_loss: 0.021; test_loss: 24.365; lr: [0.001]
+2021-09-28 22:58:02,879 | INFO : 	 test_acc: 94.25 (best: 94.49 from #130)
+2021-09-28 22:59:19,214 | INFO : Epoch #135 (stage: None)
+2021-09-28 22:59:19,214 | INFO : 	 train_acc: 99.86; train_loss: 0.024; test_loss: 24.731; lr: [0.001]
+2021-09-28 22:59:19,214 | INFO : 	 test_acc: 94.25 (best: 94.49 from #130)
+2021-09-28 23:00:35,200 | INFO : Epoch #136 (stage: None)
+2021-09-28 23:00:35,200 | INFO : 	 train_acc: 99.856; train_loss: 0.011; test_loss: 24.668; lr: [0.001]
+2021-09-28 23:00:35,201 | INFO : 	 test_acc: 94.4 (best: 94.49 from #130)
+2021-09-28 23:01:50,183 | INFO : Epoch #137 (stage: None)
+2021-09-28 23:01:50,183 | INFO : 	 train_acc: 99.882; train_loss: 0.008; test_loss: 24.699; lr: [0.001]
+2021-09-28 23:01:50,184 | INFO : 	 test_acc: 94.4 (best: 94.49 from #130)
+2021-09-28 23:03:05,220 | INFO : Epoch #138 (stage: None)
+2021-09-28 23:03:05,221 | INFO : 	 train_acc: 99.89; train_loss: 0.003; test_loss: 25.141; lr: [0.001]
+2021-09-28 23:03:05,221 | INFO : 	 test_acc: 94.27 (best: 94.49 from #130)
+2021-09-28 23:04:20,153 | INFO : Epoch #139 (stage: None)
+2021-09-28 23:04:20,154 | INFO : 	 train_acc: 99.896; train_loss: 0.132; test_loss: 25.210; lr: [0.001]
+2021-09-28 23:04:20,154 | INFO : 	 test_acc: 94.36 (best: 94.49 from #130)
+2021-09-28 23:05:35,121 | INFO : Epoch #140 (stage: None)
+2021-09-28 23:05:35,122 | INFO : 	 train_acc: 99.818; train_loss: 0.069; test_loss: 25.223; lr: [0.001]
+2021-09-28 23:05:35,122 | INFO : 	 test_acc: 94.25 (best: 94.49 from #130)
+2021-09-28 23:06:51,215 | INFO : Epoch #141 (stage: None)
+2021-09-28 23:06:51,216 | INFO : 	 train_acc: 99.854; train_loss: 0.003; test_loss: 24.960; lr: [0.001]
+2021-09-28 23:06:51,216 | INFO : 	 test_acc: 94.33 (best: 94.49 from #130)
+2021-09-28 23:08:07,504 | INFO : Epoch #142 (stage: None)
+2021-09-28 23:08:07,504 | INFO : 	 train_acc: 99.898; train_loss: 0.007; test_loss: 26.090; lr: [0.001]
+2021-09-28 23:08:07,505 | INFO : 	 test_acc: 94.03 (best: 94.49 from #130)
+2021-09-28 23:09:23,846 | INFO : Epoch #143 (stage: None)
+2021-09-28 23:09:23,846 | INFO : 	 train_acc: 99.91; train_loss: 0.006; test_loss: 25.796; lr: [0.001]
+2021-09-28 23:09:23,847 | INFO : 	 test_acc: 94.26 (best: 94.49 from #130)
+2021-09-28 23:10:39,780 | INFO : Epoch #144 (stage: None)
+2021-09-28 23:10:39,781 | INFO : 	 train_acc: 99.896; train_loss: 0.001; test_loss: 25.340; lr: [0.001]
+2021-09-28 23:10:39,781 | INFO : 	 test_acc: 94.41 (best: 94.49 from #130)
+2021-09-28 23:11:54,600 | INFO : Epoch #145 (stage: None)
+2021-09-28 23:11:54,601 | INFO : 	 train_acc: 99.858; train_loss: 0.006; test_loss: 24.447; lr: [0.001]
+2021-09-28 23:11:54,601 | INFO : 	 test_acc: 94.39 (best: 94.49 from #130)
+2021-09-28 23:13:09,415 | INFO : Epoch #146 (stage: None)
+2021-09-28 23:13:09,415 | INFO : 	 train_acc: 99.898; train_loss: 0.001; test_loss: 25.205; lr: [0.001]
+2021-09-28 23:13:09,415 | INFO : 	 test_acc: 94.37 (best: 94.49 from #130)
+2021-09-28 23:14:24,252 | INFO : Epoch #147 (stage: None)
+2021-09-28 23:14:24,253 | INFO : 	 train_acc: 99.896; train_loss: 0.000; test_loss: 25.724; lr: [0.001]
+2021-09-28 23:14:24,253 | INFO : 	 test_acc: 94.32 (best: 94.49 from #130)
+2021-09-28 23:15:39,159 | INFO : Epoch #148 (stage: None)
+2021-09-28 23:15:39,160 | INFO : 	 train_acc: 99.874; train_loss: 0.001; test_loss: 25.341; lr: [0.001]
+2021-09-28 23:15:39,160 | INFO : 	 test_acc: 94.29 (best: 94.49 from #130)
+2021-09-28 23:16:55,277 | INFO : Epoch #149 (stage: None)
+2021-09-28 23:16:55,278 | INFO : 	 train_acc: 99.882; train_loss: 0.248; test_loss: 25.328; lr: [0.001]
+2021-09-28 23:16:55,278 | INFO : 	 test_acc: 94.48 (best: 94.49 from #130)
+2021-09-28 23:18:11,373 | INFO : Epoch #150 (stage: None)
+2021-09-28 23:18:11,374 | INFO : 	 train_acc: 99.896; train_loss: 0.001; test_loss: 25.343; lr: [0.001]
+2021-09-28 23:18:11,374 | INFO : 	 test_acc: 94.36 (best: 94.49 from #130)
+2021-09-28 23:19:27,769 | INFO : Epoch #151 (stage: None)
+2021-09-28 23:19:27,770 | INFO : 	 train_acc: 99.892; train_loss: 0.357; test_loss: 25.445; lr: [0.001]
+2021-09-28 23:19:27,770 | INFO : 	 test_acc: 94.34 (best: 94.49 from #130)
+2021-09-28 23:20:43,445 | INFO : Epoch #152 (stage: None)
+2021-09-28 23:20:43,445 | INFO : 	 train_acc: 99.928; train_loss: 0.007; test_loss: 25.712; lr: [0.001]
+2021-09-28 23:20:43,445 | INFO : 	 test_acc: 94.49 (best: 94.49 from #152)
+2021-09-28 23:21:58,329 | INFO : Epoch #153 (stage: None)
+2021-09-28 23:21:58,330 | INFO : 	 train_acc: 99.896; train_loss: 0.019; test_loss: 25.853; lr: [0.001]
+2021-09-28 23:21:58,330 | INFO : 	 test_acc: 94.16 (best: 94.49 from #152)
+2021-09-28 23:23:13,316 | INFO : Epoch #154 (stage: None)
+2021-09-28 23:23:13,317 | INFO : 	 train_acc: 99.9; train_loss: 0.015; test_loss: 25.183; lr: [0.001]
+2021-09-28 23:23:13,317 | INFO : 	 test_acc: 94.42 (best: 94.49 from #152)
+2021-09-28 23:24:28,293 | INFO : Epoch #155 (stage: None)
+2021-09-28 23:24:28,294 | INFO : 	 train_acc: 99.894; train_loss: 0.017; test_loss: 24.670; lr: [0.001]
+2021-09-28 23:24:28,294 | INFO : 	 test_acc: 94.47 (best: 94.49 from #152)
+2021-09-28 23:25:43,373 | INFO : Epoch #156 (stage: None)
+2021-09-28 23:25:43,374 | INFO : 	 train_acc: 99.93; train_loss: 0.003; test_loss: 25.323; lr: [0.001]
+2021-09-28 23:25:43,374 | INFO : 	 test_acc: 94.37 (best: 94.49 from #152)
+2021-09-28 23:26:59,230 | INFO : Epoch #157 (stage: None)
+2021-09-28 23:26:59,231 | INFO : 	 train_acc: 99.93; train_loss: 0.003; test_loss: 24.899; lr: [0.001]
+2021-09-28 23:26:59,231 | INFO : 	 test_acc: 94.54 (best: 94.54 from #157)
+2021-09-28 23:28:15,744 | INFO : Epoch #158 (stage: None)
+2021-09-28 23:28:15,744 | INFO : 	 train_acc: 99.924; train_loss: 0.001; test_loss: 25.108; lr: [0.001]
+2021-09-28 23:28:15,745 | INFO : 	 test_acc: 94.49 (best: 94.54 from #157)
+2021-09-28 23:29:32,113 | INFO : Epoch #159 (stage: None)
+2021-09-28 23:29:32,113 | INFO : 	 train_acc: 99.922; train_loss: 0.004; test_loss: 24.856; lr: [0.001]
+2021-09-28 23:29:32,113 | INFO : 	 test_acc: 94.64 (best: 94.64 from #159)
+2021-09-28 23:30:48,039 | INFO : Epoch #160 (stage: None)
+2021-09-28 23:30:48,040 | INFO : 	 train_acc: 99.898; train_loss: 0.007; test_loss: 24.629; lr: [0.001]
+2021-09-28 23:30:48,040 | INFO : 	 test_acc: 94.53 (best: 94.64 from #159)
+2021-09-28 23:32:02,927 | INFO : Epoch #161 (stage: None)
+2021-09-28 23:32:02,927 | INFO : 	 train_acc: 99.888; train_loss: 0.007; test_loss: 25.061; lr: [0.001]
+2021-09-28 23:32:02,928 | INFO : 	 test_acc: 94.28 (best: 94.64 from #159)
+2021-09-28 23:33:17,825 | INFO : Epoch #162 (stage: None)
+2021-09-28 23:33:17,826 | INFO : 	 train_acc: 99.896; train_loss: 0.005; test_loss: 25.720; lr: [0.001]
+2021-09-28 23:33:17,826 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-28 23:34:32,633 | INFO : Epoch #163 (stage: None)
+2021-09-28 23:34:32,633 | INFO : 	 train_acc: 99.928; train_loss: 0.004; test_loss: 25.557; lr: [0.001]
+2021-09-28 23:34:32,633 | INFO : 	 test_acc: 94.36 (best: 94.64 from #159)
+2021-09-28 23:35:47,803 | INFO : Epoch #164 (stage: None)
+2021-09-28 23:35:47,803 | INFO : 	 train_acc: 99.92; train_loss: 0.003; test_loss: 26.173; lr: [0.001]
+2021-09-28 23:35:47,803 | INFO : 	 test_acc: 94.39 (best: 94.64 from #159)
+2021-09-28 23:37:03,957 | INFO : Epoch #165 (stage: None)
+2021-09-28 23:37:03,957 | INFO : 	 train_acc: 99.914; train_loss: 0.019; test_loss: 25.988; lr: [0.001]
+2021-09-28 23:37:03,957 | INFO : 	 test_acc: 94.46 (best: 94.64 from #159)
+2021-09-28 23:38:20,251 | INFO : Epoch #166 (stage: None)
+2021-09-28 23:38:20,252 | INFO : 	 train_acc: 99.918; train_loss: 0.006; test_loss: 26.687; lr: [0.001]
+2021-09-28 23:38:20,252 | INFO : 	 test_acc: 94.33 (best: 94.64 from #159)
+2021-09-28 23:39:36,608 | INFO : Epoch #167 (stage: None)
+2021-09-28 23:39:36,609 | INFO : 	 train_acc: 99.926; train_loss: 0.026; test_loss: 26.876; lr: [0.001]
+2021-09-28 23:39:36,609 | INFO : 	 test_acc: 94.23 (best: 94.64 from #159)
+2021-09-28 23:40:52,649 | INFO : Epoch #168 (stage: None)
+2021-09-28 23:40:52,650 | INFO : 	 train_acc: 99.934; train_loss: 0.058; test_loss: 27.298; lr: [0.001]
+2021-09-28 23:40:52,650 | INFO : 	 test_acc: 94.07 (best: 94.64 from #159)
+2021-09-28 23:42:07,754 | INFO : Epoch #169 (stage: None)
+2021-09-28 23:42:07,754 | INFO : 	 train_acc: 99.902; train_loss: 0.004; test_loss: 26.573; lr: [0.001]
+2021-09-28 23:42:07,754 | INFO : 	 test_acc: 94.28 (best: 94.64 from #159)
+2021-09-28 23:43:22,556 | INFO : Epoch #170 (stage: None)
+2021-09-28 23:43:22,557 | INFO : 	 train_acc: 99.926; train_loss: 0.004; test_loss: 26.204; lr: [0.001]
+2021-09-28 23:43:22,557 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-28 23:44:37,497 | INFO : Epoch #171 (stage: None)
+2021-09-28 23:44:37,498 | INFO : 	 train_acc: 99.908; train_loss: 0.018; test_loss: 26.383; lr: [0.001]
+2021-09-28 23:44:37,498 | INFO : 	 test_acc: 94.15 (best: 94.64 from #159)
+2021-09-28 23:45:52,683 | INFO : Epoch #172 (stage: None)
+2021-09-28 23:45:52,684 | INFO : 	 train_acc: 99.932; train_loss: 0.010; test_loss: 27.137; lr: [0.001]
+2021-09-28 23:45:52,684 | INFO : 	 test_acc: 94.11 (best: 94.64 from #159)
+2021-09-28 23:47:08,805 | INFO : Epoch #173 (stage: None)
+2021-09-28 23:47:08,805 | INFO : 	 train_acc: 99.908; train_loss: 0.034; test_loss: 26.482; lr: [0.001]
+2021-09-28 23:47:08,806 | INFO : 	 test_acc: 94.3 (best: 94.64 from #159)
+2021-09-28 23:48:25,180 | INFO : Epoch #174 (stage: None)
+2021-09-28 23:48:25,180 | INFO : 	 train_acc: 99.916; train_loss: 0.002; test_loss: 27.220; lr: [0.001]
+2021-09-28 23:48:25,180 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-28 23:49:41,726 | INFO : Epoch #175 (stage: None)
+2021-09-28 23:49:41,726 | INFO : 	 train_acc: 99.928; train_loss: 0.001; test_loss: 26.790; lr: [0.001]
+2021-09-28 23:49:41,727 | INFO : 	 test_acc: 94.31 (best: 94.64 from #159)
+2021-09-28 23:50:57,459 | INFO : Epoch #176 (stage: None)
+2021-09-28 23:50:57,460 | INFO : 	 train_acc: 99.936; train_loss: 0.002; test_loss: 26.073; lr: [0.001]
+2021-09-28 23:50:57,460 | INFO : 	 test_acc: 94.56 (best: 94.64 from #159)
+2021-09-28 23:52:12,328 | INFO : Epoch #177 (stage: None)
+2021-09-28 23:52:12,328 | INFO : 	 train_acc: 99.932; train_loss: 0.010; test_loss: 26.469; lr: [0.001]
+2021-09-28 23:52:12,328 | INFO : 	 test_acc: 94.21 (best: 94.64 from #159)
+2021-09-28 23:53:27,026 | INFO : Epoch #178 (stage: None)
+2021-09-28 23:53:27,026 | INFO : 	 train_acc: 99.912; train_loss: 0.003; test_loss: 27.019; lr: [0.001]
+2021-09-28 23:53:27,026 | INFO : 	 test_acc: 94.26 (best: 94.64 from #159)
+2021-09-28 23:54:42,338 | INFO : Epoch #179 (stage: None)
+2021-09-28 23:54:42,339 | INFO : 	 train_acc: 99.916; train_loss: 0.002; test_loss: 26.222; lr: [0.001]
+2021-09-28 23:54:42,339 | INFO : 	 test_acc: 94.39 (best: 94.64 from #159)
+2021-09-28 23:55:57,581 | INFO : Epoch #180 (stage: None)
+2021-09-28 23:55:57,582 | INFO : 	 train_acc: 99.932; train_loss: 0.009; test_loss: 27.981; lr: [0.001]
+2021-09-28 23:55:57,582 | INFO : 	 test_acc: 94.22 (best: 94.64 from #159)
+2021-09-28 23:57:13,715 | INFO : Epoch #181 (stage: None)
+2021-09-28 23:57:13,716 | INFO : 	 train_acc: 99.91; train_loss: 0.001; test_loss: 26.659; lr: [0.001]
+2021-09-28 23:57:13,716 | INFO : 	 test_acc: 94.3 (best: 94.64 from #159)
+2021-09-28 23:58:30,029 | INFO : Epoch #182 (stage: None)
+2021-09-28 23:58:30,029 | INFO : 	 train_acc: 99.92; train_loss: 0.014; test_loss: 26.572; lr: [0.001]
+2021-09-28 23:58:30,030 | INFO : 	 test_acc: 94.36 (best: 94.64 from #159)
+2021-09-28 23:59:46,717 | INFO : Epoch #183 (stage: None)
+2021-09-28 23:59:46,718 | INFO : 	 train_acc: 99.898; train_loss: 0.063; test_loss: 26.430; lr: [0.001]
+2021-09-28 23:59:46,718 | INFO : 	 test_acc: 94.26 (best: 94.64 from #159)
+2021-09-29 00:01:02,265 | INFO : Epoch #184 (stage: None)
+2021-09-29 00:01:02,265 | INFO : 	 train_acc: 99.894; train_loss: 0.046; test_loss: 26.782; lr: [0.001]
+2021-09-29 00:01:02,266 | INFO : 	 test_acc: 94.41 (best: 94.64 from #159)
+2021-09-29 00:02:17,584 | INFO : Epoch #185 (stage: None)
+2021-09-29 00:02:17,585 | INFO : 	 train_acc: 99.866; train_loss: 0.001; test_loss: 26.889; lr: [0.001]
+2021-09-29 00:02:17,585 | INFO : 	 test_acc: 94.16 (best: 94.64 from #159)
+2021-09-29 00:03:32,291 | INFO : Epoch #186 (stage: None)
+2021-09-29 00:03:32,292 | INFO : 	 train_acc: 99.866; train_loss: 0.003; test_loss: 27.394; lr: [0.001]
+2021-09-29 00:03:32,292 | INFO : 	 test_acc: 93.99 (best: 94.64 from #159)
+2021-09-29 00:04:47,404 | INFO : Epoch #187 (stage: None)
+2021-09-29 00:04:47,404 | INFO : 	 train_acc: 99.946; train_loss: 0.039; test_loss: 26.531; lr: [0.001]
+2021-09-29 00:04:47,405 | INFO : 	 test_acc: 94.24 (best: 94.64 from #159)
+2021-09-29 00:06:02,792 | INFO : Epoch #188 (stage: None)
+2021-09-29 00:06:02,792 | INFO : 	 train_acc: 99.898; train_loss: 0.003; test_loss: 26.895; lr: [0.001]
+2021-09-29 00:06:02,793 | INFO : 	 test_acc: 94.3 (best: 94.64 from #159)
+2021-09-29 00:07:19,091 | INFO : Epoch #189 (stage: None)
+2021-09-29 00:07:19,092 | INFO : 	 train_acc: 99.93; train_loss: 0.153; test_loss: 26.874; lr: [0.001]
+2021-09-29 00:07:19,092 | INFO : 	 test_acc: 94.26 (best: 94.64 from #159)
+2021-09-29 00:08:35,549 | INFO : Epoch #190 (stage: None)
+2021-09-29 00:08:35,550 | INFO : 	 train_acc: 99.868; train_loss: 0.007; test_loss: 27.637; lr: [0.001]
+2021-09-29 00:08:35,550 | INFO : 	 test_acc: 94.09 (best: 94.64 from #159)
+2021-09-29 00:09:52,219 | INFO : Epoch #191 (stage: None)
+2021-09-29 00:09:52,220 | INFO : 	 train_acc: 99.89; train_loss: 0.027; test_loss: 27.447; lr: [0.001]
+2021-09-29 00:09:52,220 | INFO : 	 test_acc: 94.17 (best: 94.64 from #159)
+2021-09-29 00:11:07,613 | INFO : Epoch #192 (stage: None)
+2021-09-29 00:11:07,613 | INFO : 	 train_acc: 99.892; train_loss: 0.184; test_loss: 26.886; lr: [0.001]
+2021-09-29 00:11:07,614 | INFO : 	 test_acc: 94.41 (best: 94.64 from #159)
+2021-09-29 00:12:22,640 | INFO : Epoch #193 (stage: None)
+2021-09-29 00:12:22,641 | INFO : 	 train_acc: 99.854; train_loss: 0.224; test_loss: 27.243; lr: [0.001]
+2021-09-29 00:12:22,641 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-29 00:13:37,536 | INFO : Epoch #194 (stage: None)
+2021-09-29 00:13:37,537 | INFO : 	 train_acc: 99.852; train_loss: 0.009; test_loss: 26.861; lr: [0.001]
+2021-09-29 00:13:37,537 | INFO : 	 test_acc: 94.12 (best: 94.64 from #159)
+2021-09-29 00:14:52,413 | INFO : Epoch #195 (stage: None)
+2021-09-29 00:14:52,413 | INFO : 	 train_acc: 99.912; train_loss: 0.006; test_loss: 26.839; lr: [0.001]
+2021-09-29 00:14:52,414 | INFO : 	 test_acc: 94.44 (best: 94.64 from #159)
+2021-09-29 00:16:07,871 | INFO : Epoch #196 (stage: None)
+2021-09-29 00:16:07,871 | INFO : 	 train_acc: 99.88; train_loss: 0.031; test_loss: 26.836; lr: [0.001]
+2021-09-29 00:16:07,871 | INFO : 	 test_acc: 94.49 (best: 94.64 from #159)
+2021-09-29 00:17:24,310 | INFO : Epoch #197 (stage: None)
+2021-09-29 00:17:24,310 | INFO : 	 train_acc: 99.884; train_loss: 0.032; test_loss: 27.194; lr: [0.001]
+2021-09-29 00:17:24,311 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-29 00:18:40,537 | INFO : Epoch #198 (stage: None)
+2021-09-29 00:18:40,538 | INFO : 	 train_acc: 99.902; train_loss: 0.001; test_loss: 27.325; lr: [0.001]
+2021-09-29 00:18:40,538 | INFO : 	 test_acc: 94.35 (best: 94.64 from #159)
+2021-09-29 00:19:57,065 | INFO : Epoch #199 (stage: None)
+2021-09-29 00:19:57,066 | INFO : 	 train_acc: 99.904; train_loss: 0.003; test_loss: 26.522; lr: [0.001]
+2021-09-29 00:19:57,066 | INFO : 	 test_acc: 94.27 (best: 94.64 from #159)
+2021-09-29 00:21:12,231 | INFO : Epoch #200 (stage: None)
+2021-09-29 00:21:12,231 | INFO : 	 train_acc: 99.918; train_loss: 0.046; test_loss: 26.177; lr: [0.0001]
+2021-09-29 00:21:12,231 | INFO : 	 test_acc: 94.39 (best: 94.64 from #159)
+2021-09-29 00:22:27,234 | INFO : Epoch #201 (stage: None)
+2021-09-29 00:22:27,234 | INFO : 	 train_acc: 99.928; train_loss: 0.004; test_loss: 26.379; lr: [0.0001]
+2021-09-29 00:22:27,234 | INFO : 	 test_acc: 94.45 (best: 94.64 from #159)
+2021-09-29 00:23:42,079 | INFO : Epoch #202 (stage: None)
+2021-09-29 00:23:42,080 | INFO : 	 train_acc: 99.938; train_loss: 0.002; test_loss: 25.888; lr: [0.0001]
+2021-09-29 00:23:42,080 | INFO : 	 test_acc: 94.54 (best: 94.64 from #159)
+2021-09-29 00:24:56,947 | INFO : Epoch #203 (stage: None)
+2021-09-29 00:24:56,948 | INFO : 	 train_acc: 99.93; train_loss: 0.001; test_loss: 26.113; lr: [0.0001]
+2021-09-29 00:24:56,948 | INFO : 	 test_acc: 94.5 (best: 94.64 from #159)
+2021-09-29 00:26:12,468 | INFO : Epoch #204 (stage: None)
+2021-09-29 00:26:12,469 | INFO : 	 train_acc: 99.94; train_loss: 0.002; test_loss: 26.344; lr: [0.0001]
+2021-09-29 00:26:12,469 | INFO : 	 test_acc: 94.32 (best: 94.64 from #159)
+2021-09-29 00:27:28,938 | INFO : Epoch #205 (stage: None)
+2021-09-29 00:27:28,939 | INFO : 	 train_acc: 99.95; train_loss: 0.001; test_loss: 25.875; lr: [0.0001]
+2021-09-29 00:27:28,939 | INFO : 	 test_acc: 94.53 (best: 94.64 from #159)
+2021-09-29 00:28:45,112 | INFO : Epoch #206 (stage: None)
+2021-09-29 00:28:45,113 | INFO : 	 train_acc: 99.964; train_loss: 0.002; test_loss: 25.881; lr: [0.0001]
+2021-09-29 00:28:45,113 | INFO : 	 test_acc: 94.56 (best: 94.64 from #159)
+2021-09-29 00:30:01,708 | INFO : Epoch #207 (stage: None)
+2021-09-29 00:30:01,708 | INFO : 	 train_acc: 99.944; train_loss: 0.002; test_loss: 26.040; lr: [0.0001]
+2021-09-29 00:30:01,708 | INFO : 	 test_acc: 94.48 (best: 94.64 from #159)
+2021-09-29 00:31:16,848 | INFO : Epoch #208 (stage: None)
+2021-09-29 00:31:16,849 | INFO : 	 train_acc: 99.966; train_loss: 0.004; test_loss: 26.014; lr: [0.0001]
+2021-09-29 00:31:16,849 | INFO : 	 test_acc: 94.4 (best: 94.64 from #159)
+2021-09-29 00:32:31,842 | INFO : Epoch #209 (stage: None)
+2021-09-29 00:32:31,842 | INFO : 	 train_acc: 99.96; train_loss: 0.056; test_loss: 26.216; lr: [0.0001]
+2021-09-29 00:32:31,842 | INFO : 	 test_acc: 94.45 (best: 94.64 from #159)
+2021-09-29 00:33:46,769 | INFO : Epoch #210 (stage: None)
+2021-09-29 00:33:46,770 | INFO : 	 train_acc: 99.962; train_loss: 0.005; test_loss: 26.151; lr: [0.0001]
+2021-09-29 00:33:46,770 | INFO : 	 test_acc: 94.56 (best: 94.64 from #159)
+2021-09-29 00:35:01,790 | INFO : Epoch #211 (stage: None)
+2021-09-29 00:35:01,791 | INFO : 	 train_acc: 99.968; train_loss: 0.002; test_loss: 25.856; lr: [0.0001]
+2021-09-29 00:35:01,791 | INFO : 	 test_acc: 94.41 (best: 94.64 from #159)
+2021-09-29 00:36:17,447 | INFO : Epoch #212 (stage: None)
+2021-09-29 00:36:17,447 | INFO : 	 train_acc: 99.966; train_loss: 0.001; test_loss: 26.008; lr: [0.0001]
+2021-09-29 00:36:17,447 | INFO : 	 test_acc: 94.51 (best: 94.64 from #159)
+2021-09-29 00:37:33,821 | INFO : Epoch #213 (stage: None)
+2021-09-29 00:37:33,822 | INFO : 	 train_acc: 99.96; train_loss: 0.014; test_loss: 26.145; lr: [0.0001]
+2021-09-29 00:37:33,822 | INFO : 	 test_acc: 94.51 (best: 94.64 from #159)
+2021-09-29 00:38:50,100 | INFO : Epoch #214 (stage: None)
+2021-09-29 00:38:50,100 | INFO : 	 train_acc: 99.954; train_loss: 0.222; test_loss: 26.132; lr: [0.0001]
+2021-09-29 00:38:50,100 | INFO : 	 test_acc: 94.44 (best: 94.64 from #159)
+2021-09-29 00:40:06,672 | INFO : Epoch #215 (stage: None)
+2021-09-29 00:40:06,672 | INFO : 	 train_acc: 99.962; train_loss: 0.004; test_loss: 26.243; lr: [0.0001]
+2021-09-29 00:40:06,672 | INFO : 	 test_acc: 94.49 (best: 94.64 from #159)
+2021-09-29 00:41:21,625 | INFO : Epoch #216 (stage: None)
+2021-09-29 00:41:21,626 | INFO : 	 train_acc: 99.976; train_loss: 0.000; test_loss: 26.250; lr: [0.0001]
+2021-09-29 00:41:21,626 | INFO : 	 test_acc: 94.45 (best: 94.64 from #159)
+2021-09-29 00:42:37,115 | INFO : Epoch #217 (stage: None)
+2021-09-29 00:42:37,116 | INFO : 	 train_acc: 99.972; train_loss: 0.002; test_loss: 25.651; lr: [0.0001]
+2021-09-29 00:42:37,116 | INFO : 	 test_acc: 94.56 (best: 94.64 from #159)
+2021-09-29 00:43:52,077 | INFO : Epoch #218 (stage: None)
+2021-09-29 00:43:52,077 | INFO : 	 train_acc: 99.974; train_loss: 0.004; test_loss: 26.359; lr: [0.0001]
+2021-09-29 00:43:52,077 | INFO : 	 test_acc: 94.5 (best: 94.64 from #159)
+2021-09-29 00:45:07,039 | INFO : Epoch #219 (stage: None)
+2021-09-29 00:45:07,039 | INFO : 	 train_acc: 99.97; train_loss: 0.059; test_loss: 26.419; lr: [0.0001]
+2021-09-29 00:45:07,039 | INFO : 	 test_acc: 94.5 (best: 94.64 from #159)
+2021-09-29 00:46:22,857 | INFO : Epoch #220 (stage: None)
+2021-09-29 00:46:22,858 | INFO : 	 train_acc: 99.966; train_loss: 0.027; test_loss: 25.829; lr: [0.0001]
+2021-09-29 00:46:22,858 | INFO : 	 test_acc: 94.59 (best: 94.64 from #159)
+2021-09-29 00:47:39,455 | INFO : Epoch #221 (stage: None)
+2021-09-29 00:47:39,456 | INFO : 	 train_acc: 99.976; train_loss: 0.072; test_loss: 25.722; lr: [0.0001]
+2021-09-29 00:47:39,456 | INFO : 	 test_acc: 94.56 (best: 94.64 from #159)
+2021-09-29 00:48:55,978 | INFO : Epoch #222 (stage: None)
+2021-09-29 00:48:55,979 | INFO : 	 train_acc: 99.964; train_loss: 0.005; test_loss: 26.047; lr: [0.0001]
+2021-09-29 00:48:55,979 | INFO : 	 test_acc: 94.5 (best: 94.64 from #159)
+2021-09-29 00:50:12,590 | INFO : Epoch #223 (stage: None)
+2021-09-29 00:50:12,590 | INFO : 	 train_acc: 99.968; train_loss: 0.002; test_loss: 25.960; lr: [0.0001]
+2021-09-29 00:50:12,590 | INFO : 	 test_acc: 94.42 (best: 94.64 from #159)
+2021-09-29 00:51:27,772 | INFO : Epoch #224 (stage: None)
+2021-09-29 00:51:27,773 | INFO : 	 train_acc: 99.972; train_loss: 0.045; test_loss: 25.587; lr: [0.0001]
+2021-09-29 00:51:27,773 | INFO : 	 test_acc: 94.52 (best: 94.64 from #159)
+2021-09-29 00:52:42,995 | INFO : Epoch #225 (stage: None)
+2021-09-29 00:52:42,996 | INFO : 	 train_acc: 99.982; train_loss: 0.002; test_loss: 25.818; lr: [0.0001]
+2021-09-29 00:52:42,996 | INFO : 	 test_acc: 94.5 (best: 94.64 from #159)
+2021-09-29 00:53:58,144 | INFO : Epoch #226 (stage: None)
+2021-09-29 00:53:58,145 | INFO : 	 train_acc: 99.954; train_loss: 0.136; test_loss: 25.755; lr: [0.0001]
+2021-09-29 00:53:58,145 | INFO : 	 test_acc: 94.63 (best: 94.64 from #159)
+2021-09-29 00:55:13,316 | INFO : Epoch #227 (stage: None)
+2021-09-29 00:55:13,317 | INFO : 	 train_acc: 99.966; train_loss: 0.090; test_loss: 25.991; lr: [0.0001]
+2021-09-29 00:55:13,317 | INFO : 	 test_acc: 94.59 (best: 94.64 from #159)
+2021-09-29 00:56:29,290 | INFO : Epoch #228 (stage: None)
+2021-09-29 00:56:29,291 | INFO : 	 train_acc: 99.974; train_loss: 0.338; test_loss: 26.458; lr: [0.0001]
+2021-09-29 00:56:29,291 | INFO : 	 test_acc: 94.38 (best: 94.64 from #159)
+2021-09-29 00:57:46,195 | INFO : Epoch #229 (stage: None)
+2021-09-29 00:57:46,196 | INFO : 	 train_acc: 99.96; train_loss: 0.037; test_loss: 25.948; lr: [0.0001]
+2021-09-29 00:57:46,196 | INFO : 	 test_acc: 94.54 (best: 94.64 from #159)
+2021-09-29 00:59:02,824 | INFO : Epoch #230 (stage: None)
+2021-09-29 00:59:02,824 | INFO : 	 train_acc: 99.986; train_loss: 0.003; test_loss: 25.811; lr: [0.0001]
+2021-09-29 00:59:02,824 | INFO : 	 test_acc: 94.73 (best: 94.73 from #230)
+2021-09-29 01:00:19,861 | INFO : Epoch #231 (stage: None)
+2021-09-29 01:00:19,862 | INFO : 	 train_acc: 99.98; train_loss: 0.006; test_loss: 25.885; lr: [0.0001]
+2021-09-29 01:00:19,862 | INFO : 	 test_acc: 94.57 (best: 94.73 from #230)
+2021-09-29 01:01:35,301 | INFO : Epoch #232 (stage: None)
+2021-09-29 01:01:35,302 | INFO : 	 train_acc: 99.984; train_loss: 0.001; test_loss: 25.825; lr: [0.0001]
+2021-09-29 01:01:35,302 | INFO : 	 test_acc: 94.51 (best: 94.73 from #230)
+2021-09-29 01:02:50,282 | INFO : Epoch #233 (stage: None)
+2021-09-29 01:02:50,283 | INFO : 	 train_acc: 99.972; train_loss: 0.003; test_loss: 25.876; lr: [0.0001]
+2021-09-29 01:02:50,283 | INFO : 	 test_acc: 94.48 (best: 94.73 from #230)
+2021-09-29 01:04:05,617 | INFO : Epoch #234 (stage: None)
+2021-09-29 01:04:05,618 | INFO : 	 train_acc: 99.968; train_loss: 0.003; test_loss: 25.823; lr: [0.0001]
+2021-09-29 01:04:05,618 | INFO : 	 test_acc: 94.52 (best: 94.73 from #230)
+2021-09-29 01:05:20,789 | INFO : Epoch #235 (stage: None)
+2021-09-29 01:05:20,790 | INFO : 	 train_acc: 99.974; train_loss: 0.012; test_loss: 25.578; lr: [0.0001]
+2021-09-29 01:05:20,790 | INFO : 	 test_acc: 94.65 (best: 94.73 from #230)
+2021-09-29 01:06:36,966 | INFO : Epoch #236 (stage: None)
+2021-09-29 01:06:36,966 | INFO : 	 train_acc: 99.978; train_loss: 0.001; test_loss: 25.613; lr: [0.0001]
+2021-09-29 01:06:36,967 | INFO : 	 test_acc: 94.56 (best: 94.73 from #230)
+2021-09-29 01:07:53,609 | INFO : Epoch #237 (stage: None)
+2021-09-29 01:07:53,609 | INFO : 	 train_acc: 99.972; train_loss: 0.001; test_loss: 25.704; lr: [0.0001]
+2021-09-29 01:07:53,610 | INFO : 	 test_acc: 94.64 (best: 94.73 from #230)
+2021-09-29 01:09:10,351 | INFO : Epoch #238 (stage: None)
+2021-09-29 01:09:10,351 | INFO : 	 train_acc: 99.972; train_loss: 0.046; test_loss: 25.959; lr: [0.0001]
+2021-09-29 01:09:10,351 | INFO : 	 test_acc: 94.49 (best: 94.73 from #230)
+2021-09-29 01:10:26,876 | INFO : Epoch #239 (stage: None)
+2021-09-29 01:10:26,877 | INFO : 	 train_acc: 99.98; train_loss: 0.007; test_loss: 25.681; lr: [0.0001]
+2021-09-29 01:10:26,877 | INFO : 	 test_acc: 94.6 (best: 94.73 from #230)
+2021-09-29 01:11:42,029 | INFO : Epoch #240 (stage: None)
+2021-09-29 01:11:42,029 | INFO : 	 train_acc: 99.98; train_loss: 0.001; test_loss: 25.752; lr: [0.0001]
+2021-09-29 01:11:42,029 | INFO : 	 test_acc: 94.69 (best: 94.73 from #230)
+2021-09-29 01:12:57,177 | INFO : Epoch #241 (stage: None)
+2021-09-29 01:12:57,177 | INFO : 	 train_acc: 99.976; train_loss: 0.104; test_loss: 25.474; lr: [0.0001]
+2021-09-29 01:12:57,178 | INFO : 	 test_acc: 94.57 (best: 94.73 from #230)
+2021-09-29 01:14:12,273 | INFO : Epoch #242 (stage: None)
+2021-09-29 01:14:12,274 | INFO : 	 train_acc: 99.976; train_loss: 0.001; test_loss: 25.588; lr: [0.0001]
+2021-09-29 01:14:12,274 | INFO : 	 test_acc: 94.55 (best: 94.73 from #230)
+2021-09-29 01:15:27,449 | INFO : Epoch #243 (stage: None)
+2021-09-29 01:15:27,449 | INFO : 	 train_acc: 99.984; train_loss: 0.037; test_loss: 25.834; lr: [0.0001]
+2021-09-29 01:15:27,449 | INFO : 	 test_acc: 94.55 (best: 94.73 from #230)
+2021-09-29 01:16:43,820 | INFO : Epoch #244 (stage: None)
+2021-09-29 01:16:43,821 | INFO : 	 train_acc: 99.974; train_loss: 0.001; test_loss: 25.953; lr: [0.0001]
+2021-09-29 01:16:43,821 | INFO : 	 test_acc: 94.54 (best: 94.73 from #230)
+2021-09-29 01:18:00,472 | INFO : Epoch #245 (stage: None)
+2021-09-29 01:18:00,473 | INFO : 	 train_acc: 99.976; train_loss: 0.004; test_loss: 25.961; lr: [0.0001]
+2021-09-29 01:18:00,473 | INFO : 	 test_acc: 94.5 (best: 94.73 from #230)
+2021-09-29 01:19:16,891 | INFO : Epoch #246 (stage: None)
+2021-09-29 01:19:16,892 | INFO : 	 train_acc: 99.98; train_loss: 0.002; test_loss: 25.826; lr: [0.0001]
+2021-09-29 01:19:16,892 | INFO : 	 test_acc: 94.74 (best: 94.74 from #246)
+2021-09-29 01:20:33,276 | INFO : Epoch #247 (stage: None)
+2021-09-29 01:20:33,277 | INFO : 	 train_acc: 99.968; train_loss: 0.006; test_loss: 25.617; lr: [0.0001]
+2021-09-29 01:20:33,277 | INFO : 	 test_acc: 94.66 (best: 94.74 from #246)
+2021-09-29 01:21:48,415 | INFO : Epoch #248 (stage: None)
+2021-09-29 01:21:48,416 | INFO : 	 train_acc: 99.974; train_loss: 0.053; test_loss: 25.853; lr: [0.0001]
+2021-09-29 01:21:48,416 | INFO : 	 test_acc: 94.68 (best: 94.74 from #246)
+2021-09-29 01:23:03,438 | INFO : Epoch #249 (stage: None)
+2021-09-29 01:23:03,439 | INFO : 	 train_acc: 99.97; train_loss: 0.015; test_loss: 25.680; lr: [0.0001]
+2021-09-29 01:23:03,439 | INFO : 	 test_acc: 94.57 (best: 94.74 from #246)
+2021-09-29 01:24:18,547 | INFO : Epoch #250 (stage: None)
+2021-09-29 01:24:18,547 | INFO : 	 train_acc: 99.978; train_loss: 0.001; test_loss: 25.788; lr: [0.0001]
+2021-09-29 01:24:18,548 | INFO : 	 test_acc: 94.57 (best: 94.74 from #246)
+2021-09-29 01:25:33,861 | INFO : Epoch #251 (stage: None)
+2021-09-29 01:25:33,861 | INFO : 	 train_acc: 99.966; train_loss: 0.025; test_loss: 26.105; lr: [0.0001]
+2021-09-29 01:25:33,861 | INFO : 	 test_acc: 94.51 (best: 94.74 from #246)
+2021-09-29 01:26:50,059 | INFO : Epoch #252 (stage: None)
+2021-09-29 01:26:50,059 | INFO : 	 train_acc: 99.968; train_loss: 0.001; test_loss: 26.124; lr: [0.0001]
+2021-09-29 01:26:50,059 | INFO : 	 test_acc: 94.4 (best: 94.74 from #246)
+2021-09-29 01:28:06,430 | INFO : Epoch #253 (stage: None)
+2021-09-29 01:28:06,430 | INFO : 	 train_acc: 99.986; train_loss: 0.003; test_loss: 25.882; lr: [0.0001]
+2021-09-29 01:28:06,430 | INFO : 	 test_acc: 94.68 (best: 94.74 from #246)
+2021-09-29 01:29:22,850 | INFO : Epoch #254 (stage: None)
+2021-09-29 01:29:22,851 | INFO : 	 train_acc: 99.98; train_loss: 0.018; test_loss: 25.591; lr: [0.0001]
+2021-09-29 01:29:22,851 | INFO : 	 test_acc: 94.62 (best: 94.74 from #246)
+2021-09-29 01:30:38,940 | INFO : Epoch #255 (stage: None)
+2021-09-29 01:30:38,941 | INFO : 	 train_acc: 99.98; train_loss: 0.001; test_loss: 25.890; lr: [0.0001]
+2021-09-29 01:30:38,941 | INFO : 	 test_acc: 94.7 (best: 94.74 from #246)
+2021-09-29 01:31:54,112 | INFO : Epoch #256 (stage: None)
+2021-09-29 01:31:54,113 | INFO : 	 train_acc: 99.978; train_loss: 0.002; test_loss: 26.176; lr: [0.0001]
+2021-09-29 01:31:54,113 | INFO : 	 test_acc: 94.55 (best: 94.74 from #246)
+2021-09-29 01:33:09,127 | INFO : Epoch #257 (stage: None)
+2021-09-29 01:33:09,128 | INFO : 	 train_acc: 99.978; train_loss: 0.003; test_loss: 25.806; lr: [0.0001]
+2021-09-29 01:33:09,128 | INFO : 	 test_acc: 94.65 (best: 94.74 from #246)
+2021-09-29 01:34:24,311 | INFO : Epoch #258 (stage: None)
+2021-09-29 01:34:24,312 | INFO : 	 train_acc: 99.992; train_loss: 0.001; test_loss: 25.635; lr: [0.0001]
+2021-09-29 01:34:24,312 | INFO : 	 test_acc: 94.67 (best: 94.74 from #246)
+2021-09-29 01:35:39,793 | INFO : Epoch #259 (stage: None)
+2021-09-29 01:35:39,793 | INFO : 	 train_acc: 99.972; train_loss: 0.095; test_loss: 25.918; lr: [0.0001]
+2021-09-29 01:35:39,793 | INFO : 	 test_acc: 94.7 (best: 94.74 from #246)
+2021-09-29 01:36:56,241 | INFO : Epoch #260 (stage: None)
+2021-09-29 01:36:56,241 | INFO : 	 train_acc: 99.972; train_loss: 0.032; test_loss: 26.146; lr: [0.0001]
+2021-09-29 01:36:56,241 | INFO : 	 test_acc: 94.45 (best: 94.74 from #246)
+2021-09-29 01:38:12,837 | INFO : Epoch #261 (stage: None)
+2021-09-29 01:38:12,837 | INFO : 	 train_acc: 99.976; train_loss: 0.023; test_loss: 26.092; lr: [0.0001]
+2021-09-29 01:38:12,837 | INFO : 	 test_acc: 94.56 (best: 94.74 from #246)
+2021-09-29 01:39:29,330 | INFO : Epoch #262 (stage: None)
+2021-09-29 01:39:29,331 | INFO : 	 train_acc: 99.968; train_loss: 0.002; test_loss: 25.981; lr: [0.0001]
+2021-09-29 01:39:29,331 | INFO : 	 test_acc: 94.54 (best: 94.74 from #246)
+2021-09-29 01:40:45,498 | INFO : Epoch #263 (stage: None)
+2021-09-29 01:40:45,498 | INFO : 	 train_acc: 99.976; train_loss: 0.001; test_loss: 25.794; lr: [0.0001]
+2021-09-29 01:40:45,498 | INFO : 	 test_acc: 94.72 (best: 94.74 from #246)
+2021-09-29 01:42:00,612 | INFO : Epoch #264 (stage: None)
+2021-09-29 01:42:00,613 | INFO : 	 train_acc: 99.974; train_loss: 0.014; test_loss: 25.873; lr: [0.0001]
+2021-09-29 01:42:00,613 | INFO : 	 test_acc: 94.52 (best: 94.74 from #246)
+2021-09-29 01:43:15,567 | INFO : Epoch #265 (stage: None)
+2021-09-29 01:43:15,568 | INFO : 	 train_acc: 99.984; train_loss: 0.004; test_loss: 25.834; lr: [0.0001]
+2021-09-29 01:43:15,568 | INFO : 	 test_acc: 94.69 (best: 94.74 from #246)
+2021-09-29 01:44:30,564 | INFO : Epoch #266 (stage: None)
+2021-09-29 01:44:30,564 | INFO : 	 train_acc: 99.98; train_loss: 0.010; test_loss: 25.964; lr: [0.0001]
+2021-09-29 01:44:30,564 | INFO : 	 test_acc: 94.71 (best: 94.74 from #246)
+2021-09-29 01:45:45,685 | INFO : Epoch #267 (stage: None)
+2021-09-29 01:45:45,685 | INFO : 	 train_acc: 99.988; train_loss: 0.015; test_loss: 25.776; lr: [0.0001]
+2021-09-29 01:45:45,686 | INFO : 	 test_acc: 94.66 (best: 94.74 from #246)
+2021-09-29 01:47:01,943 | INFO : Epoch #268 (stage: None)
+2021-09-29 01:47:01,944 | INFO : 	 train_acc: 99.986; train_loss: 0.003; test_loss: 25.612; lr: [0.0001]
+2021-09-29 01:47:01,944 | INFO : 	 test_acc: 94.61 (best: 94.74 from #246)
+2021-09-29 01:48:18,273 | INFO : Epoch #269 (stage: None)
+2021-09-29 01:48:18,274 | INFO : 	 train_acc: 99.982; train_loss: 0.001; test_loss: 25.838; lr: [0.0001]
+2021-09-29 01:48:18,274 | INFO : 	 test_acc: 94.82 (best: 94.82 from #269)
+2021-09-29 01:49:34,668 | INFO : Epoch #270 (stage: None)
+2021-09-29 01:49:34,668 | INFO : 	 train_acc: 99.972; train_loss: 0.008; test_loss: 25.695; lr: [0.0001]
+2021-09-29 01:49:34,668 | INFO : 	 test_acc: 94.57 (best: 94.82 from #269)
+2021-09-29 01:50:50,451 | INFO : Epoch #271 (stage: None)
+2021-09-29 01:50:50,451 | INFO : 	 train_acc: 99.982; train_loss: 0.026; test_loss: 25.688; lr: [0.0001]
+2021-09-29 01:50:50,452 | INFO : 	 test_acc: 94.7 (best: 94.82 from #269)
+2021-09-29 01:52:05,247 | INFO : Epoch #272 (stage: None)
+2021-09-29 01:52:05,247 | INFO : 	 train_acc: 99.976; train_loss: 0.002; test_loss: 25.829; lr: [0.0001]
+2021-09-29 01:52:05,248 | INFO : 	 test_acc: 94.66 (best: 94.82 from #269)
+2021-09-29 01:53:20,240 | INFO : Epoch #273 (stage: None)
+2021-09-29 01:53:20,240 | INFO : 	 train_acc: 99.984; train_loss: 0.000; test_loss: 25.403; lr: [0.0001]
+2021-09-29 01:53:20,240 | INFO : 	 test_acc: 94.85 (best: 94.85 from #273)
+2021-09-29 01:54:35,357 | INFO : Epoch #274 (stage: None)
+2021-09-29 01:54:35,357 | INFO : 	 train_acc: 99.976; train_loss: 0.002; test_loss: 25.649; lr: [0.0001]
+2021-09-29 01:54:35,358 | INFO : 	 test_acc: 94.73 (best: 94.85 from #273)
+2021-09-29 01:55:50,566 | INFO : Epoch #275 (stage: None)
+2021-09-29 01:55:50,567 | INFO : 	 train_acc: 99.98; train_loss: 0.001; test_loss: 25.651; lr: [0.0001]
+2021-09-29 01:55:50,567 | INFO : 	 test_acc: 94.77 (best: 94.85 from #273)
+2021-09-29 01:57:07,166 | INFO : Epoch #276 (stage: None)
+2021-09-29 01:57:07,167 | INFO : 	 train_acc: 99.98; train_loss: 0.002; test_loss: 25.990; lr: [0.0001]
+2021-09-29 01:57:07,167 | INFO : 	 test_acc: 94.54 (best: 94.85 from #273)
+2021-09-29 01:58:24,001 | INFO : Epoch #277 (stage: None)
+2021-09-29 01:58:24,002 | INFO : 	 train_acc: 99.972; train_loss: 0.002; test_loss: 25.795; lr: [0.0001]
+2021-09-29 01:58:24,002 | INFO : 	 test_acc: 94.64 (best: 94.85 from #273)
+2021-09-29 01:59:40,358 | INFO : Epoch #278 (stage: None)
+2021-09-29 01:59:40,358 | INFO : 	 train_acc: 99.992; train_loss: 0.004; test_loss: 25.755; lr: [0.0001]
+2021-09-29 01:59:40,358 | INFO : 	 test_acc: 94.66 (best: 94.85 from #273)
+2021-09-29 02:00:55,980 | INFO : Epoch #279 (stage: None)
+2021-09-29 02:00:55,981 | INFO : 	 train_acc: 99.984; train_loss: 0.020; test_loss: 25.780; lr: [0.0001]
+2021-09-29 02:00:55,981 | INFO : 	 test_acc: 94.68 (best: 94.85 from #273)
+2021-09-29 02:02:11,152 | INFO : Epoch #280 (stage: None)
+2021-09-29 02:02:11,152 | INFO : 	 train_acc: 99.976; train_loss: 0.001; test_loss: 25.920; lr: [0.0001]
+2021-09-29 02:02:11,153 | INFO : 	 test_acc: 94.58 (best: 94.85 from #273)
+2021-09-29 02:03:26,160 | INFO : Epoch #281 (stage: None)
+2021-09-29 02:03:26,161 | INFO : 	 train_acc: 99.986; train_loss: 0.001; test_loss: 25.988; lr: [0.0001]
+2021-09-29 02:03:26,161 | INFO : 	 test_acc: 94.64 (best: 94.85 from #273)
+2021-09-29 02:04:41,240 | INFO : Epoch #282 (stage: None)
+2021-09-29 02:04:41,241 | INFO : 	 train_acc: 99.99; train_loss: 0.001; test_loss: 25.529; lr: [0.0001]
+2021-09-29 02:04:41,241 | INFO : 	 test_acc: 94.77 (best: 94.85 from #273)
+2021-09-29 02:05:56,657 | INFO : Epoch #283 (stage: None)
+2021-09-29 02:05:56,657 | INFO : 	 train_acc: 99.978; train_loss: 0.002; test_loss: 25.867; lr: [0.0001]
+2021-09-29 02:05:56,657 | INFO : 	 test_acc: 94.73 (best: 94.85 from #273)
+2021-09-29 02:07:12,970 | INFO : Epoch #284 (stage: None)
+2021-09-29 02:07:12,970 | INFO : 	 train_acc: 99.982; train_loss: 0.001; test_loss: 25.428; lr: [0.0001]
+2021-09-29 02:07:12,970 | INFO : 	 test_acc: 94.62 (best: 94.85 from #273)
+2021-09-29 02:08:29,410 | INFO : Epoch #285 (stage: None)
+2021-09-29 02:08:29,410 | INFO : 	 train_acc: 99.984; train_loss: 0.049; test_loss: 25.578; lr: [0.0001]
+2021-09-29 02:08:29,411 | INFO : 	 test_acc: 94.66 (best: 94.85 from #273)
+2021-09-29 02:09:45,786 | INFO : Epoch #286 (stage: None)
+2021-09-29 02:09:45,787 | INFO : 	 train_acc: 99.982; train_loss: 0.001; test_loss: 25.632; lr: [0.0001]
+2021-09-29 02:09:45,787 | INFO : 	 test_acc: 94.63 (best: 94.85 from #273)
+2021-09-29 02:11:01,893 | INFO : Epoch #287 (stage: None)
+2021-09-29 02:11:01,894 | INFO : 	 train_acc: 99.98; train_loss: 0.001; test_loss: 25.876; lr: [0.0001]
+2021-09-29 02:11:01,894 | INFO : 	 test_acc: 94.58 (best: 94.85 from #273)
+2021-09-29 02:12:16,772 | INFO : Epoch #288 (stage: None)
+2021-09-29 02:12:16,772 | INFO : 	 train_acc: 99.978; train_loss: 0.002; test_loss: 25.681; lr: [0.0001]
+2021-09-29 02:12:16,773 | INFO : 	 test_acc: 94.66 (best: 94.85 from #273)
+2021-09-29 02:13:32,188 | INFO : Epoch #289 (stage: None)
+2021-09-29 02:13:32,189 | INFO : 	 train_acc: 99.99; train_loss: 0.001; test_loss: 25.676; lr: [0.0001]
+2021-09-29 02:13:32,189 | INFO : 	 test_acc: 94.66 (best: 94.85 from #273)
+2021-09-29 02:14:47,391 | INFO : Epoch #290 (stage: None)
+2021-09-29 02:14:47,392 | INFO : 	 train_acc: 99.978; train_loss: 0.001; test_loss: 25.701; lr: [0.0001]
+2021-09-29 02:14:47,392 | INFO : 	 test_acc: 94.63 (best: 94.85 from #273)
+2021-09-29 02:16:02,966 | INFO : Epoch #291 (stage: None)
+2021-09-29 02:16:02,966 | INFO : 	 train_acc: 99.982; train_loss: 0.004; test_loss: 25.691; lr: [0.0001]
+2021-09-29 02:16:02,966 | INFO : 	 test_acc: 94.9 (best: 94.9 from #291)
+2021-09-29 02:17:19,653 | INFO : Epoch #292 (stage: None)
+2021-09-29 02:17:19,654 | INFO : 	 train_acc: 99.988; train_loss: 0.020; test_loss: 25.498; lr: [0.0001]
+2021-09-29 02:17:19,654 | INFO : 	 test_acc: 94.76 (best: 94.9 from #291)
+2021-09-29 02:18:36,119 | INFO : Epoch #293 (stage: None)
+2021-09-29 02:18:36,120 | INFO : 	 train_acc: 99.99; train_loss: 0.000; test_loss: 25.712; lr: [0.0001]
+2021-09-29 02:18:36,120 | INFO : 	 test_acc: 94.76 (best: 94.9 from #291)
+2021-09-29 02:19:52,832 | INFO : Epoch #294 (stage: None)
+2021-09-29 02:19:52,833 | INFO : 	 train_acc: 99.978; train_loss: 0.006; test_loss: 25.420; lr: [0.0001]
+2021-09-29 02:19:52,833 | INFO : 	 test_acc: 94.76 (best: 94.9 from #291)
+2021-09-29 02:21:08,465 | INFO : Epoch #295 (stage: None)
+2021-09-29 02:21:08,466 | INFO : 	 train_acc: 99.984; train_loss: 0.002; test_loss: 25.381; lr: [0.0001]
+2021-09-29 02:21:08,466 | INFO : 	 test_acc: 94.84 (best: 94.9 from #291)
+2021-09-29 02:22:23,599 | INFO : Epoch #296 (stage: None)
+2021-09-29 02:22:23,599 | INFO : 	 train_acc: 99.99; train_loss: 0.032; test_loss: 25.623; lr: [0.0001]
+2021-09-29 02:22:23,600 | INFO : 	 test_acc: 94.63 (best: 94.9 from #291)
+2021-09-29 02:23:39,387 | INFO : Epoch #297 (stage: None)
+2021-09-29 02:23:39,387 | INFO : 	 train_acc: 99.986; train_loss: 0.001; test_loss: 25.372; lr: [0.0001]
+2021-09-29 02:23:39,387 | INFO : 	 test_acc: 94.62 (best: 94.9 from #291)
+2021-09-29 02:24:54,598 | INFO : Epoch #298 (stage: None)
+2021-09-29 02:24:54,599 | INFO : 	 train_acc: 99.988; train_loss: 0.009; test_loss: 25.504; lr: [0.0001]
+2021-09-29 02:24:54,599 | INFO : 	 test_acc: 94.61 (best: 94.9 from #291)
+2021-09-29 02:26:10,072 | INFO : Epoch #299 (stage: None)
+2021-09-29 02:26:10,073 | INFO : 	 train_acc: 99.976; train_loss: 0.005; test_loss: 25.597; lr: [0.0001]
+2021-09-29 02:26:10,073 | INFO : 	 test_acc: 94.7 (best: 94.9 from #291)
+2021-09-29 02:26:10,132 | INFO : Model /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110 finetuned 17.32 --> 94.9.
+2021-09-29 02:26:10,133 | INFO : Model /content/drive/MyDrive/lottery_grouped_kernel_pruning/baseline/best_resnet110 pruned, grouped, and finetuned: 94.26 --> 17.32 --> 17.32 --> 94.9.
+
+2021-09-29 02:26:10,137 | INFO : setting
+2021-09-29 02:26:10,139 | INFO : Saving setting file to /content/drive/MyDrive/lottery_grouped_kernel_pruning/checkpoints/resnet110_fix_abs/setting.json...
+2021-09-29 02:26:10,143 | INFO : Experiment resnet110_fix_abs (task: finetune) ends at 2021-09-29T02:26:10.133448; result: 94.26 --> 94.9.

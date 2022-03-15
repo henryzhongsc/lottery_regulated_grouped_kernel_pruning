@@ -1,0 +1,937 @@
+2022-03-10 11:53:55,339 | INFO : Experiment resnet20_cifar10_demo starts at 2022-03-10T11:53:54.895719.
+2022-03-10 11:53:55,339 | INFO : Parsed setting file from /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/settings/resnet20_cifar10_reported.json...
+2022-03-10 11:53:55,365 | INFO : ==> Preparing dataset: cifar10
+2022-03-10 11:53:57,814 | INFO : ==> Building baseline model: /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline (dataset: cifar10)
+2022-03-10 11:54:02,356 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline loaded (<class 'models.resnet.CifarResNet'>)
+2022-03-10 11:54:03,527 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline <class 'models.resnet.CifarResNet'> has a baseline of 92.35.
+2022-03-10 11:54:03,537 | INFO : pruning_strategy: greedy (tickets magnitute increase); n_clusters: 8; eval_pruned_kernel_relationship: True; cost_balancer: auto; eval_kept_kernel_ratio: 0.2
+2022-03-10 11:55:32,981 | INFO : Layer 2-0-0; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 21, 'Spectral': 13, 'DBSCAN': 2});	Sequence: {'K-PCA': 12, 'Spectral': 3, 'DBSCAN': 1});
+2022-03-10 11:57:00,606 | INFO : Layer 2-0-2; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 20, 'K-PCA': 9, 'DBSCAN': 7});	Sequence: {'Spectral': 3, 'K-PCA': 2, 'DBSCAN': 2});
+2022-03-10 11:58:33,678 | INFO : Layer 2-1-0; Shape (16, 16, 3, 3) -> (16, 144); Method: DBSCAN; Occurrence: ({'DBSCAN': 30, 'K-PCA': 3, 'Spectral': 3});	Sequence: {'K-PCA': 1, 'DBSCAN': 22, 'Spectral': 1});
+2022-03-10 12:00:06,223 | INFO : Layer 2-1-2; Shape (16, 16, 3, 3) -> (16, 144); Method: DBSCAN; Occurrence: ({'DBSCAN': 18, 'K-PCA': 15, 'Spectral': 3});	Sequence: {'DBSCAN': 9, 'K-PCA': 5});
+2022-03-10 12:01:34,362 | INFO : Layer 2-2-0; Shape (16, 16, 3, 3) -> (16, 144); Method: Spectral; Occurrence: ({'Spectral': 29, 'K-PCA': 7});	Sequence: {'Spectral': 10, 'K-PCA': 2});
+2022-03-10 12:03:04,550 | INFO : Layer 2-2-2; Shape (16, 16, 3, 3) -> (16, 144); Method: K-PCA; Occurrence: ({'K-PCA': 17, 'Spectral': 17, 'DBSCAN': 2});	Sequence: {'K-PCA': 4, 'Spectral': 2});
+2022-03-10 12:05:18,891 | INFO : Layer 3-0-0; Shape (32, 16, 3, 3) -> (32, 144); Method: K-PCA; Occurrence: ({'K-PCA': 14, 'DBSCAN': 12, 'Spectral': 10});	Sequence: {'Spectral': 1, 'K-PCA': 4, 'DBSCAN': 10});
+2022-03-10 12:07:33,956 | INFO : Layer 3-0-2; Shape (32, 32, 3, 3) -> (32, 288); Method: DBSCAN; Occurrence: ({'DBSCAN': 20, 'K-PCA': 13, 'Spectral': 3});	Sequence: {'K-PCA': 5, 'DBSCAN': 14});
+2022-03-10 12:09:49,248 | INFO : Layer 3-1-0; Shape (32, 32, 3, 3) -> (32, 288); Method: DBSCAN; Occurrence: ({'DBSCAN': 29, 'Spectral': 7});	Sequence: {'DBSCAN': 14, 'Spectral': 2});
+2022-03-10 12:12:09,341 | INFO : Layer 3-1-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 19, 'K-PCA': 17});	Sequence: {'K-PCA': 6, 'Spectral': 10});
+2022-03-10 12:14:51,228 | INFO : Layer 3-2-0; Shape (32, 32, 3, 3) -> (32, 288); Method: K-PCA; Occurrence: ({'Spectral': 14, 'K-PCA': 14, 'DBSCAN': 8});	Sequence: {'Spectral': 3, 'K-PCA': 5, 'DBSCAN': 4});
+2022-03-10 12:17:02,288 | INFO : Layer 3-2-2; Shape (32, 32, 3, 3) -> (32, 288); Method: Spectral; Occurrence: ({'Spectral': 15, 'K-PCA': 12, 'DBSCAN': 9});	Sequence: {'Spectral': 5, 'K-PCA': 3, 'DBSCAN': 1});
+2022-03-10 12:21:26,255 | INFO : Layer 4-0-0; Shape (64, 32, 3, 3) -> (64, 288); Method: DBSCAN; Occurrence: ({'DBSCAN': 24, 'Spectral': 8, 'K-PCA': 4});	Sequence: {'DBSCAN': 9, 'Spectral': 4, 'K-PCA': 2});
+2022-03-10 12:25:43,288 | INFO : Layer 4-0-2; Shape (64, 64, 3, 3) -> (64, 576); Method: DBSCAN; Occurrence: ({'DBSCAN': 27, 'K-PCA': 8, 'Spectral': 1});	Sequence: {'DBSCAN': 13, 'K-PCA': 5});
+2022-03-10 12:30:05,156 | INFO : Layer 4-1-0; Shape (64, 64, 3, 3) -> (64, 576); Method: K-PCA; Occurrence: ({'K-PCA': 19, 'Spectral': 15, 'DBSCAN': 2});	Sequence: {'Spectral': 5, 'K-PCA': 7});
+2022-03-10 12:36:47,113 | INFO : Layer 4-1-2; Shape (64, 64, 3, 3) -> (64, 576); Method: DBSCAN; Occurrence: ({'DBSCAN': 26, 'K-PCA': 8, 'Spectral': 2});	Sequence: {'DBSCAN': 12, 'K-PCA': 3});
+2022-03-10 12:41:21,157 | INFO : Layer 4-2-0; Shape (64, 64, 3, 3) -> (64, 576); Method: DBSCAN; Occurrence: ({'DBSCAN': 31, 'K-PCA': 4, 'Spectral': 1});	Sequence: {'DBSCAN': 18, 'K-PCA': 1});
+2022-03-10 12:46:50,329 | INFO : Layer 4-2-2; Shape (64, 64, 3, 3) -> (64, 576); Method: DBSCAN; Occurrence: ({'DBSCAN': 29, 'K-PCA': 5, 'Spectral': 2});	Sequence: {'K-PCA': 2, 'DBSCAN': 11, 'Spectral': 1});
+2022-03-10 12:46:52,220 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline <class 'prune_cifar.ModifiedResNet'> now pruned.
+2022-03-10 12:46:52,254 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline <class 'group_cifar.GroupResNet'> now grouped.
+2022-03-10 12:46:52,256 | INFO : ==> Starting task: finetune for 300 epochs; multi_prune_flag: False)
+2022-03-10 12:46:53,509 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline (type: <class 'group_cifar.GroupResNet'>) pruned and grouped (grouped baseline: 22.81); now to finetune with 300 epochs.
+
+2022-03-10 12:46:54,709 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline has a baseline of 22.81.
+2022-03-10 12:47:20,021 | INFO : Epoch #0
+2022-03-10 12:47:20,021 | INFO : 	 train_acc: 76.788; train_loss: 0.362; test_loss: 72.816; lr: [0.01]
+2022-03-10 12:47:20,021 | INFO : 	 test_acc: 76.75 (best: 76.75 from #0)
+2022-03-10 12:47:44,995 | INFO : Epoch #1
+2022-03-10 12:47:44,995 | INFO : 	 train_acc: 83.772; train_loss: 0.352; test_loss: 55.221; lr: [0.01]
+2022-03-10 12:47:44,996 | INFO : 	 test_acc: 82.0 (best: 82.0 from #1)
+2022-03-10 12:48:10,240 | INFO : Epoch #2
+2022-03-10 12:48:10,240 | INFO : 	 train_acc: 85.188; train_loss: 0.298; test_loss: 54.066; lr: [0.01]
+2022-03-10 12:48:10,241 | INFO : 	 test_acc: 82.19 (best: 82.19 from #2)
+2022-03-10 12:48:35,760 | INFO : Epoch #3
+2022-03-10 12:48:35,760 | INFO : 	 train_acc: 86.212; train_loss: 0.503; test_loss: 45.501; lr: [0.01]
+2022-03-10 12:48:35,760 | INFO : 	 test_acc: 84.66 (best: 84.66 from #3)
+2022-03-10 12:49:00,718 | INFO : Epoch #4
+2022-03-10 12:49:00,719 | INFO : 	 train_acc: 86.8; train_loss: 0.304; test_loss: 48.299; lr: [0.01]
+2022-03-10 12:49:00,719 | INFO : 	 test_acc: 83.94 (best: 84.66 from #3)
+2022-03-10 12:49:25,635 | INFO : Epoch #5
+2022-03-10 12:49:25,635 | INFO : 	 train_acc: 87.382; train_loss: 0.559; test_loss: 59.317; lr: [0.01]
+2022-03-10 12:49:25,635 | INFO : 	 test_acc: 81.43 (best: 84.66 from #3)
+2022-03-10 12:49:50,652 | INFO : Epoch #6
+2022-03-10 12:49:50,653 | INFO : 	 train_acc: 87.68; train_loss: 0.560; test_loss: 43.478; lr: [0.01]
+2022-03-10 12:49:50,653 | INFO : 	 test_acc: 85.45 (best: 85.45 from #6)
+2022-03-10 12:50:15,629 | INFO : Epoch #7
+2022-03-10 12:50:15,629 | INFO : 	 train_acc: 87.898; train_loss: 0.237; test_loss: 51.016; lr: [0.01]
+2022-03-10 12:50:15,629 | INFO : 	 test_acc: 83.46 (best: 85.45 from #6)
+2022-03-10 12:50:40,813 | INFO : Epoch #8
+2022-03-10 12:50:40,814 | INFO : 	 train_acc: 88.348; train_loss: 0.282; test_loss: 40.139; lr: [0.01]
+2022-03-10 12:50:40,814 | INFO : 	 test_acc: 86.63 (best: 86.63 from #8)
+2022-03-10 12:51:06,039 | INFO : Epoch #9
+2022-03-10 12:51:06,039 | INFO : 	 train_acc: 88.466; train_loss: 0.459; test_loss: 45.285; lr: [0.01]
+2022-03-10 12:51:06,039 | INFO : 	 test_acc: 85.2 (best: 86.63 from #8)
+2022-03-10 12:51:31,301 | INFO : Epoch #10
+2022-03-10 12:51:31,301 | INFO : 	 train_acc: 88.768; train_loss: 0.378; test_loss: 50.177; lr: [0.01]
+2022-03-10 12:51:31,301 | INFO : 	 test_acc: 83.84 (best: 86.63 from #8)
+2022-03-10 12:51:56,575 | INFO : Epoch #11
+2022-03-10 12:51:56,576 | INFO : 	 train_acc: 88.986; train_loss: 0.807; test_loss: 42.618; lr: [0.01]
+2022-03-10 12:51:56,576 | INFO : 	 test_acc: 86.25 (best: 86.63 from #8)
+2022-03-10 12:52:21,501 | INFO : Epoch #12
+2022-03-10 12:52:21,501 | INFO : 	 train_acc: 89.004; train_loss: 0.238; test_loss: 42.475; lr: [0.01]
+2022-03-10 12:52:21,502 | INFO : 	 test_acc: 85.61 (best: 86.63 from #8)
+2022-03-10 12:52:46,553 | INFO : Epoch #13
+2022-03-10 12:52:46,554 | INFO : 	 train_acc: 89.428; train_loss: 0.204; test_loss: 42.132; lr: [0.01]
+2022-03-10 12:52:46,554 | INFO : 	 test_acc: 85.93 (best: 86.63 from #8)
+2022-03-10 12:53:11,698 | INFO : Epoch #14
+2022-03-10 12:53:11,698 | INFO : 	 train_acc: 89.34; train_loss: 0.285; test_loss: 42.411; lr: [0.01]
+2022-03-10 12:53:11,699 | INFO : 	 test_acc: 86.09 (best: 86.63 from #8)
+2022-03-10 12:53:36,911 | INFO : Epoch #15
+2022-03-10 12:53:36,911 | INFO : 	 train_acc: 89.442; train_loss: 0.244; test_loss: 42.633; lr: [0.01]
+2022-03-10 12:53:36,911 | INFO : 	 test_acc: 86.15 (best: 86.63 from #8)
+2022-03-10 12:54:01,994 | INFO : Epoch #16
+2022-03-10 12:54:01,995 | INFO : 	 train_acc: 89.566; train_loss: 0.313; test_loss: 44.198; lr: [0.01]
+2022-03-10 12:54:01,995 | INFO : 	 test_acc: 85.86 (best: 86.63 from #8)
+2022-03-10 12:54:27,335 | INFO : Epoch #17
+2022-03-10 12:54:27,336 | INFO : 	 train_acc: 89.518; train_loss: 0.141; test_loss: 45.518; lr: [0.01]
+2022-03-10 12:54:27,336 | INFO : 	 test_acc: 85.17 (best: 86.63 from #8)
+2022-03-10 12:54:52,117 | INFO : Epoch #18
+2022-03-10 12:54:52,118 | INFO : 	 train_acc: 89.652; train_loss: 0.099; test_loss: 45.603; lr: [0.01]
+2022-03-10 12:54:52,118 | INFO : 	 test_acc: 84.74 (best: 86.63 from #8)
+2022-03-10 12:55:16,870 | INFO : Epoch #19
+2022-03-10 12:55:16,870 | INFO : 	 train_acc: 89.904; train_loss: 1.155; test_loss: 39.500; lr: [0.01]
+2022-03-10 12:55:16,870 | INFO : 	 test_acc: 86.95 (best: 86.95 from #19)
+2022-03-10 12:55:42,167 | INFO : Epoch #20
+2022-03-10 12:55:42,168 | INFO : 	 train_acc: 89.954; train_loss: 0.219; test_loss: 38.967; lr: [0.01]
+2022-03-10 12:55:42,168 | INFO : 	 test_acc: 87.01 (best: 87.01 from #20)
+2022-03-10 12:56:07,201 | INFO : Epoch #21
+2022-03-10 12:56:07,202 | INFO : 	 train_acc: 90.032; train_loss: 0.311; test_loss: 38.747; lr: [0.01]
+2022-03-10 12:56:07,202 | INFO : 	 test_acc: 87.08 (best: 87.08 from #21)
+2022-03-10 12:56:32,192 | INFO : Epoch #22
+2022-03-10 12:56:32,193 | INFO : 	 train_acc: 89.836; train_loss: 0.663; test_loss: 39.888; lr: [0.01]
+2022-03-10 12:56:32,193 | INFO : 	 test_acc: 86.33 (best: 87.08 from #21)
+2022-03-10 12:56:57,262 | INFO : Epoch #23
+2022-03-10 12:56:57,263 | INFO : 	 train_acc: 90.328; train_loss: 0.570; test_loss: 42.872; lr: [0.01]
+2022-03-10 12:56:57,263 | INFO : 	 test_acc: 85.99 (best: 87.08 from #21)
+2022-03-10 12:57:22,068 | INFO : Epoch #24
+2022-03-10 12:57:22,068 | INFO : 	 train_acc: 89.896; train_loss: 0.225; test_loss: 36.908; lr: [0.01]
+2022-03-10 12:57:22,069 | INFO : 	 test_acc: 87.83 (best: 87.83 from #24)
+2022-03-10 12:57:47,314 | INFO : Epoch #25
+2022-03-10 12:57:47,314 | INFO : 	 train_acc: 90.414; train_loss: 0.461; test_loss: 43.100; lr: [0.01]
+2022-03-10 12:57:47,314 | INFO : 	 test_acc: 85.53 (best: 87.83 from #24)
+2022-03-10 12:58:12,538 | INFO : Epoch #26
+2022-03-10 12:58:12,539 | INFO : 	 train_acc: 90.298; train_loss: 0.176; test_loss: 40.588; lr: [0.01]
+2022-03-10 12:58:12,539 | INFO : 	 test_acc: 86.86 (best: 87.83 from #24)
+2022-03-10 12:58:37,674 | INFO : Epoch #27
+2022-03-10 12:58:37,674 | INFO : 	 train_acc: 90.114; train_loss: 0.253; test_loss: 47.006; lr: [0.01]
+2022-03-10 12:58:37,675 | INFO : 	 test_acc: 84.76 (best: 87.83 from #24)
+2022-03-10 12:59:02,806 | INFO : Epoch #28
+2022-03-10 12:59:02,806 | INFO : 	 train_acc: 90.206; train_loss: 0.490; test_loss: 43.585; lr: [0.01]
+2022-03-10 12:59:02,807 | INFO : 	 test_acc: 86.1 (best: 87.83 from #24)
+2022-03-10 12:59:27,770 | INFO : Epoch #29
+2022-03-10 12:59:27,770 | INFO : 	 train_acc: 90.288; train_loss: 0.387; test_loss: 42.853; lr: [0.01]
+2022-03-10 12:59:27,770 | INFO : 	 test_acc: 85.59 (best: 87.83 from #24)
+2022-03-10 12:59:53,288 | INFO : Epoch #30
+2022-03-10 12:59:53,289 | INFO : 	 train_acc: 90.308; train_loss: 0.283; test_loss: 41.085; lr: [0.01]
+2022-03-10 12:59:53,289 | INFO : 	 test_acc: 86.54 (best: 87.83 from #24)
+2022-03-10 13:00:18,394 | INFO : Epoch #31
+2022-03-10 13:00:18,395 | INFO : 	 train_acc: 90.292; train_loss: 1.210; test_loss: 41.086; lr: [0.01]
+2022-03-10 13:00:18,395 | INFO : 	 test_acc: 86.65 (best: 87.83 from #24)
+2022-03-10 13:00:43,252 | INFO : Epoch #32
+2022-03-10 13:00:43,253 | INFO : 	 train_acc: 90.39; train_loss: 0.410; test_loss: 41.275; lr: [0.01]
+2022-03-10 13:00:43,253 | INFO : 	 test_acc: 86.88 (best: 87.83 from #24)
+2022-03-10 13:01:08,475 | INFO : Epoch #33
+2022-03-10 13:01:08,475 | INFO : 	 train_acc: 90.658; train_loss: 0.264; test_loss: 51.131; lr: [0.01]
+2022-03-10 13:01:08,476 | INFO : 	 test_acc: 83.92 (best: 87.83 from #24)
+2022-03-10 13:01:33,564 | INFO : Epoch #34
+2022-03-10 13:01:33,565 | INFO : 	 train_acc: 90.24; train_loss: 0.270; test_loss: 43.273; lr: [0.01]
+2022-03-10 13:01:33,565 | INFO : 	 test_acc: 85.92 (best: 87.83 from #24)
+2022-03-10 13:01:59,078 | INFO : Epoch #35
+2022-03-10 13:01:59,078 | INFO : 	 train_acc: 90.478; train_loss: 0.408; test_loss: 42.769; lr: [0.01]
+2022-03-10 13:01:59,079 | INFO : 	 test_acc: 86.31 (best: 87.83 from #24)
+2022-03-10 13:02:24,440 | INFO : Epoch #36
+2022-03-10 13:02:24,441 | INFO : 	 train_acc: 90.352; train_loss: 0.364; test_loss: 38.753; lr: [0.01]
+2022-03-10 13:02:24,441 | INFO : 	 test_acc: 87.24 (best: 87.83 from #24)
+2022-03-10 13:02:49,335 | INFO : Epoch #37
+2022-03-10 13:02:49,335 | INFO : 	 train_acc: 90.628; train_loss: 0.506; test_loss: 39.108; lr: [0.01]
+2022-03-10 13:02:49,336 | INFO : 	 test_acc: 86.54 (best: 87.83 from #24)
+2022-03-10 13:03:14,360 | INFO : Epoch #38
+2022-03-10 13:03:14,361 | INFO : 	 train_acc: 90.522; train_loss: 0.779; test_loss: 38.532; lr: [0.01]
+2022-03-10 13:03:14,361 | INFO : 	 test_acc: 86.83 (best: 87.83 from #24)
+2022-03-10 13:03:39,232 | INFO : Epoch #39
+2022-03-10 13:03:39,233 | INFO : 	 train_acc: 90.598; train_loss: 0.455; test_loss: 42.962; lr: [0.01]
+2022-03-10 13:03:39,233 | INFO : 	 test_acc: 85.95 (best: 87.83 from #24)
+2022-03-10 13:04:04,274 | INFO : Epoch #40
+2022-03-10 13:04:04,274 | INFO : 	 train_acc: 90.572; train_loss: 0.490; test_loss: 43.877; lr: [0.01]
+2022-03-10 13:04:04,275 | INFO : 	 test_acc: 85.54 (best: 87.83 from #24)
+2022-03-10 13:04:29,163 | INFO : Epoch #41
+2022-03-10 13:04:29,164 | INFO : 	 train_acc: 90.6; train_loss: 0.028; test_loss: 43.090; lr: [0.01]
+2022-03-10 13:04:29,164 | INFO : 	 test_acc: 86.11 (best: 87.83 from #24)
+2022-03-10 13:04:54,036 | INFO : Epoch #42
+2022-03-10 13:04:54,037 | INFO : 	 train_acc: 90.692; train_loss: 0.351; test_loss: 39.980; lr: [0.01]
+2022-03-10 13:04:54,037 | INFO : 	 test_acc: 86.94 (best: 87.83 from #24)
+2022-03-10 13:05:19,264 | INFO : Epoch #43
+2022-03-10 13:05:19,264 | INFO : 	 train_acc: 90.826; train_loss: 0.223; test_loss: 43.204; lr: [0.01]
+2022-03-10 13:05:19,264 | INFO : 	 test_acc: 85.79 (best: 87.83 from #24)
+2022-03-10 13:05:44,649 | INFO : Epoch #44
+2022-03-10 13:05:44,650 | INFO : 	 train_acc: 90.808; train_loss: 0.509; test_loss: 44.832; lr: [0.01]
+2022-03-10 13:05:44,650 | INFO : 	 test_acc: 85.43 (best: 87.83 from #24)
+2022-03-10 13:06:09,545 | INFO : Epoch #45
+2022-03-10 13:06:09,546 | INFO : 	 train_acc: 91.008; train_loss: 0.178; test_loss: 36.442; lr: [0.01]
+2022-03-10 13:06:09,546 | INFO : 	 test_acc: 87.74 (best: 87.83 from #24)
+2022-03-10 13:06:34,840 | INFO : Epoch #46
+2022-03-10 13:06:34,840 | INFO : 	 train_acc: 90.828; train_loss: 0.133; test_loss: 38.549; lr: [0.01]
+2022-03-10 13:06:34,840 | INFO : 	 test_acc: 87.5 (best: 87.83 from #24)
+2022-03-10 13:07:00,026 | INFO : Epoch #47
+2022-03-10 13:07:00,026 | INFO : 	 train_acc: 90.748; train_loss: 0.266; test_loss: 51.388; lr: [0.01]
+2022-03-10 13:07:00,027 | INFO : 	 test_acc: 84.34 (best: 87.83 from #24)
+2022-03-10 13:07:25,007 | INFO : Epoch #48
+2022-03-10 13:07:25,007 | INFO : 	 train_acc: 90.898; train_loss: 0.530; test_loss: 42.149; lr: [0.01]
+2022-03-10 13:07:25,007 | INFO : 	 test_acc: 86.31 (best: 87.83 from #24)
+2022-03-10 13:07:50,814 | INFO : Epoch #49
+2022-03-10 13:07:50,814 | INFO : 	 train_acc: 90.612; train_loss: 0.153; test_loss: 51.016; lr: [0.01]
+2022-03-10 13:07:50,814 | INFO : 	 test_acc: 83.92 (best: 87.83 from #24)
+2022-03-10 13:08:15,966 | INFO : Epoch #50
+2022-03-10 13:08:15,967 | INFO : 	 train_acc: 90.696; train_loss: 0.335; test_loss: 39.774; lr: [0.01]
+2022-03-10 13:08:15,967 | INFO : 	 test_acc: 86.66 (best: 87.83 from #24)
+2022-03-10 13:08:41,476 | INFO : Epoch #51
+2022-03-10 13:08:41,477 | INFO : 	 train_acc: 90.836; train_loss: 0.292; test_loss: 42.837; lr: [0.01]
+2022-03-10 13:08:41,477 | INFO : 	 test_acc: 85.77 (best: 87.83 from #24)
+2022-03-10 13:09:06,489 | INFO : Epoch #52
+2022-03-10 13:09:06,489 | INFO : 	 train_acc: 91.012; train_loss: 0.100; test_loss: 39.849; lr: [0.01]
+2022-03-10 13:09:06,490 | INFO : 	 test_acc: 86.97 (best: 87.83 from #24)
+2022-03-10 13:09:31,666 | INFO : Epoch #53
+2022-03-10 13:09:31,666 | INFO : 	 train_acc: 90.576; train_loss: 0.098; test_loss: 41.822; lr: [0.01]
+2022-03-10 13:09:31,666 | INFO : 	 test_acc: 86.44 (best: 87.83 from #24)
+2022-03-10 13:09:57,043 | INFO : Epoch #54
+2022-03-10 13:09:57,044 | INFO : 	 train_acc: 90.814; train_loss: 0.382; test_loss: 41.189; lr: [0.01]
+2022-03-10 13:09:57,044 | INFO : 	 test_acc: 86.08 (best: 87.83 from #24)
+2022-03-10 13:10:22,095 | INFO : Epoch #55
+2022-03-10 13:10:22,095 | INFO : 	 train_acc: 91.026; train_loss: 0.508; test_loss: 38.740; lr: [0.01]
+2022-03-10 13:10:22,095 | INFO : 	 test_acc: 87.54 (best: 87.83 from #24)
+2022-03-10 13:10:47,168 | INFO : Epoch #56
+2022-03-10 13:10:47,169 | INFO : 	 train_acc: 90.71; train_loss: 0.500; test_loss: 36.088; lr: [0.01]
+2022-03-10 13:10:47,169 | INFO : 	 test_acc: 88.04 (best: 88.04 from #56)
+2022-03-10 13:11:12,422 | INFO : Epoch #57
+2022-03-10 13:11:12,422 | INFO : 	 train_acc: 90.916; train_loss: 0.904; test_loss: 44.827; lr: [0.01]
+2022-03-10 13:11:12,423 | INFO : 	 test_acc: 85.9 (best: 88.04 from #56)
+2022-03-10 13:11:37,932 | INFO : Epoch #58
+2022-03-10 13:11:37,933 | INFO : 	 train_acc: 91.012; train_loss: 0.251; test_loss: 38.068; lr: [0.01]
+2022-03-10 13:11:37,933 | INFO : 	 test_acc: 87.69 (best: 88.04 from #56)
+2022-03-10 13:12:02,949 | INFO : Epoch #59
+2022-03-10 13:12:02,950 | INFO : 	 train_acc: 90.75; train_loss: 0.128; test_loss: 41.553; lr: [0.01]
+2022-03-10 13:12:02,950 | INFO : 	 test_acc: 86.05 (best: 88.04 from #56)
+2022-03-10 13:12:28,039 | INFO : Epoch #60
+2022-03-10 13:12:28,039 | INFO : 	 train_acc: 90.944; train_loss: 0.348; test_loss: 42.501; lr: [0.01]
+2022-03-10 13:12:28,040 | INFO : 	 test_acc: 86.5 (best: 88.04 from #56)
+2022-03-10 13:12:53,010 | INFO : Epoch #61
+2022-03-10 13:12:53,010 | INFO : 	 train_acc: 90.914; train_loss: 0.295; test_loss: 34.976; lr: [0.01]
+2022-03-10 13:12:53,011 | INFO : 	 test_acc: 88.24 (best: 88.24 from #61)
+2022-03-10 13:13:18,792 | INFO : Epoch #62
+2022-03-10 13:13:18,792 | INFO : 	 train_acc: 90.982; train_loss: 0.655; test_loss: 40.593; lr: [0.01]
+2022-03-10 13:13:18,792 | INFO : 	 test_acc: 86.65 (best: 88.24 from #61)
+2022-03-10 13:13:43,685 | INFO : Epoch #63
+2022-03-10 13:13:43,685 | INFO : 	 train_acc: 90.946; train_loss: 0.540; test_loss: 38.287; lr: [0.01]
+2022-03-10 13:13:43,686 | INFO : 	 test_acc: 87.27 (best: 88.24 from #61)
+2022-03-10 13:14:08,688 | INFO : Epoch #64
+2022-03-10 13:14:08,688 | INFO : 	 train_acc: 90.918; train_loss: 0.813; test_loss: 41.705; lr: [0.01]
+2022-03-10 13:14:08,689 | INFO : 	 test_acc: 86.51 (best: 88.24 from #61)
+2022-03-10 13:14:33,807 | INFO : Epoch #65
+2022-03-10 13:14:33,808 | INFO : 	 train_acc: 90.856; train_loss: 0.515; test_loss: 35.592; lr: [0.01]
+2022-03-10 13:14:33,808 | INFO : 	 test_acc: 88.21 (best: 88.24 from #61)
+2022-03-10 13:14:58,776 | INFO : Epoch #66
+2022-03-10 13:14:58,777 | INFO : 	 train_acc: 91.046; train_loss: 0.496; test_loss: 43.484; lr: [0.01]
+2022-03-10 13:14:58,777 | INFO : 	 test_acc: 86.06 (best: 88.24 from #61)
+2022-03-10 13:15:23,947 | INFO : Epoch #67
+2022-03-10 13:15:23,948 | INFO : 	 train_acc: 90.934; train_loss: 0.393; test_loss: 40.699; lr: [0.01]
+2022-03-10 13:15:23,948 | INFO : 	 test_acc: 86.46 (best: 88.24 from #61)
+2022-03-10 13:15:48,788 | INFO : Epoch #68
+2022-03-10 13:15:48,788 | INFO : 	 train_acc: 91.156; train_loss: 0.229; test_loss: 46.003; lr: [0.01]
+2022-03-10 13:15:48,789 | INFO : 	 test_acc: 85.65 (best: 88.24 from #61)
+2022-03-10 13:16:13,638 | INFO : Epoch #69
+2022-03-10 13:16:13,638 | INFO : 	 train_acc: 90.88; train_loss: 0.244; test_loss: 39.917; lr: [0.01]
+2022-03-10 13:16:13,639 | INFO : 	 test_acc: 86.48 (best: 88.24 from #61)
+2022-03-10 13:16:39,101 | INFO : Epoch #70
+2022-03-10 13:16:39,102 | INFO : 	 train_acc: 90.962; train_loss: 0.137; test_loss: 43.479; lr: [0.01]
+2022-03-10 13:16:39,102 | INFO : 	 test_acc: 86.33 (best: 88.24 from #61)
+2022-03-10 13:17:04,387 | INFO : Epoch #71
+2022-03-10 13:17:04,387 | INFO : 	 train_acc: 91.066; train_loss: 0.241; test_loss: 43.615; lr: [0.01]
+2022-03-10 13:17:04,387 | INFO : 	 test_acc: 86.13 (best: 88.24 from #61)
+2022-03-10 13:17:29,424 | INFO : Epoch #72
+2022-03-10 13:17:29,425 | INFO : 	 train_acc: 91.186; train_loss: 0.127; test_loss: 38.856; lr: [0.01]
+2022-03-10 13:17:29,425 | INFO : 	 test_acc: 87.41 (best: 88.24 from #61)
+2022-03-10 13:17:54,528 | INFO : Epoch #73
+2022-03-10 13:17:54,528 | INFO : 	 train_acc: 90.908; train_loss: 0.298; test_loss: 35.934; lr: [0.01]
+2022-03-10 13:17:54,529 | INFO : 	 test_acc: 87.98 (best: 88.24 from #61)
+2022-03-10 13:18:19,425 | INFO : Epoch #74
+2022-03-10 13:18:19,425 | INFO : 	 train_acc: 91.182; train_loss: 0.202; test_loss: 45.548; lr: [0.01]
+2022-03-10 13:18:19,425 | INFO : 	 test_acc: 85.49 (best: 88.24 from #61)
+2022-03-10 13:18:44,124 | INFO : Epoch #75
+2022-03-10 13:18:44,124 | INFO : 	 train_acc: 91.06; train_loss: 0.774; test_loss: 42.295; lr: [0.01]
+2022-03-10 13:18:44,124 | INFO : 	 test_acc: 86.39 (best: 88.24 from #61)
+2022-03-10 13:19:08,957 | INFO : Epoch #76
+2022-03-10 13:19:08,957 | INFO : 	 train_acc: 91.106; train_loss: 0.469; test_loss: 38.536; lr: [0.01]
+2022-03-10 13:19:08,957 | INFO : 	 test_acc: 87.52 (best: 88.24 from #61)
+2022-03-10 13:19:33,809 | INFO : Epoch #77
+2022-03-10 13:19:33,810 | INFO : 	 train_acc: 91.028; train_loss: 0.425; test_loss: 39.449; lr: [0.01]
+2022-03-10 13:19:33,810 | INFO : 	 test_acc: 87.35 (best: 88.24 from #61)
+2022-03-10 13:19:58,457 | INFO : Epoch #78
+2022-03-10 13:19:58,458 | INFO : 	 train_acc: 90.996; train_loss: 0.193; test_loss: 37.282; lr: [0.01]
+2022-03-10 13:19:58,458 | INFO : 	 test_acc: 87.84 (best: 88.24 from #61)
+2022-03-10 13:20:23,334 | INFO : Epoch #79
+2022-03-10 13:20:23,335 | INFO : 	 train_acc: 91.13; train_loss: 0.322; test_loss: 42.561; lr: [0.01]
+2022-03-10 13:20:23,335 | INFO : 	 test_acc: 86.67 (best: 88.24 from #61)
+2022-03-10 13:20:48,442 | INFO : Epoch #80
+2022-03-10 13:20:48,443 | INFO : 	 train_acc: 90.992; train_loss: 0.530; test_loss: 42.632; lr: [0.01]
+2022-03-10 13:20:48,443 | INFO : 	 test_acc: 86.01 (best: 88.24 from #61)
+2022-03-10 13:21:12,945 | INFO : Epoch #81
+2022-03-10 13:21:12,946 | INFO : 	 train_acc: 91.022; train_loss: 0.216; test_loss: 44.914; lr: [0.01]
+2022-03-10 13:21:12,946 | INFO : 	 test_acc: 85.75 (best: 88.24 from #61)
+2022-03-10 13:21:37,379 | INFO : Epoch #82
+2022-03-10 13:21:37,379 | INFO : 	 train_acc: 91.166; train_loss: 0.704; test_loss: 41.615; lr: [0.01]
+2022-03-10 13:21:37,380 | INFO : 	 test_acc: 86.42 (best: 88.24 from #61)
+2022-03-10 13:22:01,723 | INFO : Epoch #83
+2022-03-10 13:22:01,724 | INFO : 	 train_acc: 91.084; train_loss: 0.077; test_loss: 44.424; lr: [0.01]
+2022-03-10 13:22:01,724 | INFO : 	 test_acc: 85.49 (best: 88.24 from #61)
+2022-03-10 13:22:25,932 | INFO : Epoch #84
+2022-03-10 13:22:25,933 | INFO : 	 train_acc: 91.04; train_loss: 0.085; test_loss: 40.874; lr: [0.01]
+2022-03-10 13:22:25,933 | INFO : 	 test_acc: 86.66 (best: 88.24 from #61)
+2022-03-10 13:22:50,227 | INFO : Epoch #85
+2022-03-10 13:22:50,228 | INFO : 	 train_acc: 91.174; train_loss: 0.074; test_loss: 42.477; lr: [0.01]
+2022-03-10 13:22:50,228 | INFO : 	 test_acc: 85.89 (best: 88.24 from #61)
+2022-03-10 13:23:14,552 | INFO : Epoch #86
+2022-03-10 13:23:14,552 | INFO : 	 train_acc: 91.088; train_loss: 0.228; test_loss: 42.649; lr: [0.01]
+2022-03-10 13:23:14,552 | INFO : 	 test_acc: 85.88 (best: 88.24 from #61)
+2022-03-10 13:23:38,828 | INFO : Epoch #87
+2022-03-10 13:23:38,828 | INFO : 	 train_acc: 91.092; train_loss: 0.394; test_loss: 43.204; lr: [0.01]
+2022-03-10 13:23:38,829 | INFO : 	 test_acc: 85.99 (best: 88.24 from #61)
+2022-03-10 13:24:03,752 | INFO : Epoch #88
+2022-03-10 13:24:03,753 | INFO : 	 train_acc: 91.218; train_loss: 0.228; test_loss: 38.389; lr: [0.01]
+2022-03-10 13:24:03,753 | INFO : 	 test_acc: 87.29 (best: 88.24 from #61)
+2022-03-10 13:24:28,763 | INFO : Epoch #89
+2022-03-10 13:24:28,764 | INFO : 	 train_acc: 91.178; train_loss: 0.322; test_loss: 39.070; lr: [0.01]
+2022-03-10 13:24:28,764 | INFO : 	 test_acc: 87.49 (best: 88.24 from #61)
+2022-03-10 13:24:53,134 | INFO : Epoch #90
+2022-03-10 13:24:53,134 | INFO : 	 train_acc: 91.202; train_loss: 0.048; test_loss: 40.430; lr: [0.01]
+2022-03-10 13:24:53,134 | INFO : 	 test_acc: 87.44 (best: 88.24 from #61)
+2022-03-10 13:25:17,494 | INFO : Epoch #91
+2022-03-10 13:25:17,495 | INFO : 	 train_acc: 91.206; train_loss: 0.139; test_loss: 39.029; lr: [0.01]
+2022-03-10 13:25:17,495 | INFO : 	 test_acc: 87.32 (best: 88.24 from #61)
+2022-03-10 13:25:42,112 | INFO : Epoch #92
+2022-03-10 13:25:42,113 | INFO : 	 train_acc: 91.25; train_loss: 0.711; test_loss: 38.066; lr: [0.01]
+2022-03-10 13:25:42,113 | INFO : 	 test_acc: 87.77 (best: 88.24 from #61)
+2022-03-10 13:26:06,671 | INFO : Epoch #93
+2022-03-10 13:26:06,672 | INFO : 	 train_acc: 91.33; train_loss: 0.348; test_loss: 41.276; lr: [0.01]
+2022-03-10 13:26:06,672 | INFO : 	 test_acc: 86.19 (best: 88.24 from #61)
+2022-03-10 13:26:31,292 | INFO : Epoch #94
+2022-03-10 13:26:31,293 | INFO : 	 train_acc: 91.104; train_loss: 0.419; test_loss: 48.598; lr: [0.01]
+2022-03-10 13:26:31,293 | INFO : 	 test_acc: 84.7 (best: 88.24 from #61)
+2022-03-10 13:26:55,852 | INFO : Epoch #95
+2022-03-10 13:26:55,852 | INFO : 	 train_acc: 91.236; train_loss: 0.232; test_loss: 41.738; lr: [0.01]
+2022-03-10 13:26:55,852 | INFO : 	 test_acc: 86.29 (best: 88.24 from #61)
+2022-03-10 13:27:20,699 | INFO : Epoch #96
+2022-03-10 13:27:20,700 | INFO : 	 train_acc: 91.33; train_loss: 0.090; test_loss: 39.893; lr: [0.01]
+2022-03-10 13:27:20,700 | INFO : 	 test_acc: 86.65 (best: 88.24 from #61)
+2022-03-10 13:27:45,395 | INFO : Epoch #97
+2022-03-10 13:27:45,396 | INFO : 	 train_acc: 91.382; train_loss: 0.480; test_loss: 42.283; lr: [0.01]
+2022-03-10 13:27:45,396 | INFO : 	 test_acc: 86.63 (best: 88.24 from #61)
+2022-03-10 13:28:10,377 | INFO : Epoch #98
+2022-03-10 13:28:10,378 | INFO : 	 train_acc: 91.126; train_loss: 0.167; test_loss: 38.597; lr: [0.01]
+2022-03-10 13:28:10,378 | INFO : 	 test_acc: 87.07 (best: 88.24 from #61)
+2022-03-10 13:28:35,241 | INFO : Epoch #99
+2022-03-10 13:28:35,241 | INFO : 	 train_acc: 91.202; train_loss: 0.384; test_loss: 36.446; lr: [0.01]
+2022-03-10 13:28:35,241 | INFO : 	 test_acc: 88.22 (best: 88.24 from #61)
+2022-03-10 13:28:59,770 | INFO : Epoch #100
+2022-03-10 13:28:59,771 | INFO : 	 train_acc: 94.204; train_loss: 0.170; test_loss: 27.226; lr: [0.001]
+2022-03-10 13:28:59,771 | INFO : 	 test_acc: 91.12 (best: 91.12 from #100)
+2022-03-10 13:29:24,933 | INFO : Epoch #101
+2022-03-10 13:29:24,934 | INFO : 	 train_acc: 95.102; train_loss: 0.095; test_loss: 26.779; lr: [0.001]
+2022-03-10 13:29:24,934 | INFO : 	 test_acc: 91.29 (best: 91.29 from #101)
+2022-03-10 13:29:50,128 | INFO : Epoch #102
+2022-03-10 13:29:50,128 | INFO : 	 train_acc: 95.506; train_loss: 0.359; test_loss: 27.078; lr: [0.001]
+2022-03-10 13:29:50,128 | INFO : 	 test_acc: 91.34 (best: 91.34 from #102)
+2022-03-10 13:30:14,839 | INFO : Epoch #103
+2022-03-10 13:30:14,840 | INFO : 	 train_acc: 95.884; train_loss: 0.192; test_loss: 26.658; lr: [0.001]
+2022-03-10 13:30:14,840 | INFO : 	 test_acc: 91.27 (best: 91.34 from #102)
+2022-03-10 13:30:39,660 | INFO : Epoch #104
+2022-03-10 13:30:39,661 | INFO : 	 train_acc: 95.946; train_loss: 0.148; test_loss: 27.000; lr: [0.001]
+2022-03-10 13:30:39,661 | INFO : 	 test_acc: 91.23 (best: 91.34 from #102)
+2022-03-10 13:31:04,927 | INFO : Epoch #105
+2022-03-10 13:31:04,928 | INFO : 	 train_acc: 95.99; train_loss: 0.176; test_loss: 26.668; lr: [0.001]
+2022-03-10 13:31:04,928 | INFO : 	 test_acc: 91.23 (best: 91.34 from #102)
+2022-03-10 13:31:29,959 | INFO : Epoch #106
+2022-03-10 13:31:29,959 | INFO : 	 train_acc: 95.984; train_loss: 0.439; test_loss: 26.650; lr: [0.001]
+2022-03-10 13:31:29,960 | INFO : 	 test_acc: 91.39 (best: 91.39 from #106)
+2022-03-10 13:31:55,159 | INFO : Epoch #107
+2022-03-10 13:31:55,159 | INFO : 	 train_acc: 96.254; train_loss: 0.369; test_loss: 26.668; lr: [0.001]
+2022-03-10 13:31:55,160 | INFO : 	 test_acc: 91.43 (best: 91.43 from #107)
+2022-03-10 13:32:20,519 | INFO : Epoch #108
+2022-03-10 13:32:20,519 | INFO : 	 train_acc: 96.272; train_loss: 0.274; test_loss: 27.053; lr: [0.001]
+2022-03-10 13:32:20,520 | INFO : 	 test_acc: 91.18 (best: 91.43 from #107)
+2022-03-10 13:32:45,359 | INFO : Epoch #109
+2022-03-10 13:32:45,359 | INFO : 	 train_acc: 96.396; train_loss: 0.119; test_loss: 26.580; lr: [0.001]
+2022-03-10 13:32:45,360 | INFO : 	 test_acc: 91.48 (best: 91.48 from #109)
+2022-03-10 13:33:10,744 | INFO : Epoch #110
+2022-03-10 13:33:10,744 | INFO : 	 train_acc: 96.342; train_loss: 0.019; test_loss: 27.176; lr: [0.001]
+2022-03-10 13:33:10,745 | INFO : 	 test_acc: 91.36 (best: 91.48 from #109)
+2022-03-10 13:33:36,261 | INFO : Epoch #111
+2022-03-10 13:33:36,262 | INFO : 	 train_acc: 96.48; train_loss: 0.254; test_loss: 26.800; lr: [0.001]
+2022-03-10 13:33:36,262 | INFO : 	 test_acc: 91.69 (best: 91.69 from #111)
+2022-03-10 13:34:01,987 | INFO : Epoch #112
+2022-03-10 13:34:01,987 | INFO : 	 train_acc: 96.484; train_loss: 0.124; test_loss: 26.455; lr: [0.001]
+2022-03-10 13:34:01,987 | INFO : 	 test_acc: 91.61 (best: 91.69 from #111)
+2022-03-10 13:34:27,489 | INFO : Epoch #113
+2022-03-10 13:34:27,490 | INFO : 	 train_acc: 96.496; train_loss: 0.438; test_loss: 27.037; lr: [0.001]
+2022-03-10 13:34:27,490 | INFO : 	 test_acc: 91.61 (best: 91.69 from #111)
+2022-03-10 13:34:53,223 | INFO : Epoch #114
+2022-03-10 13:34:53,223 | INFO : 	 train_acc: 96.694; train_loss: 0.004; test_loss: 27.064; lr: [0.001]
+2022-03-10 13:34:53,223 | INFO : 	 test_acc: 91.32 (best: 91.69 from #111)
+2022-03-10 13:35:18,712 | INFO : Epoch #115
+2022-03-10 13:35:18,712 | INFO : 	 train_acc: 96.796; train_loss: 0.383; test_loss: 27.495; lr: [0.001]
+2022-03-10 13:35:18,713 | INFO : 	 test_acc: 91.4 (best: 91.69 from #111)
+2022-03-10 13:35:44,249 | INFO : Epoch #116
+2022-03-10 13:35:44,249 | INFO : 	 train_acc: 96.696; train_loss: 0.067; test_loss: 27.270; lr: [0.001]
+2022-03-10 13:35:44,250 | INFO : 	 test_acc: 91.48 (best: 91.69 from #111)
+2022-03-10 13:36:09,255 | INFO : Epoch #117
+2022-03-10 13:36:09,256 | INFO : 	 train_acc: 96.838; train_loss: 0.059; test_loss: 27.264; lr: [0.001]
+2022-03-10 13:36:09,256 | INFO : 	 test_acc: 91.42 (best: 91.69 from #111)
+2022-03-10 13:36:34,379 | INFO : Epoch #118
+2022-03-10 13:36:34,379 | INFO : 	 train_acc: 96.75; train_loss: 0.349; test_loss: 27.083; lr: [0.001]
+2022-03-10 13:36:34,379 | INFO : 	 test_acc: 91.6 (best: 91.69 from #111)
+2022-03-10 13:36:59,421 | INFO : Epoch #119
+2022-03-10 13:36:59,421 | INFO : 	 train_acc: 96.934; train_loss: 0.199; test_loss: 27.720; lr: [0.001]
+2022-03-10 13:36:59,421 | INFO : 	 test_acc: 91.45 (best: 91.69 from #111)
+2022-03-10 13:37:24,434 | INFO : Epoch #120
+2022-03-10 13:37:24,435 | INFO : 	 train_acc: 96.758; train_loss: 0.207; test_loss: 27.872; lr: [0.001]
+2022-03-10 13:37:24,435 | INFO : 	 test_acc: 91.31 (best: 91.69 from #111)
+2022-03-10 13:37:49,850 | INFO : Epoch #121
+2022-03-10 13:37:49,850 | INFO : 	 train_acc: 97.056; train_loss: 0.131; test_loss: 27.617; lr: [0.001]
+2022-03-10 13:37:49,850 | INFO : 	 test_acc: 91.22 (best: 91.69 from #111)
+2022-03-10 13:38:14,961 | INFO : Epoch #122
+2022-03-10 13:38:14,961 | INFO : 	 train_acc: 97.02; train_loss: 0.037; test_loss: 27.340; lr: [0.001]
+2022-03-10 13:38:14,961 | INFO : 	 test_acc: 91.6 (best: 91.69 from #111)
+2022-03-10 13:38:40,136 | INFO : Epoch #123
+2022-03-10 13:38:40,137 | INFO : 	 train_acc: 97.034; train_loss: 0.154; test_loss: 27.337; lr: [0.001]
+2022-03-10 13:38:40,137 | INFO : 	 test_acc: 91.44 (best: 91.69 from #111)
+2022-03-10 13:39:06,033 | INFO : Epoch #124
+2022-03-10 13:39:06,033 | INFO : 	 train_acc: 97.126; train_loss: 0.048; test_loss: 27.939; lr: [0.001]
+2022-03-10 13:39:06,034 | INFO : 	 test_acc: 91.52 (best: 91.69 from #111)
+2022-03-10 13:39:31,256 | INFO : Epoch #125
+2022-03-10 13:39:31,256 | INFO : 	 train_acc: 97.046; train_loss: 0.095; test_loss: 28.043; lr: [0.001]
+2022-03-10 13:39:31,256 | INFO : 	 test_acc: 91.29 (best: 91.69 from #111)
+2022-03-10 13:39:56,489 | INFO : Epoch #126
+2022-03-10 13:39:56,489 | INFO : 	 train_acc: 97.098; train_loss: 0.156; test_loss: 27.579; lr: [0.001]
+2022-03-10 13:39:56,489 | INFO : 	 test_acc: 91.55 (best: 91.69 from #111)
+2022-03-10 13:40:21,926 | INFO : Epoch #127
+2022-03-10 13:40:21,927 | INFO : 	 train_acc: 97.174; train_loss: 0.102; test_loss: 27.408; lr: [0.001]
+2022-03-10 13:40:21,927 | INFO : 	 test_acc: 91.33 (best: 91.69 from #111)
+2022-03-10 13:40:47,119 | INFO : Epoch #128
+2022-03-10 13:40:47,120 | INFO : 	 train_acc: 97.234; train_loss: 0.156; test_loss: 27.420; lr: [0.001]
+2022-03-10 13:40:47,120 | INFO : 	 test_acc: 91.49 (best: 91.69 from #111)
+2022-03-10 13:41:12,385 | INFO : Epoch #129
+2022-03-10 13:41:12,386 | INFO : 	 train_acc: 97.188; train_loss: 0.050; test_loss: 27.987; lr: [0.001]
+2022-03-10 13:41:12,386 | INFO : 	 test_acc: 91.27 (best: 91.69 from #111)
+2022-03-10 13:41:37,703 | INFO : Epoch #130
+2022-03-10 13:41:37,704 | INFO : 	 train_acc: 97.304; train_loss: 0.279; test_loss: 28.850; lr: [0.001]
+2022-03-10 13:41:37,704 | INFO : 	 test_acc: 91.18 (best: 91.69 from #111)
+2022-03-10 13:42:03,227 | INFO : Epoch #131
+2022-03-10 13:42:03,227 | INFO : 	 train_acc: 97.272; train_loss: 0.106; test_loss: 28.326; lr: [0.001]
+2022-03-10 13:42:03,227 | INFO : 	 test_acc: 91.58 (best: 91.69 from #111)
+2022-03-10 13:42:28,803 | INFO : Epoch #132
+2022-03-10 13:42:28,804 | INFO : 	 train_acc: 97.272; train_loss: 0.154; test_loss: 28.535; lr: [0.001]
+2022-03-10 13:42:28,804 | INFO : 	 test_acc: 91.29 (best: 91.69 from #111)
+2022-03-10 13:42:54,460 | INFO : Epoch #133
+2022-03-10 13:42:54,460 | INFO : 	 train_acc: 97.374; train_loss: 0.165; test_loss: 28.574; lr: [0.001]
+2022-03-10 13:42:54,460 | INFO : 	 test_acc: 91.24 (best: 91.69 from #111)
+2022-03-10 13:43:19,797 | INFO : Epoch #134
+2022-03-10 13:43:19,797 | INFO : 	 train_acc: 97.418; train_loss: 0.121; test_loss: 28.848; lr: [0.001]
+2022-03-10 13:43:19,797 | INFO : 	 test_acc: 91.27 (best: 91.69 from #111)
+2022-03-10 13:43:44,984 | INFO : Epoch #135
+2022-03-10 13:43:44,985 | INFO : 	 train_acc: 97.37; train_loss: 0.059; test_loss: 29.007; lr: [0.001]
+2022-03-10 13:43:44,985 | INFO : 	 test_acc: 91.19 (best: 91.69 from #111)
+2022-03-10 13:44:10,165 | INFO : Epoch #136
+2022-03-10 13:44:10,165 | INFO : 	 train_acc: 97.368; train_loss: 0.125; test_loss: 28.876; lr: [0.001]
+2022-03-10 13:44:10,165 | INFO : 	 test_acc: 91.4 (best: 91.69 from #111)
+2022-03-10 13:44:35,546 | INFO : Epoch #137
+2022-03-10 13:44:35,547 | INFO : 	 train_acc: 97.368; train_loss: 0.083; test_loss: 29.291; lr: [0.001]
+2022-03-10 13:44:35,547 | INFO : 	 test_acc: 91.35 (best: 91.69 from #111)
+2022-03-10 13:45:00,972 | INFO : Epoch #138
+2022-03-10 13:45:00,973 | INFO : 	 train_acc: 97.44; train_loss: 0.061; test_loss: 28.925; lr: [0.001]
+2022-03-10 13:45:00,973 | INFO : 	 test_acc: 91.14 (best: 91.69 from #111)
+2022-03-10 13:45:26,682 | INFO : Epoch #139
+2022-03-10 13:45:26,683 | INFO : 	 train_acc: 97.422; train_loss: 0.254; test_loss: 29.054; lr: [0.001]
+2022-03-10 13:45:26,683 | INFO : 	 test_acc: 91.1 (best: 91.69 from #111)
+2022-03-10 13:45:52,172 | INFO : Epoch #140
+2022-03-10 13:45:52,172 | INFO : 	 train_acc: 97.464; train_loss: 0.252; test_loss: 29.799; lr: [0.001]
+2022-03-10 13:45:52,172 | INFO : 	 test_acc: 91.26 (best: 91.69 from #111)
+2022-03-10 13:46:17,317 | INFO : Epoch #141
+2022-03-10 13:46:17,317 | INFO : 	 train_acc: 97.522; train_loss: 0.340; test_loss: 29.098; lr: [0.001]
+2022-03-10 13:46:17,317 | INFO : 	 test_acc: 91.11 (best: 91.69 from #111)
+2022-03-10 13:46:43,057 | INFO : Epoch #142
+2022-03-10 13:46:43,057 | INFO : 	 train_acc: 97.532; train_loss: 0.087; test_loss: 28.835; lr: [0.001]
+2022-03-10 13:46:43,057 | INFO : 	 test_acc: 91.49 (best: 91.69 from #111)
+2022-03-10 13:47:08,914 | INFO : Epoch #143
+2022-03-10 13:47:08,914 | INFO : 	 train_acc: 97.49; train_loss: 0.107; test_loss: 28.659; lr: [0.001]
+2022-03-10 13:47:08,914 | INFO : 	 test_acc: 91.73 (best: 91.73 from #143)
+2022-03-10 13:47:34,825 | INFO : Epoch #144
+2022-03-10 13:47:34,825 | INFO : 	 train_acc: 97.52; train_loss: 0.063; test_loss: 29.055; lr: [0.001]
+2022-03-10 13:47:34,825 | INFO : 	 test_acc: 91.29 (best: 91.73 from #143)
+2022-03-10 13:48:00,076 | INFO : Epoch #145
+2022-03-10 13:48:00,077 | INFO : 	 train_acc: 97.62; train_loss: 0.734; test_loss: 29.054; lr: [0.001]
+2022-03-10 13:48:00,077 | INFO : 	 test_acc: 91.31 (best: 91.73 from #143)
+2022-03-10 13:48:25,443 | INFO : Epoch #146
+2022-03-10 13:48:25,443 | INFO : 	 train_acc: 97.422; train_loss: 0.073; test_loss: 29.403; lr: [0.001]
+2022-03-10 13:48:25,443 | INFO : 	 test_acc: 91.31 (best: 91.73 from #143)
+2022-03-10 13:48:51,074 | INFO : Epoch #147
+2022-03-10 13:48:51,074 | INFO : 	 train_acc: 97.532; train_loss: 0.060; test_loss: 29.026; lr: [0.001]
+2022-03-10 13:48:51,074 | INFO : 	 test_acc: 91.07 (best: 91.73 from #143)
+2022-03-10 13:49:16,259 | INFO : Epoch #148
+2022-03-10 13:49:16,260 | INFO : 	 train_acc: 97.62; train_loss: 0.013; test_loss: 28.944; lr: [0.001]
+2022-03-10 13:49:16,260 | INFO : 	 test_acc: 91.48 (best: 91.73 from #143)
+2022-03-10 13:49:41,602 | INFO : Epoch #149
+2022-03-10 13:49:41,603 | INFO : 	 train_acc: 97.642; train_loss: 0.073; test_loss: 29.542; lr: [0.001]
+2022-03-10 13:49:41,603 | INFO : 	 test_acc: 91.19 (best: 91.73 from #143)
+2022-03-10 13:50:07,207 | INFO : Epoch #150
+2022-03-10 13:50:07,208 | INFO : 	 train_acc: 97.59; train_loss: 0.196; test_loss: 29.550; lr: [0.001]
+2022-03-10 13:50:07,208 | INFO : 	 test_acc: 91.12 (best: 91.73 from #143)
+2022-03-10 13:50:32,756 | INFO : Epoch #151
+2022-03-10 13:50:32,757 | INFO : 	 train_acc: 97.522; train_loss: 0.133; test_loss: 30.177; lr: [0.001]
+2022-03-10 13:50:32,757 | INFO : 	 test_acc: 91.28 (best: 91.73 from #143)
+2022-03-10 13:50:58,191 | INFO : Epoch #152
+2022-03-10 13:50:58,192 | INFO : 	 train_acc: 97.602; train_loss: 0.064; test_loss: 29.627; lr: [0.001]
+2022-03-10 13:50:58,192 | INFO : 	 test_acc: 91.13 (best: 91.73 from #143)
+2022-03-10 13:51:23,535 | INFO : Epoch #153
+2022-03-10 13:51:23,535 | INFO : 	 train_acc: 97.59; train_loss: 0.667; test_loss: 30.736; lr: [0.001]
+2022-03-10 13:51:23,535 | INFO : 	 test_acc: 90.97 (best: 91.73 from #143)
+2022-03-10 13:51:48,966 | INFO : Epoch #154
+2022-03-10 13:51:48,969 | INFO : 	 train_acc: 97.604; train_loss: 0.438; test_loss: 29.038; lr: [0.001]
+2022-03-10 13:51:48,970 | INFO : 	 test_acc: 91.31 (best: 91.73 from #143)
+2022-03-10 13:52:14,670 | INFO : Epoch #155
+2022-03-10 13:52:14,670 | INFO : 	 train_acc: 97.744; train_loss: 0.029; test_loss: 30.154; lr: [0.001]
+2022-03-10 13:52:14,670 | INFO : 	 test_acc: 91.28 (best: 91.73 from #143)
+2022-03-10 13:52:39,794 | INFO : Epoch #156
+2022-03-10 13:52:39,795 | INFO : 	 train_acc: 97.59; train_loss: 0.197; test_loss: 29.988; lr: [0.001]
+2022-03-10 13:52:39,795 | INFO : 	 test_acc: 91.26 (best: 91.73 from #143)
+2022-03-10 13:53:05,131 | INFO : Epoch #157
+2022-03-10 13:53:05,131 | INFO : 	 train_acc: 97.66; train_loss: 0.156; test_loss: 30.863; lr: [0.001]
+2022-03-10 13:53:05,132 | INFO : 	 test_acc: 90.98 (best: 91.73 from #143)
+2022-03-10 13:53:30,694 | INFO : Epoch #158
+2022-03-10 13:53:30,694 | INFO : 	 train_acc: 97.7; train_loss: 0.063; test_loss: 30.364; lr: [0.001]
+2022-03-10 13:53:30,695 | INFO : 	 test_acc: 91.08 (best: 91.73 from #143)
+2022-03-10 13:53:55,854 | INFO : Epoch #159
+2022-03-10 13:53:55,854 | INFO : 	 train_acc: 97.658; train_loss: 0.169; test_loss: 30.848; lr: [0.001]
+2022-03-10 13:53:55,854 | INFO : 	 test_acc: 90.85 (best: 91.73 from #143)
+2022-03-10 13:54:21,366 | INFO : Epoch #160
+2022-03-10 13:54:21,366 | INFO : 	 train_acc: 97.706; train_loss: 0.101; test_loss: 30.770; lr: [0.001]
+2022-03-10 13:54:21,366 | INFO : 	 test_acc: 91.04 (best: 91.73 from #143)
+2022-03-10 13:54:46,597 | INFO : Epoch #161
+2022-03-10 13:54:46,598 | INFO : 	 train_acc: 97.644; train_loss: 0.081; test_loss: 30.687; lr: [0.001]
+2022-03-10 13:54:46,598 | INFO : 	 test_acc: 90.99 (best: 91.73 from #143)
+2022-03-10 13:55:11,955 | INFO : Epoch #162
+2022-03-10 13:55:11,956 | INFO : 	 train_acc: 97.818; train_loss: 0.143; test_loss: 29.997; lr: [0.001]
+2022-03-10 13:55:11,956 | INFO : 	 test_acc: 91.31 (best: 91.73 from #143)
+2022-03-10 13:55:37,923 | INFO : Epoch #163
+2022-03-10 13:55:37,924 | INFO : 	 train_acc: 97.694; train_loss: 0.330; test_loss: 29.999; lr: [0.001]
+2022-03-10 13:55:37,924 | INFO : 	 test_acc: 91.18 (best: 91.73 from #143)
+2022-03-10 13:56:03,306 | INFO : Epoch #164
+2022-03-10 13:56:03,307 | INFO : 	 train_acc: 97.718; train_loss: 0.161; test_loss: 30.137; lr: [0.001]
+2022-03-10 13:56:03,307 | INFO : 	 test_acc: 91.37 (best: 91.73 from #143)
+2022-03-10 13:56:28,814 | INFO : Epoch #165
+2022-03-10 13:56:28,815 | INFO : 	 train_acc: 97.838; train_loss: 0.107; test_loss: 32.556; lr: [0.001]
+2022-03-10 13:56:28,815 | INFO : 	 test_acc: 90.59 (best: 91.73 from #143)
+2022-03-10 13:56:54,052 | INFO : Epoch #166
+2022-03-10 13:56:54,052 | INFO : 	 train_acc: 97.784; train_loss: 0.211; test_loss: 30.803; lr: [0.001]
+2022-03-10 13:56:54,052 | INFO : 	 test_acc: 91.09 (best: 91.73 from #143)
+2022-03-10 13:57:19,479 | INFO : Epoch #167
+2022-03-10 13:57:19,480 | INFO : 	 train_acc: 97.674; train_loss: 0.301; test_loss: 29.981; lr: [0.001]
+2022-03-10 13:57:19,480 | INFO : 	 test_acc: 91.3 (best: 91.73 from #143)
+2022-03-10 13:57:44,648 | INFO : Epoch #168
+2022-03-10 13:57:44,648 | INFO : 	 train_acc: 97.718; train_loss: 0.280; test_loss: 29.627; lr: [0.001]
+2022-03-10 13:57:44,649 | INFO : 	 test_acc: 91.57 (best: 91.73 from #143)
+2022-03-10 13:58:09,775 | INFO : Epoch #169
+2022-03-10 13:58:09,776 | INFO : 	 train_acc: 97.694; train_loss: 0.055; test_loss: 30.127; lr: [0.001]
+2022-03-10 13:58:09,776 | INFO : 	 test_acc: 91.1 (best: 91.73 from #143)
+2022-03-10 13:58:35,251 | INFO : Epoch #170
+2022-03-10 13:58:35,251 | INFO : 	 train_acc: 97.696; train_loss: 0.070; test_loss: 30.187; lr: [0.001]
+2022-03-10 13:58:35,251 | INFO : 	 test_acc: 91.09 (best: 91.73 from #143)
+2022-03-10 13:59:00,829 | INFO : Epoch #171
+2022-03-10 13:59:00,830 | INFO : 	 train_acc: 97.758; train_loss: 0.070; test_loss: 29.564; lr: [0.001]
+2022-03-10 13:59:00,830 | INFO : 	 test_acc: 91.53 (best: 91.73 from #143)
+2022-03-10 13:59:26,381 | INFO : Epoch #172
+2022-03-10 13:59:26,381 | INFO : 	 train_acc: 97.796; train_loss: 0.036; test_loss: 30.305; lr: [0.001]
+2022-03-10 13:59:26,381 | INFO : 	 test_acc: 91.29 (best: 91.73 from #143)
+2022-03-10 13:59:51,688 | INFO : Epoch #173
+2022-03-10 13:59:51,689 | INFO : 	 train_acc: 97.75; train_loss: 0.056; test_loss: 31.753; lr: [0.001]
+2022-03-10 13:59:51,689 | INFO : 	 test_acc: 90.96 (best: 91.73 from #143)
+2022-03-10 14:00:17,182 | INFO : Epoch #174
+2022-03-10 14:00:17,182 | INFO : 	 train_acc: 97.734; train_loss: 0.030; test_loss: 31.397; lr: [0.001]
+2022-03-10 14:00:17,182 | INFO : 	 test_acc: 91.09 (best: 91.73 from #143)
+2022-03-10 14:00:42,455 | INFO : Epoch #175
+2022-03-10 14:00:42,456 | INFO : 	 train_acc: 97.956; train_loss: 0.302; test_loss: 30.349; lr: [0.001]
+2022-03-10 14:00:42,456 | INFO : 	 test_acc: 91.32 (best: 91.73 from #143)
+2022-03-10 14:01:07,958 | INFO : Epoch #176
+2022-03-10 14:01:07,959 | INFO : 	 train_acc: 97.826; train_loss: 0.032; test_loss: 30.962; lr: [0.001]
+2022-03-10 14:01:07,959 | INFO : 	 test_acc: 91.31 (best: 91.73 from #143)
+2022-03-10 14:01:33,348 | INFO : Epoch #177
+2022-03-10 14:01:33,349 | INFO : 	 train_acc: 97.812; train_loss: 0.148; test_loss: 31.398; lr: [0.001]
+2022-03-10 14:01:33,349 | INFO : 	 test_acc: 91.33 (best: 91.73 from #143)
+2022-03-10 14:01:59,098 | INFO : Epoch #178
+2022-03-10 14:01:59,099 | INFO : 	 train_acc: 97.856; train_loss: 0.271; test_loss: 32.137; lr: [0.001]
+2022-03-10 14:01:59,099 | INFO : 	 test_acc: 90.73 (best: 91.73 from #143)
+2022-03-10 14:02:24,485 | INFO : Epoch #179
+2022-03-10 14:02:24,486 | INFO : 	 train_acc: 97.83; train_loss: 0.182; test_loss: 31.116; lr: [0.001]
+2022-03-10 14:02:24,486 | INFO : 	 test_acc: 91.01 (best: 91.73 from #143)
+2022-03-10 14:02:50,025 | INFO : Epoch #180
+2022-03-10 14:02:50,026 | INFO : 	 train_acc: 97.842; train_loss: 0.407; test_loss: 31.982; lr: [0.001]
+2022-03-10 14:02:50,026 | INFO : 	 test_acc: 91.06 (best: 91.73 from #143)
+2022-03-10 14:03:15,476 | INFO : Epoch #181
+2022-03-10 14:03:15,477 | INFO : 	 train_acc: 97.822; train_loss: 0.020; test_loss: 31.946; lr: [0.001]
+2022-03-10 14:03:15,477 | INFO : 	 test_acc: 90.74 (best: 91.73 from #143)
+2022-03-10 14:03:40,649 | INFO : Epoch #182
+2022-03-10 14:03:40,650 | INFO : 	 train_acc: 97.8; train_loss: 0.018; test_loss: 30.965; lr: [0.001]
+2022-03-10 14:03:40,650 | INFO : 	 test_acc: 91.17 (best: 91.73 from #143)
+2022-03-10 14:04:05,849 | INFO : Epoch #183
+2022-03-10 14:04:05,850 | INFO : 	 train_acc: 97.964; train_loss: 0.027; test_loss: 31.144; lr: [0.001]
+2022-03-10 14:04:05,850 | INFO : 	 test_acc: 90.81 (best: 91.73 from #143)
+2022-03-10 14:04:31,719 | INFO : Epoch #184
+2022-03-10 14:04:31,719 | INFO : 	 train_acc: 97.876; train_loss: 0.122; test_loss: 32.337; lr: [0.001]
+2022-03-10 14:04:31,719 | INFO : 	 test_acc: 90.76 (best: 91.73 from #143)
+2022-03-10 14:04:56,916 | INFO : Epoch #185
+2022-03-10 14:04:56,917 | INFO : 	 train_acc: 97.858; train_loss: 0.043; test_loss: 30.977; lr: [0.001]
+2022-03-10 14:04:56,917 | INFO : 	 test_acc: 91.14 (best: 91.73 from #143)
+2022-03-10 14:05:22,336 | INFO : Epoch #186
+2022-03-10 14:05:22,336 | INFO : 	 train_acc: 97.928; train_loss: 0.101; test_loss: 32.174; lr: [0.001]
+2022-03-10 14:05:22,336 | INFO : 	 test_acc: 90.63 (best: 91.73 from #143)
+2022-03-10 14:05:48,142 | INFO : Epoch #187
+2022-03-10 14:05:48,143 | INFO : 	 train_acc: 97.832; train_loss: 0.390; test_loss: 33.201; lr: [0.001]
+2022-03-10 14:05:48,143 | INFO : 	 test_acc: 90.66 (best: 91.73 from #143)
+2022-03-10 14:06:13,389 | INFO : Epoch #188
+2022-03-10 14:06:13,389 | INFO : 	 train_acc: 97.884; train_loss: 0.111; test_loss: 30.979; lr: [0.001]
+2022-03-10 14:06:13,390 | INFO : 	 test_acc: 91.05 (best: 91.73 from #143)
+2022-03-10 14:06:39,186 | INFO : Epoch #189
+2022-03-10 14:06:39,186 | INFO : 	 train_acc: 97.814; train_loss: 0.380; test_loss: 31.727; lr: [0.001]
+2022-03-10 14:06:39,187 | INFO : 	 test_acc: 90.92 (best: 91.73 from #143)
+2022-03-10 14:07:05,112 | INFO : Epoch #190
+2022-03-10 14:07:05,112 | INFO : 	 train_acc: 97.8; train_loss: 0.109; test_loss: 31.382; lr: [0.001]
+2022-03-10 14:07:05,113 | INFO : 	 test_acc: 91.22 (best: 91.73 from #143)
+2022-03-10 14:07:30,625 | INFO : Epoch #191
+2022-03-10 14:07:30,626 | INFO : 	 train_acc: 97.788; train_loss: 0.036; test_loss: 31.128; lr: [0.001]
+2022-03-10 14:07:30,626 | INFO : 	 test_acc: 91.06 (best: 91.73 from #143)
+2022-03-10 14:07:56,022 | INFO : Epoch #192
+2022-03-10 14:07:56,022 | INFO : 	 train_acc: 97.878; train_loss: 0.016; test_loss: 31.361; lr: [0.001]
+2022-03-10 14:07:56,022 | INFO : 	 test_acc: 91.17 (best: 91.73 from #143)
+2022-03-10 14:08:21,606 | INFO : Epoch #193
+2022-03-10 14:08:21,607 | INFO : 	 train_acc: 97.826; train_loss: 0.142; test_loss: 34.026; lr: [0.001]
+2022-03-10 14:08:21,607 | INFO : 	 test_acc: 90.56 (best: 91.73 from #143)
+2022-03-10 14:08:46,840 | INFO : Epoch #194
+2022-03-10 14:08:46,840 | INFO : 	 train_acc: 97.926; train_loss: 0.386; test_loss: 31.476; lr: [0.001]
+2022-03-10 14:08:46,840 | INFO : 	 test_acc: 90.93 (best: 91.73 from #143)
+2022-03-10 14:09:12,313 | INFO : Epoch #195
+2022-03-10 14:09:12,314 | INFO : 	 train_acc: 97.778; train_loss: 0.101; test_loss: 30.592; lr: [0.001]
+2022-03-10 14:09:12,314 | INFO : 	 test_acc: 91.1 (best: 91.73 from #143)
+2022-03-10 14:09:37,609 | INFO : Epoch #196
+2022-03-10 14:09:37,610 | INFO : 	 train_acc: 97.85; train_loss: 0.083; test_loss: 32.028; lr: [0.001]
+2022-03-10 14:09:37,610 | INFO : 	 test_acc: 90.94 (best: 91.73 from #143)
+2022-03-10 14:10:03,435 | INFO : Epoch #197
+2022-03-10 14:10:03,435 | INFO : 	 train_acc: 97.864; train_loss: 0.009; test_loss: 31.090; lr: [0.001]
+2022-03-10 14:10:03,435 | INFO : 	 test_acc: 91.19 (best: 91.73 from #143)
+2022-03-10 14:10:28,539 | INFO : Epoch #198
+2022-03-10 14:10:28,540 | INFO : 	 train_acc: 97.792; train_loss: 0.178; test_loss: 32.194; lr: [0.001]
+2022-03-10 14:10:28,540 | INFO : 	 test_acc: 91.0 (best: 91.73 from #143)
+2022-03-10 14:10:54,023 | INFO : Epoch #199
+2022-03-10 14:10:54,024 | INFO : 	 train_acc: 97.83; train_loss: 0.059; test_loss: 31.018; lr: [0.001]
+2022-03-10 14:10:54,024 | INFO : 	 test_acc: 91.18 (best: 91.73 from #143)
+2022-03-10 14:11:19,521 | INFO : Epoch #200
+2022-03-10 14:11:19,522 | INFO : 	 train_acc: 98.31; train_loss: 0.005; test_loss: 30.045; lr: [0.0001]
+2022-03-10 14:11:19,522 | INFO : 	 test_acc: 91.5 (best: 91.73 from #143)
+2022-03-10 14:11:44,752 | INFO : Epoch #201
+2022-03-10 14:11:44,752 | INFO : 	 train_acc: 98.472; train_loss: 0.155; test_loss: 29.926; lr: [0.0001]
+2022-03-10 14:11:44,752 | INFO : 	 test_acc: 91.67 (best: 91.73 from #143)
+2022-03-10 14:12:10,256 | INFO : Epoch #202
+2022-03-10 14:12:10,257 | INFO : 	 train_acc: 98.604; train_loss: 0.091; test_loss: 30.001; lr: [0.0001]
+2022-03-10 14:12:10,257 | INFO : 	 test_acc: 91.7 (best: 91.73 from #143)
+2022-03-10 14:12:35,627 | INFO : Epoch #203
+2022-03-10 14:12:35,627 | INFO : 	 train_acc: 98.756; train_loss: 0.439; test_loss: 30.045; lr: [0.0001]
+2022-03-10 14:12:35,628 | INFO : 	 test_acc: 91.78 (best: 91.78 from #203)
+2022-03-10 14:13:00,850 | INFO : Epoch #204
+2022-03-10 14:13:00,851 | INFO : 	 train_acc: 98.764; train_loss: 0.213; test_loss: 29.988; lr: [0.0001]
+2022-03-10 14:13:00,851 | INFO : 	 test_acc: 91.69 (best: 91.78 from #203)
+2022-03-10 14:13:26,403 | INFO : Epoch #205
+2022-03-10 14:13:26,404 | INFO : 	 train_acc: 98.776; train_loss: 0.107; test_loss: 29.984; lr: [0.0001]
+2022-03-10 14:13:26,404 | INFO : 	 test_acc: 91.66 (best: 91.78 from #203)
+2022-03-10 14:13:51,902 | INFO : Epoch #206
+2022-03-10 14:13:51,903 | INFO : 	 train_acc: 98.784; train_loss: 0.057; test_loss: 29.526; lr: [0.0001]
+2022-03-10 14:13:51,903 | INFO : 	 test_acc: 91.85 (best: 91.85 from #206)
+2022-03-10 14:14:17,252 | INFO : Epoch #207
+2022-03-10 14:14:17,252 | INFO : 	 train_acc: 98.738; train_loss: 0.005; test_loss: 29.982; lr: [0.0001]
+2022-03-10 14:14:17,253 | INFO : 	 test_acc: 91.74 (best: 91.85 from #206)
+2022-03-10 14:14:42,450 | INFO : Epoch #208
+2022-03-10 14:14:42,451 | INFO : 	 train_acc: 98.73; train_loss: 0.115; test_loss: 29.525; lr: [0.0001]
+2022-03-10 14:14:42,451 | INFO : 	 test_acc: 91.88 (best: 91.88 from #208)
+2022-03-10 14:15:07,996 | INFO : Epoch #209
+2022-03-10 14:15:07,997 | INFO : 	 train_acc: 98.782; train_loss: 0.156; test_loss: 29.889; lr: [0.0001]
+2022-03-10 14:15:07,997 | INFO : 	 test_acc: 91.7 (best: 91.88 from #208)
+2022-03-10 14:15:33,378 | INFO : Epoch #210
+2022-03-10 14:15:33,379 | INFO : 	 train_acc: 98.746; train_loss: 0.061; test_loss: 30.111; lr: [0.0001]
+2022-03-10 14:15:33,379 | INFO : 	 test_acc: 91.71 (best: 91.88 from #208)
+2022-03-10 14:15:58,776 | INFO : Epoch #211
+2022-03-10 14:15:58,776 | INFO : 	 train_acc: 98.796; train_loss: 0.051; test_loss: 29.864; lr: [0.0001]
+2022-03-10 14:15:58,777 | INFO : 	 test_acc: 91.74 (best: 91.88 from #208)
+2022-03-10 14:16:24,577 | INFO : Epoch #212
+2022-03-10 14:16:24,578 | INFO : 	 train_acc: 98.83; train_loss: 0.055; test_loss: 29.329; lr: [0.0001]
+2022-03-10 14:16:24,578 | INFO : 	 test_acc: 91.89 (best: 91.89 from #212)
+2022-03-10 14:16:50,093 | INFO : Epoch #213
+2022-03-10 14:16:50,094 | INFO : 	 train_acc: 98.97; train_loss: 0.020; test_loss: 30.025; lr: [0.0001]
+2022-03-10 14:16:50,094 | INFO : 	 test_acc: 91.55 (best: 91.89 from #212)
+2022-03-10 14:17:15,383 | INFO : Epoch #214
+2022-03-10 14:17:15,384 | INFO : 	 train_acc: 98.872; train_loss: 0.051; test_loss: 30.023; lr: [0.0001]
+2022-03-10 14:17:15,384 | INFO : 	 test_acc: 91.55 (best: 91.89 from #212)
+2022-03-10 14:17:40,165 | INFO : Epoch #215
+2022-03-10 14:17:40,166 | INFO : 	 train_acc: 98.874; train_loss: 0.068; test_loss: 30.048; lr: [0.0001]
+2022-03-10 14:17:40,166 | INFO : 	 test_acc: 91.66 (best: 91.89 from #212)
+2022-03-10 14:18:05,344 | INFO : Epoch #216
+2022-03-10 14:18:05,344 | INFO : 	 train_acc: 98.848; train_loss: 0.061; test_loss: 30.162; lr: [0.0001]
+2022-03-10 14:18:05,344 | INFO : 	 test_acc: 91.56 (best: 91.89 from #212)
+2022-03-10 14:18:30,651 | INFO : Epoch #217
+2022-03-10 14:18:30,652 | INFO : 	 train_acc: 98.838; train_loss: 0.108; test_loss: 30.013; lr: [0.0001]
+2022-03-10 14:18:30,652 | INFO : 	 test_acc: 91.66 (best: 91.89 from #212)
+2022-03-10 14:18:55,512 | INFO : Epoch #218
+2022-03-10 14:18:55,512 | INFO : 	 train_acc: 98.808; train_loss: 0.079; test_loss: 30.098; lr: [0.0001]
+2022-03-10 14:18:55,513 | INFO : 	 test_acc: 91.55 (best: 91.89 from #212)
+2022-03-10 14:19:20,726 | INFO : Epoch #219
+2022-03-10 14:19:20,727 | INFO : 	 train_acc: 98.826; train_loss: 0.284; test_loss: 29.882; lr: [0.0001]
+2022-03-10 14:19:20,727 | INFO : 	 test_acc: 91.7 (best: 91.89 from #212)
+2022-03-10 14:19:45,456 | INFO : Epoch #220
+2022-03-10 14:19:45,457 | INFO : 	 train_acc: 98.866; train_loss: 0.147; test_loss: 29.926; lr: [0.0001]
+2022-03-10 14:19:45,457 | INFO : 	 test_acc: 91.79 (best: 91.89 from #212)
+2022-03-10 14:20:10,292 | INFO : Epoch #221
+2022-03-10 14:20:10,293 | INFO : 	 train_acc: 98.834; train_loss: 0.093; test_loss: 29.980; lr: [0.0001]
+2022-03-10 14:20:10,293 | INFO : 	 test_acc: 91.65 (best: 91.89 from #212)
+2022-03-10 14:20:35,143 | INFO : Epoch #222
+2022-03-10 14:20:35,143 | INFO : 	 train_acc: 98.86; train_loss: 0.027; test_loss: 29.988; lr: [0.0001]
+2022-03-10 14:20:35,143 | INFO : 	 test_acc: 91.62 (best: 91.89 from #212)
+2022-03-10 14:21:00,587 | INFO : Epoch #223
+2022-03-10 14:21:00,587 | INFO : 	 train_acc: 98.924; train_loss: 0.027; test_loss: 29.866; lr: [0.0001]
+2022-03-10 14:21:00,587 | INFO : 	 test_acc: 91.82 (best: 91.89 from #212)
+2022-03-10 14:21:25,290 | INFO : Epoch #224
+2022-03-10 14:21:25,292 | INFO : 	 train_acc: 98.886; train_loss: 0.121; test_loss: 29.965; lr: [0.0001]
+2022-03-10 14:21:25,292 | INFO : 	 test_acc: 91.62 (best: 91.89 from #212)
+2022-03-10 14:21:50,324 | INFO : Epoch #225
+2022-03-10 14:21:50,324 | INFO : 	 train_acc: 98.882; train_loss: 0.150; test_loss: 30.009; lr: [0.0001]
+2022-03-10 14:21:50,325 | INFO : 	 test_acc: 91.71 (best: 91.89 from #212)
+2022-03-10 14:22:15,086 | INFO : Epoch #226
+2022-03-10 14:22:15,087 | INFO : 	 train_acc: 98.988; train_loss: 0.256; test_loss: 30.056; lr: [0.0001]
+2022-03-10 14:22:15,087 | INFO : 	 test_acc: 91.61 (best: 91.89 from #212)
+2022-03-10 14:22:40,499 | INFO : Epoch #227
+2022-03-10 14:22:40,500 | INFO : 	 train_acc: 98.976; train_loss: 0.096; test_loss: 29.780; lr: [0.0001]
+2022-03-10 14:22:40,500 | INFO : 	 test_acc: 91.65 (best: 91.89 from #212)
+2022-03-10 14:23:05,438 | INFO : Epoch #228
+2022-03-10 14:23:05,439 | INFO : 	 train_acc: 98.968; train_loss: 0.001; test_loss: 29.830; lr: [0.0001]
+2022-03-10 14:23:05,439 | INFO : 	 test_acc: 91.66 (best: 91.89 from #212)
+2022-03-10 14:23:30,574 | INFO : Epoch #229
+2022-03-10 14:23:30,575 | INFO : 	 train_acc: 98.952; train_loss: 0.019; test_loss: 29.960; lr: [0.0001]
+2022-03-10 14:23:30,575 | INFO : 	 test_acc: 91.8 (best: 91.89 from #212)
+2022-03-10 14:23:55,908 | INFO : Epoch #230
+2022-03-10 14:23:55,908 | INFO : 	 train_acc: 99.006; train_loss: 0.012; test_loss: 30.321; lr: [0.0001]
+2022-03-10 14:23:55,908 | INFO : 	 test_acc: 91.55 (best: 91.89 from #212)
+2022-03-10 14:24:20,888 | INFO : Epoch #231
+2022-03-10 14:24:20,888 | INFO : 	 train_acc: 99.024; train_loss: 0.022; test_loss: 30.538; lr: [0.0001]
+2022-03-10 14:24:20,889 | INFO : 	 test_acc: 91.63 (best: 91.89 from #212)
+2022-03-10 14:24:46,156 | INFO : Epoch #232
+2022-03-10 14:24:46,156 | INFO : 	 train_acc: 98.94; train_loss: 0.031; test_loss: 30.034; lr: [0.0001]
+2022-03-10 14:24:46,156 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:25:11,073 | INFO : Epoch #233
+2022-03-10 14:25:11,073 | INFO : 	 train_acc: 98.882; train_loss: 0.077; test_loss: 29.989; lr: [0.0001]
+2022-03-10 14:25:11,073 | INFO : 	 test_acc: 91.59 (best: 91.89 from #212)
+2022-03-10 14:25:35,978 | INFO : Epoch #234
+2022-03-10 14:25:35,979 | INFO : 	 train_acc: 98.954; train_loss: 0.027; test_loss: 30.328; lr: [0.0001]
+2022-03-10 14:25:35,979 | INFO : 	 test_acc: 91.5 (best: 91.89 from #212)
+2022-03-10 14:26:00,796 | INFO : Epoch #235
+2022-03-10 14:26:00,796 | INFO : 	 train_acc: 98.948; train_loss: 0.150; test_loss: 29.945; lr: [0.0001]
+2022-03-10 14:26:00,796 | INFO : 	 test_acc: 91.54 (best: 91.89 from #212)
+2022-03-10 14:26:25,501 | INFO : Epoch #236
+2022-03-10 14:26:25,501 | INFO : 	 train_acc: 98.966; train_loss: 0.032; test_loss: 29.922; lr: [0.0001]
+2022-03-10 14:26:25,501 | INFO : 	 test_acc: 91.66 (best: 91.89 from #212)
+2022-03-10 14:26:50,340 | INFO : Epoch #237
+2022-03-10 14:26:50,341 | INFO : 	 train_acc: 98.92; train_loss: 0.276; test_loss: 29.965; lr: [0.0001]
+2022-03-10 14:26:50,341 | INFO : 	 test_acc: 91.61 (best: 91.89 from #212)
+2022-03-10 14:27:15,250 | INFO : Epoch #238
+2022-03-10 14:27:15,250 | INFO : 	 train_acc: 99.0; train_loss: 0.025; test_loss: 29.374; lr: [0.0001]
+2022-03-10 14:27:15,251 | INFO : 	 test_acc: 91.73 (best: 91.89 from #212)
+2022-03-10 14:27:39,927 | INFO : Epoch #239
+2022-03-10 14:27:39,927 | INFO : 	 train_acc: 98.94; train_loss: 0.228; test_loss: 30.284; lr: [0.0001]
+2022-03-10 14:27:39,927 | INFO : 	 test_acc: 91.68 (best: 91.89 from #212)
+2022-03-10 14:28:04,900 | INFO : Epoch #240
+2022-03-10 14:28:04,901 | INFO : 	 train_acc: 98.99; train_loss: 0.010; test_loss: 29.971; lr: [0.0001]
+2022-03-10 14:28:04,901 | INFO : 	 test_acc: 91.66 (best: 91.89 from #212)
+2022-03-10 14:28:29,700 | INFO : Epoch #241
+2022-03-10 14:28:29,701 | INFO : 	 train_acc: 99.014; train_loss: 0.033; test_loss: 30.212; lr: [0.0001]
+2022-03-10 14:28:29,701 | INFO : 	 test_acc: 91.72 (best: 91.89 from #212)
+2022-03-10 14:28:54,492 | INFO : Epoch #242
+2022-03-10 14:28:54,492 | INFO : 	 train_acc: 99.072; train_loss: 0.053; test_loss: 29.883; lr: [0.0001]
+2022-03-10 14:28:54,493 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:29:19,515 | INFO : Epoch #243
+2022-03-10 14:29:19,516 | INFO : 	 train_acc: 99.04; train_loss: 0.029; test_loss: 30.100; lr: [0.0001]
+2022-03-10 14:29:19,516 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:29:44,291 | INFO : Epoch #244
+2022-03-10 14:29:44,291 | INFO : 	 train_acc: 98.884; train_loss: 0.016; test_loss: 30.112; lr: [0.0001]
+2022-03-10 14:29:44,291 | INFO : 	 test_acc: 91.55 (best: 91.89 from #212)
+2022-03-10 14:30:09,204 | INFO : Epoch #245
+2022-03-10 14:30:09,204 | INFO : 	 train_acc: 98.988; train_loss: 0.011; test_loss: 29.773; lr: [0.0001]
+2022-03-10 14:30:09,204 | INFO : 	 test_acc: 91.69 (best: 91.89 from #212)
+2022-03-10 14:30:34,011 | INFO : Epoch #246
+2022-03-10 14:30:34,011 | INFO : 	 train_acc: 99.062; train_loss: 0.019; test_loss: 30.269; lr: [0.0001]
+2022-03-10 14:30:34,011 | INFO : 	 test_acc: 91.57 (best: 91.89 from #212)
+2022-03-10 14:30:59,580 | INFO : Epoch #247
+2022-03-10 14:30:59,581 | INFO : 	 train_acc: 98.966; train_loss: 0.173; test_loss: 30.233; lr: [0.0001]
+2022-03-10 14:30:59,581 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:31:24,868 | INFO : Epoch #248
+2022-03-10 14:31:24,868 | INFO : 	 train_acc: 99.04; train_loss: 0.152; test_loss: 30.440; lr: [0.0001]
+2022-03-10 14:31:24,868 | INFO : 	 test_acc: 91.59 (best: 91.89 from #212)
+2022-03-10 14:31:50,837 | INFO : Epoch #249
+2022-03-10 14:31:50,837 | INFO : 	 train_acc: 98.884; train_loss: 0.161; test_loss: 30.445; lr: [0.0001]
+2022-03-10 14:31:50,838 | INFO : 	 test_acc: 91.62 (best: 91.89 from #212)
+2022-03-10 14:32:15,915 | INFO : Epoch #250
+2022-03-10 14:32:15,916 | INFO : 	 train_acc: 99.06; train_loss: 0.007; test_loss: 29.936; lr: [0.0001]
+2022-03-10 14:32:15,916 | INFO : 	 test_acc: 91.67 (best: 91.89 from #212)
+2022-03-10 14:32:41,163 | INFO : Epoch #251
+2022-03-10 14:32:41,164 | INFO : 	 train_acc: 99.064; train_loss: 0.275; test_loss: 30.271; lr: [0.0001]
+2022-03-10 14:32:41,164 | INFO : 	 test_acc: 91.61 (best: 91.89 from #212)
+2022-03-10 14:33:06,126 | INFO : Epoch #252
+2022-03-10 14:33:06,126 | INFO : 	 train_acc: 98.9; train_loss: 0.099; test_loss: 30.573; lr: [0.0001]
+2022-03-10 14:33:06,127 | INFO : 	 test_acc: 91.56 (best: 91.89 from #212)
+2022-03-10 14:33:30,694 | INFO : Epoch #253
+2022-03-10 14:33:30,695 | INFO : 	 train_acc: 99.046; train_loss: 0.011; test_loss: 30.654; lr: [0.0001]
+2022-03-10 14:33:30,695 | INFO : 	 test_acc: 91.42 (best: 91.89 from #212)
+2022-03-10 14:33:55,113 | INFO : Epoch #254
+2022-03-10 14:33:55,114 | INFO : 	 train_acc: 99.0; train_loss: 0.058; test_loss: 30.459; lr: [0.0001]
+2022-03-10 14:33:55,114 | INFO : 	 test_acc: 91.68 (best: 91.89 from #212)
+2022-03-10 14:34:19,825 | INFO : Epoch #255
+2022-03-10 14:34:19,826 | INFO : 	 train_acc: 99.038; train_loss: 0.055; test_loss: 30.117; lr: [0.0001]
+2022-03-10 14:34:19,826 | INFO : 	 test_acc: 91.62 (best: 91.89 from #212)
+2022-03-10 14:34:44,427 | INFO : Epoch #256
+2022-03-10 14:34:44,427 | INFO : 	 train_acc: 99.048; train_loss: 0.092; test_loss: 30.429; lr: [0.0001]
+2022-03-10 14:34:44,427 | INFO : 	 test_acc: 91.56 (best: 91.89 from #212)
+2022-03-10 14:35:09,354 | INFO : Epoch #257
+2022-03-10 14:35:09,354 | INFO : 	 train_acc: 98.936; train_loss: 0.038; test_loss: 30.797; lr: [0.0001]
+2022-03-10 14:35:09,354 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:35:33,783 | INFO : Epoch #258
+2022-03-10 14:35:33,784 | INFO : 	 train_acc: 98.992; train_loss: 0.239; test_loss: 31.155; lr: [0.0001]
+2022-03-10 14:35:33,784 | INFO : 	 test_acc: 91.58 (best: 91.89 from #212)
+2022-03-10 14:35:58,553 | INFO : Epoch #259
+2022-03-10 14:35:58,553 | INFO : 	 train_acc: 99.02; train_loss: 0.076; test_loss: 30.726; lr: [0.0001]
+2022-03-10 14:35:58,553 | INFO : 	 test_acc: 91.38 (best: 91.89 from #212)
+2022-03-10 14:36:22,965 | INFO : Epoch #260
+2022-03-10 14:36:22,965 | INFO : 	 train_acc: 99.008; train_loss: 0.044; test_loss: 30.585; lr: [0.0001]
+2022-03-10 14:36:22,965 | INFO : 	 test_acc: 91.64 (best: 91.89 from #212)
+2022-03-10 14:36:47,447 | INFO : Epoch #261
+2022-03-10 14:36:47,448 | INFO : 	 train_acc: 98.972; train_loss: 0.155; test_loss: 31.085; lr: [0.0001]
+2022-03-10 14:36:47,448 | INFO : 	 test_acc: 91.45 (best: 91.89 from #212)
+2022-03-10 14:37:12,088 | INFO : Epoch #262
+2022-03-10 14:37:12,088 | INFO : 	 train_acc: 99.082; train_loss: 0.121; test_loss: 31.080; lr: [0.0001]
+2022-03-10 14:37:12,088 | INFO : 	 test_acc: 91.43 (best: 91.89 from #212)
+2022-03-10 14:37:36,724 | INFO : Epoch #263
+2022-03-10 14:37:36,725 | INFO : 	 train_acc: 99.114; train_loss: 0.020; test_loss: 30.547; lr: [0.0001]
+2022-03-10 14:37:36,725 | INFO : 	 test_acc: 91.62 (best: 91.89 from #212)
+2022-03-10 14:38:01,335 | INFO : Epoch #264
+2022-03-10 14:38:01,335 | INFO : 	 train_acc: 99.004; train_loss: 0.017; test_loss: 30.457; lr: [0.0001]
+2022-03-10 14:38:01,335 | INFO : 	 test_acc: 92.01 (best: 92.01 from #264)
+2022-03-10 14:38:26,711 | INFO : Epoch #265
+2022-03-10 14:38:26,712 | INFO : 	 train_acc: 99.058; train_loss: 0.037; test_loss: 30.656; lr: [0.0001]
+2022-03-10 14:38:26,712 | INFO : 	 test_acc: 91.56 (best: 92.01 from #264)
+2022-03-10 14:38:51,146 | INFO : Epoch #266
+2022-03-10 14:38:51,147 | INFO : 	 train_acc: 99.058; train_loss: 0.048; test_loss: 30.715; lr: [0.0001]
+2022-03-10 14:38:51,147 | INFO : 	 test_acc: 91.69 (best: 92.01 from #264)
+2022-03-10 14:39:15,798 | INFO : Epoch #267
+2022-03-10 14:39:15,798 | INFO : 	 train_acc: 99.026; train_loss: 0.037; test_loss: 30.541; lr: [0.0001]
+2022-03-10 14:39:15,798 | INFO : 	 test_acc: 91.7 (best: 92.01 from #264)
+2022-03-10 14:39:40,547 | INFO : Epoch #268
+2022-03-10 14:39:40,547 | INFO : 	 train_acc: 99.058; train_loss: 0.043; test_loss: 30.203; lr: [0.0001]
+2022-03-10 14:39:40,547 | INFO : 	 test_acc: 91.64 (best: 92.01 from #264)
+2022-03-10 14:40:05,734 | INFO : Epoch #269
+2022-03-10 14:40:05,734 | INFO : 	 train_acc: 99.072; train_loss: 0.226; test_loss: 30.619; lr: [0.0001]
+2022-03-10 14:40:05,734 | INFO : 	 test_acc: 91.64 (best: 92.01 from #264)
+2022-03-10 14:40:30,587 | INFO : Epoch #270
+2022-03-10 14:40:30,588 | INFO : 	 train_acc: 99.02; train_loss: 0.051; test_loss: 30.549; lr: [0.0001]
+2022-03-10 14:40:30,588 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:40:56,017 | INFO : Epoch #271
+2022-03-10 14:40:56,017 | INFO : 	 train_acc: 98.98; train_loss: 0.071; test_loss: 30.707; lr: [0.0001]
+2022-03-10 14:40:56,017 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:41:20,563 | INFO : Epoch #272
+2022-03-10 14:41:20,563 | INFO : 	 train_acc: 98.998; train_loss: 0.180; test_loss: 30.611; lr: [0.0001]
+2022-03-10 14:41:20,564 | INFO : 	 test_acc: 91.74 (best: 92.01 from #264)
+2022-03-10 14:41:45,319 | INFO : Epoch #273
+2022-03-10 14:41:45,320 | INFO : 	 train_acc: 99.018; train_loss: 0.004; test_loss: 30.741; lr: [0.0001]
+2022-03-10 14:41:45,320 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:42:09,971 | INFO : Epoch #274
+2022-03-10 14:42:09,971 | INFO : 	 train_acc: 99.04; train_loss: 0.104; test_loss: 30.812; lr: [0.0001]
+2022-03-10 14:42:09,972 | INFO : 	 test_acc: 91.38 (best: 92.01 from #264)
+2022-03-10 14:42:34,725 | INFO : Epoch #275
+2022-03-10 14:42:34,726 | INFO : 	 train_acc: 99.074; train_loss: 0.136; test_loss: 30.920; lr: [0.0001]
+2022-03-10 14:42:34,726 | INFO : 	 test_acc: 91.47 (best: 92.01 from #264)
+2022-03-10 14:42:59,364 | INFO : Epoch #276
+2022-03-10 14:42:59,365 | INFO : 	 train_acc: 99.054; train_loss: 0.117; test_loss: 31.318; lr: [0.0001]
+2022-03-10 14:42:59,365 | INFO : 	 test_acc: 91.46 (best: 92.01 from #264)
+2022-03-10 14:43:24,258 | INFO : Epoch #277
+2022-03-10 14:43:24,259 | INFO : 	 train_acc: 98.942; train_loss: 0.029; test_loss: 30.484; lr: [0.0001]
+2022-03-10 14:43:24,259 | INFO : 	 test_acc: 91.62 (best: 92.01 from #264)
+2022-03-10 14:43:48,983 | INFO : Epoch #278
+2022-03-10 14:43:48,984 | INFO : 	 train_acc: 99.056; train_loss: 0.260; test_loss: 31.162; lr: [0.0001]
+2022-03-10 14:43:48,984 | INFO : 	 test_acc: 91.41 (best: 92.01 from #264)
+2022-03-10 14:44:13,833 | INFO : Epoch #279
+2022-03-10 14:44:13,833 | INFO : 	 train_acc: 99.048; train_loss: 0.054; test_loss: 30.832; lr: [0.0001]
+2022-03-10 14:44:13,833 | INFO : 	 test_acc: 91.52 (best: 92.01 from #264)
+2022-03-10 14:44:38,505 | INFO : Epoch #280
+2022-03-10 14:44:38,506 | INFO : 	 train_acc: 99.106; train_loss: 0.026; test_loss: 30.796; lr: [0.0001]
+2022-03-10 14:44:38,506 | INFO : 	 test_acc: 91.48 (best: 92.01 from #264)
+2022-03-10 14:45:03,170 | INFO : Epoch #281
+2022-03-10 14:45:03,170 | INFO : 	 train_acc: 99.04; train_loss: 0.027; test_loss: 30.627; lr: [0.0001]
+2022-03-10 14:45:03,170 | INFO : 	 test_acc: 91.56 (best: 92.01 from #264)
+2022-03-10 14:45:27,754 | INFO : Epoch #282
+2022-03-10 14:45:27,754 | INFO : 	 train_acc: 99.08; train_loss: 0.046; test_loss: 30.933; lr: [0.0001]
+2022-03-10 14:45:27,754 | INFO : 	 test_acc: 91.57 (best: 92.01 from #264)
+2022-03-10 14:45:52,688 | INFO : Epoch #283
+2022-03-10 14:45:52,689 | INFO : 	 train_acc: 99.124; train_loss: 0.068; test_loss: 30.947; lr: [0.0001]
+2022-03-10 14:45:52,689 | INFO : 	 test_acc: 91.5 (best: 92.01 from #264)
+2022-03-10 14:46:17,349 | INFO : Epoch #284
+2022-03-10 14:46:17,350 | INFO : 	 train_acc: 99.022; train_loss: 0.105; test_loss: 30.832; lr: [0.0001]
+2022-03-10 14:46:17,350 | INFO : 	 test_acc: 91.64 (best: 92.01 from #264)
+2022-03-10 14:46:42,170 | INFO : Epoch #285
+2022-03-10 14:46:42,171 | INFO : 	 train_acc: 99.062; train_loss: 0.131; test_loss: 30.530; lr: [0.0001]
+2022-03-10 14:46:42,171 | INFO : 	 test_acc: 91.65 (best: 92.01 from #264)
+2022-03-10 14:47:07,037 | INFO : Epoch #286
+2022-03-10 14:47:07,038 | INFO : 	 train_acc: 99.034; train_loss: 0.265; test_loss: 30.774; lr: [0.0001]
+2022-03-10 14:47:07,038 | INFO : 	 test_acc: 91.63 (best: 92.01 from #264)
+2022-03-10 14:47:32,657 | INFO : Epoch #287
+2022-03-10 14:47:32,658 | INFO : 	 train_acc: 99.046; train_loss: 0.132; test_loss: 30.762; lr: [0.0001]
+2022-03-10 14:47:32,658 | INFO : 	 test_acc: 91.64 (best: 92.01 from #264)
+2022-03-10 14:47:57,609 | INFO : Epoch #288
+2022-03-10 14:47:57,610 | INFO : 	 train_acc: 99.14; train_loss: 0.039; test_loss: 30.351; lr: [0.0001]
+2022-03-10 14:47:57,610 | INFO : 	 test_acc: 91.74 (best: 92.01 from #264)
+2022-03-10 14:48:22,381 | INFO : Epoch #289
+2022-03-10 14:48:22,382 | INFO : 	 train_acc: 99.158; train_loss: 0.039; test_loss: 31.017; lr: [0.0001]
+2022-03-10 14:48:22,382 | INFO : 	 test_acc: 91.63 (best: 92.01 from #264)
+2022-03-10 14:48:47,081 | INFO : Epoch #290
+2022-03-10 14:48:47,082 | INFO : 	 train_acc: 99.094; train_loss: 0.021; test_loss: 30.580; lr: [0.0001]
+2022-03-10 14:48:47,082 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:49:11,625 | INFO : Epoch #291
+2022-03-10 14:49:11,626 | INFO : 	 train_acc: 99.138; train_loss: 0.102; test_loss: 30.620; lr: [0.0001]
+2022-03-10 14:49:11,626 | INFO : 	 test_acc: 91.69 (best: 92.01 from #264)
+2022-03-10 14:49:36,768 | INFO : Epoch #292
+2022-03-10 14:49:36,768 | INFO : 	 train_acc: 99.124; train_loss: 0.016; test_loss: 30.530; lr: [0.0001]
+2022-03-10 14:49:36,768 | INFO : 	 test_acc: 91.4 (best: 92.01 from #264)
+2022-03-10 14:50:02,066 | INFO : Epoch #293
+2022-03-10 14:50:02,066 | INFO : 	 train_acc: 99.094; train_loss: 0.068; test_loss: 30.719; lr: [0.0001]
+2022-03-10 14:50:02,067 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:50:27,269 | INFO : Epoch #294
+2022-03-10 14:50:27,270 | INFO : 	 train_acc: 99.1; train_loss: 0.407; test_loss: 31.333; lr: [0.0001]
+2022-03-10 14:50:27,270 | INFO : 	 test_acc: 91.53 (best: 92.01 from #264)
+2022-03-10 14:50:51,959 | INFO : Epoch #295
+2022-03-10 14:50:51,959 | INFO : 	 train_acc: 99.074; train_loss: 0.336; test_loss: 31.110; lr: [0.0001]
+2022-03-10 14:50:51,959 | INFO : 	 test_acc: 91.56 (best: 92.01 from #264)
+2022-03-10 14:51:16,704 | INFO : Epoch #296
+2022-03-10 14:51:16,705 | INFO : 	 train_acc: 99.108; train_loss: 0.004; test_loss: 30.885; lr: [0.0001]
+2022-03-10 14:51:16,705 | INFO : 	 test_acc: 91.61 (best: 92.01 from #264)
+2022-03-10 14:51:41,445 | INFO : Epoch #297
+2022-03-10 14:51:41,445 | INFO : 	 train_acc: 99.086; train_loss: 0.118; test_loss: 31.015; lr: [0.0001]
+2022-03-10 14:51:41,445 | INFO : 	 test_acc: 91.68 (best: 92.01 from #264)
+2022-03-10 14:52:06,569 | INFO : Epoch #298
+2022-03-10 14:52:06,569 | INFO : 	 train_acc: 99.114; train_loss: 0.269; test_loss: 31.154; lr: [0.0001]
+2022-03-10 14:52:06,570 | INFO : 	 test_acc: 91.47 (best: 92.01 from #264)
+2022-03-10 14:52:31,211 | INFO : Epoch #299
+2022-03-10 14:52:31,212 | INFO : 	 train_acc: 99.09; train_loss: 0.109; test_loss: 30.763; lr: [0.0001]
+2022-03-10 14:52:31,212 | INFO : 	 test_acc: 91.56 (best: 92.01 from #264)
+2022-03-10 14:52:31,282 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline finetuned 22.81 --> 92.01.
+2022-03-10 14:52:31,282 | INFO : Model /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/baseline/resnet20_cifar10_baseline pruned, grouped, and finetuned: 92.35 --> 22.81 --> 92.01.
+
+2022-03-10 14:52:31,286 | INFO : setting
+2022-03-10 14:52:31,288 | INFO : Saving setting file to /content/drive/MyDrive/lottery_regulated_grouped_kernel_pruning/output/resnet20_cifar10_demo/setting.json...
+2022-03-10 14:52:31,292 | INFO : Experiment resnet20_cifar10_demo (task: finetune) ends at 2022-03-10T14:52:31.282754; result: 92.35 --> 92.01.

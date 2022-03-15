@@ -1,0 +1,39 @@
+{
+    "train_params": {
+        "weight_decay": 5e-4,
+        "momentum": 0.9,
+        "gamma": 0.1,
+        "lr": 0.01,
+        "lr_step_size": 100,
+        "train_batch_size": 64,
+        "test_batch_size": 100,
+        "epoch_num": [
+            300
+        ]
+    },
+    "prune_params": {
+        "pruning_rate": [
+            0.4375
+        ],
+        "n_clusters": 8,
+        "ticket_start_epoch": 35,
+        "ticket_end_epoch": 70,
+        "ticket_step": 1,
+        "clustering_method": "ALL",
+        "criterion": "tickets magnitute increase",
+        "pruning_strategy": "greedy",
+        "eval_pruned_kernel_relationship": true,
+        "eval_kept_kernel_ratio": 0.2,
+        "cost_balancer": 2,
+        "metric": "euclidean",
+        "clustering_assignment": null
+    },
+    "cluster_info": {
+        "method_list": null,
+        "permutation_matrix_list": null
+    },
+    "management": {
+        "overwrite_save_flag": true,
+        "save_subdir": "checkpoints"
+    }
+}
