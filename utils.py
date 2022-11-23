@@ -348,14 +348,14 @@ def get_cluster_permutation_matrix(criterion_result, old_weights, old_out_channe
         except ValueError:
             # pass
             if clustering_method != 'ALL':
-                adj_mat = squareform(pdist(old_weights_normalized, metric='cosine', p=2))
+                adj_mat = squareform(pdist(old_weights_normalized, metric='cosine'))
                 V_K = Spectral_Clustering(adj_mat, K= n_clusters, sim_graph='mutual_knn', knn=16, normalized=1)
                 clustering_method = 'SPECTRAL (KPCA fallback)'
                 permutation_matrix, labels = get_equal_k_means_permutation_matrix(V_K, n_clusters)
 
 
     if clustering_method == 'SPECTRAL' or clustering_method == 'ALL':
-        adj_mat = squareform(pdist(old_weights_normalized, metric='cosine', p=2))
+        adj_mat = squareform(pdist(old_weights_normalized, metric='cosine'))
         V_K = Spectral_Clustering(adj_mat, K= n_clusters, sim_graph='mutual_knn', knn=16, normalized=1)
         permutation_matrix, labels = get_equal_k_means_permutation_matrix(V_K, n_clusters)
         if clustering_method == 'ALL':
