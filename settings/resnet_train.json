@@ -1,0 +1,18 @@
+{
+    "train_params": {
+        "weight_decay": 5e-4,
+        "momentum": 0.9,
+        "gamma": 0.1,
+        "lr": 0.1,
+        "lr_step_size": 100,
+        "train_batch_size": 64,
+        "test_batch_size": 100,
+        "epoch_num": [
+            300
+        ]
+    },
+    "management": {
+        "overwrite_save_flag": false,
+        "save_subdir": "checkpoints"
+    }
+}
