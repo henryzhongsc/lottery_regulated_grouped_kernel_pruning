@@ -19,28 +19,27 @@ url={https://openreview.net/forum?id=LdEhiMG9WLO}
 
 There is no better way to familiarize a codebase than running an example trial. Thus, we provide a demo Google Colab [notebook](https://github.com/choH/lottery_regulated_grouped_kernel_pruning/blob/main/TMI_GKP_demo.ipynb) with annotation, where you are able to run the ResNet-20 on CIFAR-10 experiment with one-click as all necessary files are supplemented in this GitHub repo.
 
-The basic logic is the `main.py` file will take a baseline model (in this case, `./baseline/resnet20_cifar10_baseline`), the baseline model's training snapshot folder (`./snapshots/resnet20/`) for TMI evaluation, and a pruning setting file (`./settings/resnet20_cifar10_reported.json`). You will also need to specify an output folder (`./output/resnet20_cifar10_demo`). See the full command below:
+This Colab demo file will walk you through every stage of a typical TMI-GKP task: model initialization, baseline training, snapshot registration, pruning, fine-tuning, supplied with `setting.json` files for all tasks mentioned here.
 
-```
-!python main.py \
---exp_desc resnet20_cifar10_demo \
---setting_dir settings/resnet20_cifar10_reported.json \
---model_dir baseline/resnet20_cifar10_baseline \
---snapshot_folder_dir snapshots/resnet20/ \
---output_folder_dir output/resnet20_cifar10_demo \
---baseline True \
---task finetune
-```
 
-Upon completion of this experiment, you should find the following files in your assigned output folder:
+For a `--task finetune` (where TMI-GKP plays), the basic logic is the `main.py` file will take a baseline model, the baseline model's training snapshot folder for TMI evaluation, and a pruning setting file. You will also need to specify an output folder, where upon completion of this `--task finetune` experiment, you should find:
 
 * `baseline`: Copy of the baseline model
-* `pruned`: The pruned model (with clustering information to extact a `cluster.json` as described in Section A.3.2 of the paper).
-* `grouped`: The grouped model, this is basically `pruned` but in grouped convolution architecture (with sparisty removed). All non-inference related portion are also removed (e.g., the clustering info).
+* `pruned`: The pruned model (with clustering information to extract a `cluster.json` as described in Section A.3.2 of the paper).
+* `grouped`: The grouped model. This is basically `pruned` but in grouped convolution architecture (with sparsity removed). All non-inference-related portions are also removed (e.g., the clustering info).
 * `finetuned`: The finetuned model trained upon `grouped`.
-* `setting.json`: Copy of the assigned setting file, but with more information stored (e.g., configuration assigned via `argparse`, log of acc/loss, ect.). Should you want to rerun this experiment, you should pass the original setting file (in this case, `./baseline/resnet20_cifar10_baseline`) but not this one.
-* `experiment.log`: Experiment printouts registered by logger. This will also print to the terminal for easier monitoring.
+* `setting.json`: Copy of the assigned setting file, but with more information stored (e.g., configuration assigned via `argparse`, log of acc/loss, etc.). Should you want to rerun this experiment, you should pass the original setting file (in this case, `settings/resnet20_cifar10_prune_and_finetune.json`) but not this one.
+* `experiment.log`: Experiment printouts registered by the logger. This will also print to the terminal for easier monitoring.
 * `/checkpoints/` folder: Saved checkpoints during the finetuning process.
+
+---
+
+Please do not hesitate to open an issue for questions or discussions. Being my undergraduate work, I'd be first to admit — and there's no denying with the complete lack of docs and comments — this is not the cleanest codebase you'd work with, but I keep a close monitor of this repo, yet I put in serious efforts to help people as showcased in the issues we got.   
+
+**We the authors believe *Grouped Kernel Pruning* is a promising direction for future structured pruning methods, as it makes sense to pursue a higher degree of pruning freedom yet retain those densely structured properties** (empirical results also suggest a one-shot adoption of GKP is often better than most iterative filter pruning methods with much higher retraining/finetuning budget). We'd hope more people from the pruning community may explore it in lieu of the already crowded filter/channel pruning realms.
+
+---
+---
 
 ## Demo experiments, and to reproduce experiments in Table 2.
 
@@ -48,6 +47,7 @@ As mentioned in Appendix 3.2 of our paper, we have replicated four CIFAR-10 expe
 
 To reproduce experiments in Table 2, you should first obtain the respective baseline model with necessary training snapshots. Then you will need to make a `setting.json` file that follows the structure of [`settings/resnet20_cifar10_reported.json`](https://github.com/choH/lottery_regulated_grouped_kernel_pruning/blob/main/settings/resnet20_cifar10_reported.json) (you should find the necessary information at Appendix 3.1 and Appendix 3.2). Last, you will need to mimic the `argparse` command of above ResNet-20 + CIFAR-10 experiment to kick-of the intended experiment. Do make sure that the assigned `output_folder_dir` is empty if you do not intend to overwrite.
 
+---
 ---
 
 ### Discussion regarding inference speedup
