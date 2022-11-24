@@ -394,8 +394,8 @@ if setting['management']['task'] == 'test':
 elif setting['management']['task'] == 'train':
 
     num_of_epoch = sum(setting['train_params']['epoch_num'])
-    baseline_net_output_path = setting['management']['output_folder_dir'] + 'trained_only_baseline'
-    finetuned_net_output_path = setting['management']['output_folder_dir'] + 'best_trained_only'
+    baseline_net_output_path = setting['management']['output_folder_dir'] + 'initialized'
+    finetuned_net_output_path = setting['management']['output_folder_dir'] + 'trained'
     baseline_test_acc, finetuned_test_acc = finetune_model(num_of_epoch, baseline_net_output_path, finetuned_net_output_path)
 
     sys.exit(0)
